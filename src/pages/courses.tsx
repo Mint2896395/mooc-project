@@ -36,7 +36,7 @@ const courses = () => {
                     >
                     <option
                         className="box-border text-base font-light text-[rgba(112,112,112,1)]"
-                        selected=""
+                        
                         value=""
                     >
                         ประเภทผู้เรียน
@@ -74,7 +74,7 @@ const courses = () => {
                     >
                     <option
                         className="box-border text-base font-light text-[rgba(112,112,112,1)]"
-                        selected=""
+                        
                         value=""
                     >
                         คอร์สทั้งหมด
@@ -106,7 +106,7 @@ const courses = () => {
                     >
                     <option
                         className="box-border text-base font-light text-[rgba(112,112,112,1)]"
-                        selected=""
+                        
                         value=""
                     >
                         หมวดหมู่
@@ -324,7 +324,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW011101_กฎหมายกับสังคม"
                 />
@@ -332,7 +332,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW011201_หลักกฎหมายเอกชน"
                 />
@@ -340,7 +340,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW012102_นิติปรัชญา"
                 />
@@ -348,7 +348,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW012204 กฎหมายว่าด้วยหนี้"
                 />
@@ -356,7 +356,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW012205_กฎหมายว่าด้วยละเมิดฯ"
                 />
@@ -364,7 +364,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW012206_เอกเทศสัญญา_1"
                 />
@@ -372,7 +372,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW012401_หลักกฎหมายมหาชน"
                 />
@@ -380,7 +380,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW012501 กฎหมายอาญา : บทบัญญัติทั่วไป"
                 />
@@ -388,7 +388,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW013108 ภาษาอังกฤษสำหรับนักศึกษากฎหมาย 1"
                 />
@@ -396,7 +396,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW013208_การเจรจาต่อรองและสัญญาทางธุรกิจ"
                 />
@@ -404,7 +404,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW013209_กฎหมายว่าด้วยองค์กรทางธุรกิจ"
                 />
@@ -412,7 +412,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW013210_กฎหมายว่าด้วยครอบครัวและมรดก"
                 />
@@ -420,7 +420,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW013211_กฎหมายวิธีพิจารณาความแพ่ง_1"
                 />
@@ -428,7 +428,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW013213 กฎหมายวิธีพิจารณาความอาญา"
                 />
@@ -436,7 +436,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW013304 กฎหมายบริหารรัฐกิจและกิจการสาธารณะ"
                 />
@@ -444,7 +444,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW013401 กฎหมายระหว่างประเทศแผนกคดีบุคคล"
                 />
@@ -452,7 +452,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW013402 กฎหมายระหว่างประเทศแผนกคดีเมือง"
                 />
@@ -460,7 +460,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW013404 กฎหมายการค้าระหว่างประเทศและอนุญาโตตุลาการ"
                 />
@@ -468,7 +468,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW013505 กฎหมายที่ดินและการพัฒนาเมือง"
                 />
@@ -476,7 +476,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW014217 กฎหมายกับการสร้างธุรกิจดิจิทัล"
                 />
@@ -484,7 +484,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW014220_กฎหมายล้มละลายและฟื้นฟูกิจการ"
                 />
@@ -492,7 +492,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW014303_กฎหมายปกครอง"
                 />
@@ -500,7 +500,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW014409 กฎหมายมนุษยธรรมระหว่างประเทศ"
                 />
@@ -508,7 +508,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW014508_กฎหมายป้องกันและปราบปรามการทุจริต"
                 />
@@ -516,7 +516,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW014511_กฎหมายคุ้มครองข้อมูลส่วนบุคคล"
                 />
@@ -524,7 +524,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW014605_กฎหมายแรงงานและสวัสดิการสังคม"
                 />
@@ -532,7 +532,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW014606_กฎหมายภาษีอากร"
                 />
@@ -540,7 +540,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW014607 กฎหมายว่าด้วยการกระทำความผิดของเด็กและเยาวชน"
                 />
@@ -548,7 +548,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW_428312 กฎหมายระหว่างประเทศในเอเชียตะวันออกเฉียงใต้"
                 />
@@ -556,7 +556,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW_777100 ความรู้เบื้องต้นเกี่ยวกับกฎหมายทั่วไป"
                 />
@@ -564,7 +564,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW_777301 กฎหมายวิธีพิจารณาความอาญา สำหรับนักศึกษารัฐประศาสนศาสตร์"
                 />
@@ -572,7 +572,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW_777401 ทฤษฎีกฎหมายมหาชนและหลักการปกครองท้องถิ่น"
                 />
@@ -580,7 +580,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW_777440 กฎหมายภาษีอากร"
                 />
@@ -588,7 +588,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/LW_CL403559 การภาษีอากร"
                 />
@@ -596,7 +596,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/M_โครงการเสริมทักษะวิชาการ การเขียน-ตอบ ข้อสอบกฎหมาย สำหรับนักศึกษาชั้นปีที่ 1"
                 />
@@ -604,7 +604,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW011202_กฎหมายว่าด้วยนิติกรรมและสัญญา"
                 />
@@ -612,7 +612,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW011203_กฎหมายว่าด้วยทรัพย์สิน"
                 />
@@ -620,7 +620,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW012207_เอกเทศสัญญา 2"
                 />
@@ -628,7 +628,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW012208_กฎหมายว่าด้วยตั๋วเงินและประกันภัย"
                 />
@@ -636,7 +636,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW012302_กฎหมายรัฐธรรมนูญและสถาบันการเมือง"
                 />
@@ -644,7 +644,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW012502 กฎหมายอาญา : ภาคความผิด"
                 />
@@ -652,7 +652,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW012601_กฎหมายสิทธิมนุษยชน"
                 />
@@ -660,7 +660,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW012602_นโยบายและการบริหารงานยุติธรรม"
                 />
@@ -668,7 +668,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW013210_กฎหมายการแข่งขันการค้า"
                 />
@@ -676,7 +676,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW013211_กฎหมายธุรกิจ (ภาษาอังกฤษ)"
                 />
@@ -684,7 +684,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW013212_กฎหมายวิธีพิจารณาความแพ่ง_2"
                 />
@@ -692,7 +692,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW013214 กฎหมายว่าด้วยพยานหลักฐาน"
                 />
@@ -700,7 +700,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW013215_พระธรรมนูญศาลยุติธรรม"
                 />
@@ -708,7 +708,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW013217_กฎหมายทรัพย์สินทางปัญญา"
                 />
@@ -716,7 +716,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW013303 กฎหมายมหาชนทางเศรษฐกิจ"
                 />
@@ -724,7 +724,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW013404_กฎหมายว่าด้วยการส่งเสริมการลงทุนในประชาคมอาเซียน"
                 />
@@ -732,7 +732,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW013503_นิติวิทยาศาสตร์"
                 />
@@ -740,7 +740,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW013603_กฎหมายเศรษฐกิจระหว่างประเทศ"
                 />
@@ -748,7 +748,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW013604_กฎหมายสิ่งแวดล้อมและทรัพยากรธรรมชาติ"
                 />
@@ -756,7 +756,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW013605 อาชญวิทยา"
                 />
@@ -764,7 +764,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW013608_กฎหมายธุรกิจสถาบันการเงิน"
                 />
@@ -772,7 +772,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW014103_นิติทัศนะและจริยธรรมของนักกฎหมาย"
                 />
@@ -780,7 +780,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW014112_การระงับและการไกล่เกลี่ยข้อพิพาท"
                 />
@@ -788,7 +788,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW014149_ระเบียบวิธีวิจัยทางกฎหมาย"
                 />
@@ -796,7 +796,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW014506_การว่าความและศาลจำลอง"
                 />
@@ -804,7 +804,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW014507_กฎหมายว่าด้วยการกระทำความผิดของเด็กและเยาวชน"
                 />
@@ -812,7 +812,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW_ 777 100 ความรู้เบื้องต้นเกี่ยวกับกฎหมายทั่วไป"
                 />
@@ -820,7 +820,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW_ 777 302 กฎหมายว่าด้วยพยานหลักฐาน วปท."
                 />
@@ -828,7 +828,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW_777 201 ทฤษฎีและความรับผิดชอบทางกฎหมายอาญา"
                 />
@@ -836,7 +836,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW_777 440 กฎหมายภาษีอากร 1 KKBS"
                 />
@@ -844,7 +844,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW_BS951111กฎหมายธรุกิจ(คณะบริหารธรุกิจฯ)"
                 />
@@ -852,7 +852,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/_LW_CL403742_กฎหมายธุรกิจ วปท."
                 />
@@ -860,7 +860,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/__LW014761_สัมมนาวิชาชีพนักกฎหมาย"
                 />
@@ -868,7 +868,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/__LW014762_สัมมนากฎหมายธุรกิจ"
                 />
@@ -876,7 +876,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/___LW012204 กฎหมายว่าด้วยหนี้"
                 />
@@ -884,7 +884,7 @@ const courses = () => {
               <div className="box-border ">
                 <img
                   className="box-border rounded border-none align-middle "
-                  onmouseover="this.style.cursor='pointer'"
+                  
                   height="180px"
                   src="https://lawlibrarykku.online/getclassimg/___LW012501 กฎหมายอาญา : บทบัญญัติทั่วไป"
                 />
