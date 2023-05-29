@@ -3,7 +3,7 @@ import { GetServerSideProps } from 'next';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import your icons
-import { faCode, faHighlighter, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
     return (
@@ -226,16 +226,6 @@ const Header = () => {
             </div>
         </div>
     );
-}
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-
-
-    return {
-        props:{
-
-        }
-    }
 }
 
 export default Header
