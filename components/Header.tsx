@@ -1,4 +1,5 @@
-import { GetServerSideProps } from 'next';
+import Link from "next/link";
+import Script from 'next/script'
 // import the library
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,7 +21,7 @@ const Header = () => {
             <div className="mx-0 box-border">
                 <div className="relative box-border min-h-[1px] px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/4" />
                     <div className="flex relative float-left box-border min-h-[1px] w-full px-3.5 md:float-left lg:float-left ">
-                        <a
+                        <Link
                             className="box-border bg-transparent text-white"
                             title="home"
                             href="index.php"
@@ -30,7 +31,7 @@ const Header = () => {
                             width="100%"
                             src="https://lawlibrarykku.online/LOGO_law-kku1.png"
                             />
-                        </a>
+                        </Link>
                         <span className='text-white w-full pl-5 pt-5'>
                             <h6>คณะนิติศาสตร์ มหาวิทยาลัยขอนแก่น</h6>
                             <p>Faculty of Law, Khon Kaen University</p>
@@ -39,13 +40,13 @@ const Header = () => {
                     <div className="relative box-border min-h-[1px] px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/4" />
                     <div className="relative float-left box-border min-h-[1px] w-full px-3.5 md:float-left md:w-full lg:float-left lg:w-full">
                     <div className="box-border font-[Noto_Sans_Thai] float-right text-xs text-[#F2F4F9] mr-[5px] mt-[5px]">
-                        <a
+                        <Link
                         className="box-border bg-transparent text-[#F2F4F9] no-underline"
                         title="Change Language"
                         href="../eng/"
                         >
                         TH/EN
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -61,163 +62,163 @@ const Header = () => {
                                 <ul className="static my-0 box-border pl-0 md:float-left py-4 md:py-0">
                                     {/* Classic list */}
                                     <li className="static box-border block font-[Noto_Sans_Thai] text-sm md:float-left mx-2 h-8 md:w-auto w-[80vw]">
-                                    <a
+                                    <Link
                                         className="relative box-border block bg-transparent leading-5 text-white md:py-3.5 md:text-base xl:text-lg "
                                         href="/"
                                     >
                                         Home
-                                    </a>
+                                    </Link>
                                     </li>
                                     <li className="dropdown static box-border block font-[Noto_Sans_Thai] text-sm md:float-left mx-2 h-8">
-                                    <a
+                                    <Link
                                         className="relative box-border block bg-transparent leading-5 text-white md:py-3.5 md:text-base xl:text-lg"
                                         href="/courses"
                                     >
                                         หมวดวิชา
                                         <b className="inline-block w-0 h-0 align-middle text-[#ffc74c] ml-0.5 border-t-4 border-t-[\9] border-x-4 border-x-transparent border-dashed" />
-                                    </a>
+                                    </Link>
                                     <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 z-20">
                                         <li className="">
-                                            <a
+                                            <Link
                                                 className="rounded-t bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
                                                 href="#"
                                             >
                                                 ภาษา
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="">
-                                            <a
+                                            <Link
                                                 className="bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
                                                 href="#"
                                             >
                                                 เทคโนโลยี
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="">
-                                            <a
+                                            <Link
                                                 className="bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
                                                 href="#"
                                             >
                                                 การจัดการ
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="">
-                                            <a
+                                            <Link
                                                 className="bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
                                                 href="#"
                                             >
                                                 ศิลปะและการพัฒนาตนเอง
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="">
-                                            <a
+                                            <Link
                                                 className="bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
                                                 href="#"
                                             >
                                                 สุขภาพ
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="">
-                                            <a
+                                            <Link
                                                 className="rounded-b bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
                                                 href="#"
                                             >
                                                 คอร์สทั้งหมด
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                     </li>
                                     <li className="dropdown static box-border block font-[Noto_Sans_Thai] text-sm md:float-left mx-2 h-8">
-                                    <a
+                                    <Link
                                         className="relative box-border block bg-transparent leading-5 text-white md:py-3.5 md:text-base xl:text-lg"
                                         href="#"
                                     >
                                         ประเภทผู้เรียน
                                         <b className="inline-block w-0 h-0 align-middle text-[#ffc74c] ml-0.5 border-t-4 border-t-[\9] border-x-4 border-x-transparent border-dashed" />
-                                    </a>
+                                    </Link>
                                     <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 z-20">
                                         <li className="">
-                                            <a
+                                            <Link
                                                 className="rounded-t bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
                                                 href="#"
                                             >
                                                 นิสิตและบุคลากรจุฬาฯ
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="">
-                                            <a
+                                            <Link
                                                 className="bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
                                                 href="#"
                                             >
                                                 บุคคลทั่วไป
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="">
-                                            <a
+                                            <Link
                                                 className="rounded-b bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
                                                 href="#"
                                             >
                                                 Partner
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                     </li>
                                     <li className="static box-border block font-[Noto_Sans_Thai] text-sm md:float-left mx-2 h-8">
-                                    <a
+                                    <Link
                                         className="relative box-border block bg-transparent leading-5 text-white md:py-3.5 md:text-base xl:text-lg"
                                         href="#"
                                     >
                                         คลังความรู้
-                                    </a>
+                                    </Link>
                                     </li>
                                     <li className="static box-border block font-[Noto_Sans_Thai] text-sm md:float-left mx-2 h-8">
-                                    <a
+                                    <Link
                                         className="relative box-border block bg-transparent leading-5 text-white md:py-3.5 md:text-base xl:text-lg"
                                         href="#"
                                     >
                                         ข่าวประชาสัมพันธ์
-                                    </a>
+                                    </Link>
                                     </li>
                                     <li className="static box-border block font-[Noto_Sans_Thai] text-sm md:float-left mx-2 h-8">
-                                    <a
+                                    <Link
                                         className="relative box-border block bg-transparent leading-5 text-white md:py-3.5 md:text-base xl:text-lg"
                                         href="#"
                                     >
                                         คำถามที่พบบ่อย
-                                    </a>
+                                    </Link>
                                     </li>
                                     <li className="dropdown static box-border block font-[Noto_Sans_Thai] text-sm md:float-left mx-2 h-8">
-                                    <a
+                                    <Link
                                         className="relative box-border block bg-transparent leading-5 text-white md:py-3.5 md:text-base xl:text-lg"
                                         href="#"
                                     >
                                         เกี่ยวกับเรา
                                         <b className="inline-block w-0 h-0 align-middle text-[#ffc74c] ml-0.5 border-t-4 border-t-[\9] border-x-4 border-x-transparent border-dashed" />
-                                    </a>
+                                    </Link>
                                     <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 z-20">
                                         <li className="">
-                                            <a
+                                            <Link
                                                 className="rounded-t bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
                                                 href="#"
                                             >
                                                 เกี่ยวกับเรา
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="">
-                                            <a
+                                            <Link
                                                 className="bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
                                                 href="#"
                                             >
                                                 ติดต่อเรา
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="">
-                                            <a
+                                            <Link
                                                 className="rounded-b bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
                                                 href="#"
                                             >
                                                 คลิปอื่น
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                     </li>

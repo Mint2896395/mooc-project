@@ -1,8 +1,8 @@
 import Footer from 'components/Footer';
 import Header from 'components/Header';
-import { GetServerSideProps } from 'next';
 import Head from "next/head";
 import Link from "next/link";
+import Script from 'next/script'
 
 const Detail = () => {
     return (
@@ -67,13 +67,13 @@ const Detail = () => {
                         <div className="box-border w-full max-w-full flex-shrink-0 ">
                         <ul className="my-0 box-border pl-0 ">
                             <li className="float-left mr-3.5 box-border last:mr-0 ">
-                            <a
+                            <Link
                                 className="float-left box-border text-center text-base font-normal text-white hover:block min-w-[200px] bg-yellow-400 rounded-[25px]"
                                 target="_blank"
                                 href="https://www.mycourseville.com/?q=onlinecourse/course/34730"
                             >
                                 บุคคลทั่วไป
-                            </a>
+                            </Link>
                             </li>
                         </ul>
                         </div>

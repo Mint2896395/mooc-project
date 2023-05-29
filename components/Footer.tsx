@@ -1,4 +1,5 @@
-import { GetServerSideProps } from 'next';
+import Link from "next/link";
+import Script from 'next/script'
 
 const Footer = () => {
     return (
@@ -18,58 +19,58 @@ const Footer = () => {
                 <br/>
                 <br/>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1682"
                 >
                      เกี่ยวกับเรา{" "}
-                </a>
+                </Link>
                 </li>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1683"
                 >
                     คำถามที่พบบ่อย{" "}
-                </a>
+                </Link>
                 </li>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1684"
                 >
                     การใช้งาน{" "}
-                </a>
+                </Link>
                 </li>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1685"
                 >
                    ติดต่อเรา{" "}
-                </a>
+                </Link>
                 </li>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1717"
                 >
                     นโยบายความเป็นส่วนตัว{" "}
-                </a>
+                </Link>
                 </li>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1718"
                 >
                     นโยบายคุกกี้{" "}
-                </a>
+                </Link>
                 </li>
             </ul>
             </div>
@@ -83,63 +84,63 @@ const Footer = () => {
                 <br/>
                 <br/>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1687"
                 >
                     ภาษา{" "}
-                </a>
+                </Link>
                 </li>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1688"
                 >
                     เทคโนโลยี{" "}
-                </a>
+                </Link>
                 </li>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1689"
                 >
                     การจัดการ{" "}
-                </a>
+                </Link>
                 </li>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1690"
                 >
                     ศิลปะและการพัฒนาตนเอง{" "}
-                </a>
+                </Link>
                 </li>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1691"
                 >
                     สุขภาพ{" "}
-                </a>
+                </Link>
                 </li>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1719"
                 >
                     คอร์สทั้งหมด{" "}
-                </a>
+                </Link>
                 </li>
             </ul>
             </div>
             <div className="relative float-left box-border w-1/2 px-3.5 md:float-left md:w-1/3 lg:float-left lg:w-1/3 min-h-[1px]">
-            <a
+            <Link
                 className="box-border bg-transparent "
                 target="_blank"
                 href="send.php?a_id=60"
@@ -148,7 +149,7 @@ const Footer = () => {
                     className="box-border mx-auto align-middle w-[50%]"
                     src="https://lawlibrarykku.online/LOGO_law-kku1.png"
                 />
-            </a>
+            </Link>
             </div>
             <div className="relative float-left box-border w-1/2 px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/6 min-h-[1px] text-left border-l-[rgba(165,163,159,0.5)] border-l border-solid">
             <ul className="mt-0 mb-2.5 box-border ">
@@ -160,34 +161,34 @@ const Footer = () => {
                 <br/>
                 <br/>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1693"
                 >
                     <i className="box-border inline-block not-italic leading-none  text-[inherit]" />
                     นิสิตและบุคลากรมหาวิทยาลัยขอนแก่น
-                </a>
+                </Link>
                 </li>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1694"
                 >
                     <i className="box-border inline-block not-italic leading-none  text-[inherit]" />
                     บุคคลทั่วไป
-                </a>
+                </Link>
                 </li>
                 <li className="box-border">
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="send.php?a_id=1695"
                 >
                     <i className="box-border inline-block not-italic leading-none  text-[inherit]" />
                     Partner
-                </a>
+                </Link>
                 </li>
             </ul>
             </div>
@@ -209,32 +210,32 @@ const Footer = () => {
                     <span className="box-border ">โทรศัพท์:</span>
                 </b>
                 <span className="box-border "> </span>
-                <a
+                <Link
                     className="box-border bg-transparent "
                     href="tel:043-203588"
                 >
                     <span className="box-border ">
                         (+66) 43-203588
                     </span>
-                </a>
+                </Link>
                 <span className="box-border "> </span>
                 <br />
                 <b className="box-border font-[bold]">
                     <span className="box-border ">โทรสาร:</span>
                 </b>
                 <span className="box-border "> </span>
-                <a
+                <Link
                     className="box-border bg-transparent "
                     href="tel:043-203588"
                 >
                     <span className="box-border ">
                         (+66) 43-203588
                     </span>
-                </a>
+                </Link>
                 <br />
                 <span className="box-border ">e-mail:</span>
                 <span className="box-border ">&nbsp;</span>
-                <a
+                <Link
                     className="box-border bg-transparent "
                     target="_blank"
                     href="mailto:law@kku.ac.th"
@@ -242,8 +243,8 @@ const Footer = () => {
                     <span className="box-border ">
                         law@kku.ac.th
                     </span>
-                </a>
-                <a
+                </Link>
+                <Link
                     className="box-border bg-transparent "
                     href="tel:04320 3875"
                 />

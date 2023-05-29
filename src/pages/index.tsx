@@ -4,6 +4,7 @@ import Slider from "components/Slider";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import Script from 'next/script'
 
 
 const Home: NextPage = () => {
@@ -199,7 +200,7 @@ const Home: NextPage = () => {
         </div>
       </main>
       <Footer />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js" defer />
     </>
   );
 };
