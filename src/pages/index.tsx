@@ -90,12 +90,12 @@ const Home: NextPage = () => {
     </div>
       <div className="relative box-border w-full max-w-full flex flex-col items-center top-[-90px]">
         <div className="box-border ">
-          <a
+          <Link
             className="box-border rounded-3xl text-center font-medium normal-case tracking-normal border border-[rgba(200,0,114,1)] text-[rgba(200,0,114,1)] open:cursor-pointer font-[inherit] leading-[inherit] min-w-[140px] py-2 px-6 text-sm"
             href="/courses"
           >
             ดูทั้งหมด
-          </a>
+          </Link>
         </div>
       </div>
       <div className="flow-root">
@@ -103,12 +103,7 @@ const Home: NextPage = () => {
           คอร์สที่กำลังเปิด
           </h2>
           <div className="box-border pt-3 float-right pr-10">
-          <a
-            className="box-border rounded-3xl text-center font-medium normal-case tracking-normal border border-[rgba(200,0,114,1)] text-[rgba(200,0,114,1)] open:cursor-pointer font-[inherit] leading-[inherit] w-[140px] py-2 px-6 text-sm"
-            href="/courses"
-          >
-            ดูทั้งหมด
-          </a>
+          <Link className="box-border rounded-3xl text-center font-medium normal-case tracking-normal border border-[rgba(200,0,114,1)] text-[rgba(200,0,114,1)] open:cursor-pointer font-[inherit] leading-[inherit] w-[140px] py-2 px-6 text-sm" href="/courses">ดูทั้งหมด</Link>
         </div>
       </div>
       <div className="box-border justify-center lg:columns-3 columns-1 md:columns-2 space-y-3 px-10 pb-10">
