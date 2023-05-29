@@ -85,7 +85,7 @@ const Detail = () => {
                     {/*<div class="img-width"><img src="images/course/courseIT-01.jpg"></div>*/}
                     {/* VDO */}
                     <div className="relative box-border w-full overflow-hidden">
-                        <iframe width="546" height="307" src="https://www.youtube.com/embed/ukZNOXnKvs8" title="CHULA MOOC | การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพดีมีความสุข" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="546" height="307" src="https://www.youtube.com/embed/ukZNOXnKvs8" title="CHULA MOOC | การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพดีมีความสุข"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                     </div>
                 </div>
                 </div>
