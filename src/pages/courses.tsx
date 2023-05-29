@@ -148,7 +148,7 @@ const courses = () => {
                     <div className="-mt-0 box-border w-full max-w-full flex flex-col items-center flex-shrink-0">
                         <div className="float-none box-border table">
                         <button
-                            className="box-border rounded-3xl text-center text-base font-medium normal-case tracking-normal open:cursor-pointer font-[inherit] leading-[inherit] min-w-[140px] bg-yellow-500 text-white p-2 text-[18px]"
+                            className="box-border rounded-3xl text-center text-base font-medium normal-case tracking-normal open:cursor-pointer font-[inherit] leading-[inherit] min-w-[140px] bg-yellow-400 text-white p-2 text-[18px]"
                             type="submit"
                         >
                             <i className="box-border pr-2 text-sm " />

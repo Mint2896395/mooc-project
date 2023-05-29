@@ -16,7 +16,7 @@ const Header = () => {
                     </h2>
                 </button>
   			 </div>
-            <div className="flex items-center justify-center bg-[#1515ae] pt-20 md:pt-10 pb-[15px] px-[15px]">
+            <div className="flex items-center justify-center bg-blue-900 pt-20 md:pt-10 pb-[15px] px-[15px]">
             <div className="mx-0 box-border">
                 <div className="relative box-border min-h-[1px] px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/4" />
                     <div className="flex relative float-left box-border min-h-[1px] w-full px-3.5 md:float-left lg:float-left ">
@@ -50,9 +50,9 @@ const Header = () => {
                 </div>
             </div>
             </div>
-            <div className="mx-0 box-border h-[0.8px] bg-[#0e0e77]" />
-            <div className="mx-0 box-border h-[0.8px] bg-[#2828ef]" />
-            <div className="flex flex-col items-center justify-center bg-[#1515ae]">
+            <div className="mx-0 box-border h-[0.8px] bg-[#0e0e52]" />
+            <div className="mx-0 box-border h-[0.8px] bg-[#39399e]" />
+            <div className="flex flex-col items-center justify-center bg-blue-900">
                 <div className="mx-0 box-border md:h-12">
                     <div className="relative float-left box-border min-h-[1px] w-full px-3.5 md:float-left md:w-full lg:float-left lg:w-full">
                         {/*Main menu*/}
