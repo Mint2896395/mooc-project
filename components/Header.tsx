@@ -49,7 +49,7 @@ const Header = () => {
             <div className="mx-0 box-border h-[0.8px] bg-[#0e0e77]" />
             <div className="mx-0 box-border h-[0.8px] bg-[#2828ef]" />
             <div className="flex flex-col items-center justify-center bg-[#1515ae]">
-                <div className="mx-0 box-border">
+                <div className="mx-0 box-border md:h-12">
                     <div className="relative float-left box-border min-h-[1px] w-full px-3.5 md:float-left md:w-full lg:float-left lg:w-full">
                         {/*Main menu*/}
                         <div className="relative mb-0 box-border md:rounded">
@@ -59,7 +59,7 @@ const Header = () => {
                                     <li className="static box-border block font-[Noto_Sans_Thai] text-sm md:float-left mx-2 h-8 md:w-auto w-[80vw]">
                                     <a
                                         className="relative box-border block bg-transparent leading-5 text-white md:py-3.5 md:text-base xl:text-lg "
-                                        href="#"
+                                        href="/"
                                     >
                                         Home
                                     </a>
@@ -67,7 +67,7 @@ const Header = () => {
                                     <li className="dropdown static box-border block font-[Noto_Sans_Thai] text-sm md:float-left mx-2 h-8">
                                     <a
                                         className="relative box-border block bg-transparent leading-5 text-white md:py-3.5 md:text-base xl:text-lg"
-                                        href="#"
+                                        href="/courses"
                                     >
                                         หมวดวิชา
                                         <b className="inline-block w-0 h-0 align-middle text-[#ffc74c] ml-0.5 border-t-4 border-t-[\9] border-x-4 border-x-transparent border-dashed" />
