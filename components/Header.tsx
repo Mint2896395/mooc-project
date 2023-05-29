@@ -19,7 +19,7 @@ const Header = () => {
             <div className="flex items-center justify-center bg-[#1515ae] pt-20 md:pt-10 pb-[15px] px-[15px]">
             <div className="mx-0 box-border">
                 <div className="relative box-border min-h-[1px] px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/4" />
-                    <div className="relative float-left box-border min-h-[1px] w-full px-3.5 md:float-left md:w-2/3 lg:float-left lg:w-1/2">
+                    <div className="flex relative float-left box-border min-h-[1px] w-full px-3.5 md:float-left lg:float-left ">
                         <a
                             className="box-border bg-transparent text-white"
                             title="home"
@@ -28,9 +28,13 @@ const Header = () => {
                             <img
                             className="box-border align-middle"
                             width="100%"
-                            src="https://www.cola.kku.ac.th/cola/web/admin/images/article/2020-09-221600758719.png"
+                            src="https://lawlibrarykku.online/LOGO_law-kku1.png"
                             />
                         </a>
+                        <span className='text-white w-full pl-5 pt-5'>
+                            <h6>คณะนิติศาสตร์ มหาวิทยาลัยขอนแก่น</h6>
+                            <p>Faculty of Law, Khon Kaen University</p>
+                        </span>
                     </div>
                     <div className="relative box-border min-h-[1px] px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/4" />
                     <div className="relative float-left box-border min-h-[1px] w-full px-3.5 md:float-left md:w-full lg:float-left lg:w-full">

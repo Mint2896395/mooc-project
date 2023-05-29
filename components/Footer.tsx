@@ -11,11 +11,11 @@ const Footer = () => {
             <div className="relative float-left box-border w-1/2 px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/6 min-h-[1px] text-right border-r-[rgba(165,163,159,0.5)] border-r border-solid">
             <ul className="mt-0 mb-2.5 box-border ">
                 <span className="box-border">
-                    <span className="box-border text-sm">
-                        CHULA MOOC
+                    <span className="box-border text-sm underline decoration-sky-500 underline-offset-8">
+                        LAW KKU
                     </span>
                 </span>
-                <div className="h-[2px] bg-[#f14ce1]"></div>
+                <br/>
                 <br/>
                 <li className="box-border">
                 <a
@@ -76,11 +76,11 @@ const Footer = () => {
             <div className="relative float-left box-border w-1/2 px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/6 min-h-[1px] text-right border-r-[rgba(165,163,159,0.5)] border-r border-solid">
             <ul className="mt-0 mb-2.5 box-border ">
                 <span className="box-border">
-                    <span className="box-border text-sm">
+                    <span className="box-border text-sm underline decoration-sky-500 underline-offset-8">
                         หมวดวิชา
                     </span>
                 </span>
-                <div className="h-[2px] bg-[#f14ce1]"></div>
+                <br/>
                 <br/>
                 <li className="box-border">
                 <a
@@ -146,18 +146,18 @@ const Footer = () => {
             >
                 <img
                     className="box-border mx-auto align-middle w-[50%]"
-                    src="https://mooc.chula.ac.th/images/cumooc-WHlogo.svg"
+                    src="https://lawlibrarykku.online/LOGO_law-kku1.png"
                 />
             </a>
             </div>
             <div className="relative float-left box-border w-1/2 px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/6 min-h-[1px] text-left border-l-[rgba(165,163,159,0.5)] border-l border-solid">
             <ul className="mt-0 mb-2.5 box-border ">
                 <span className="box-border">
-                    <span className="box-border text-sm">
+                    <span className="box-border text-sm underline decoration-sky-500 underline-offset-8">
                         ประเภทผู้เรียน
                     </span>
                 </span>
-                <div className="h-[2px] bg-[#f14ce1]"></div>
+                <br/>
                 <br/>
                 <li className="box-border">
                 <a
@@ -166,7 +166,7 @@ const Footer = () => {
                     href="send.php?a_id=1693"
                 >
                     <i className="box-border inline-block not-italic leading-none  text-[inherit]" />
-                    นิสิตและบุคลากรจุฬาฯ
+                    นิสิตและบุคลากรมหาวิทยาลัยขอนแก่น
                 </a>
                 </li>
                 <li className="box-border">
@@ -196,13 +196,13 @@ const Footer = () => {
                 <b className="box-border font-[bold]">
                     <span className="box-border text-xs">
                         <span className="box-border text-sm leading-3">
-                            วิทยาลัยการปกครองท้องถิ่น มหาวิทยาลัยขอนแก่น
+                        คณะนิติศาสตร์ มหาวิทยาลัยขอนแก่น
                         </span>
                     </span>
                 </b>
                 <br />
                 <span className="box-border ">
-                    123 มหาวิทยาลัยขอนแก่น 40002, ประเทศไทย
+                123 หมู่ 16 ถ.มิตรภาพ ต.ในเมือง อ.เมือง จ.ขอนแก่น, ประเทศไทย
                 </span>
                 <br />
                 <b className="box-border font-[bold]">
@@ -211,10 +211,10 @@ const Footer = () => {
                 <span className="box-border "> </span>
                 <a
                     className="box-border bg-transparent "
-                    href="tel:04320 3124"
+                    href="tel:043-203588"
                 >
                     <span className="box-border ">
-                        (+66) 4320 3124
+                        (+66) 43-203588
                     </span>
                 </a>
                 <span className="box-border "> </span>
@@ -225,10 +225,10 @@ const Footer = () => {
                 <span className="box-border "> </span>
                 <a
                     className="box-border bg-transparent "
-                    href="tel:04320 3875"
+                    href="tel:043-203588"
                 >
                     <span className="box-border ">
-                        (+66) 4320 3875
+                        (+66) 43-203588
                     </span>
                 </a>
                 <br />
@@ -237,10 +237,10 @@ const Footer = () => {
                 <a
                     className="box-border bg-transparent "
                     target="_blank"
-                    href="mailto:cola@kku.ac.th"
+                    href="mailto:law@kku.ac.th"
                 >
                     <span className="box-border ">
-                        cola@kku.ac.th
+                        law@kku.ac.th
                     </span>
                 </a>
                 <a
@@ -258,7 +258,7 @@ const Footer = () => {
         <div className="h-[0.6px] bg-[#4e4e4e]"></div>
         <div className="bg-[#403f3f] text-xs">
             <div className="text-center text-white">
-                <br/><p className="box-border ">© 2023 CHULA MOOC. ALL RIGHTS RESERVED</p>
+                <br/><p className="box-border ">© 2023 LAW KKU. ALL RIGHTS RESERVED</p>
                 <br/>
             </div>
         </div>
