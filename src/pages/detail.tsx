@@ -1,3 +1,4 @@
+import Footer from 'components/Footer';
 import Header from 'components/Header';
 import { GetServerSideProps } from 'next';
 import Head from "next/head";
@@ -96,6 +97,81 @@ const Detail = () => {
             ช่วงเวลาเรียนสำหรับบุคคลทั่วไป
             </h2>
         </div>
+        <div className="relative box-border flex w-full max-w-full flex-shrink-0 pl-0 ">
+        <div className="box-border z-[-1]">
+        <img src="https://mooc.chula.ac.th/img/upload/การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพ.png" />
+        </div>
+    <div className="bg-gray-100 pl-20 pt-10 box-border tracking-normal w-[calc(100%_-_12px)]">
+      <div className="box-border flex flex-wrap mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)]">
+        <div className="box-border w-full  max-w-full flex-shrink-0 text-xl leading-8 md:w-1/3 lg:w-1/3 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)] text-[rgba(37,37,37,1)]">
+          เนื้อหา
+        </div>
+        <div className="box-border w-full max-w-full flex-shrink-0 pl-0 text-lg leading-8 md:w-2/3 lg:w-2/3 pr-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
+          8 บทเรียน
+        </div>
+      </div>
+      <div className="box-border flex flex-wrap mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)]">
+        <div className="box-border w-full max-w-full flex-shrink-0 text-xl leading-8 md:w-1/3 lg:w-1/3 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]  text-[rgba(37,37,37,1)]">
+          กลุ่มเป้าหมาย
+        </div>
+        <div className="box-border w-full max-w-full flex-shrink-0 pl-0 text-lg leading-8 md:w-2/3 lg:w-2/3 pr-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
+          นักเรียน นิสิต นักศึกษา และบุคคลทั่วไป จำนวน 5,000 คน
+        </div>
+      </div>
+      <div className="box-border flex flex-wrap mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)]">
+        <div className="box-border w-full max-w-full flex-shrink-0 text-xl leading-8 md:w-1/3 lg:w-1/3 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]  text-[rgba(37,37,37,1)]">
+          เกณฑ์การเรียนจบ
+        </div>
+        <div className="box-border w-full max-w-full flex-shrink-0 pl-0 text-lg leading-8 md:w-2/3 lg:w-2/3 pr-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
+          ผู้เรียนต้องทำคะแนนรวมทั้งหมดให้ได้ร้อยละ 60 ขึ้นไป
+        </div>
+      </div>
+      <div className="box-border flex flex-wrap mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)]">
+        <div className="box-border w-full max-w-full flex-shrink-0 text-xl leading-8 md:w-1/3 lg:w-1/3 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]  text-[rgba(37,37,37,1)]">
+          แพลตฟอร์ม
+        </div>
+        <div className="box-border w-full max-w-full flex-shrink-0 pl-0 text-lg leading-8 md:w-2/3 lg:w-2/3 pr-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
+          myCourseVille
+        </div>
+      </div>
+    </div>
+  </div>
+  <div className='flex p-10'>
+  <span className="box-border w-1/2 p-5">
+    <p className="mt-0 mb-11  box-border table text-3xl font-medium tracking-wide xl:text-3xl leading-[normal]  text-[rgba(17,17,17,1)] underline decoration-sky-500 underline-offset-8">
+    เกี่ยวกับรายวิชา
+          </p>
+    <p>
+    วิชา การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพดีมีความสุข (Aging Society and The Oral Health Care) เป็นการนำเสนอความรู้เรื่องการดูแลสุขภาพตนเองซึ่งเป็นเรื่องที่สำคัญ เพื่อให้ประชาชนมีสุขภาพดีและมีความสุขในทุกช่วงวัย โดยจะมุ่งเน้นการสร้างความรอบรู้ด้านสุขภาพในมิติต่าง ๆ ตามแนวทางการบูรณาการดูแลผู้สูงอายุขององค์การอนามัยโลก ซึ่งเป็นผลผลิตจากการประชุมผู้เชี่ยวชาญ และความร่วมมือกับกรมอนามัย กรมการแพทย์ สำนักอนามัย สสส. ภายใต้โครงการบูรณาการสหศาสตร์เพื่อรองรับสังคมสูงวัย (จุฬาอารี) เพื่อให้ผู้เรียนมีความรู้และทักษะที่จำเป็นก่อนเข้าสู่วัยผู้สูงอายุ สำหรับเนื้อหาวิชาจะประกอบด้วย ความรอบรู้ และการตระหนักรู้ตนเองด้านสุขภาพ กิจกรรมทางกาย โภชนาการเพื่อสุขภาพดี การได้ยิน และการมองเห็น การดูแลตนเองเพื่อชะลอสมองเสื่อม การดูแลสุขภาพช่องปาก และการดูแลสุขภาพจิต เป็นต้น
+    </p>
+    <br />
+    <p>หัวข้อวิชา การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพดีมีความสุข</p>
+    <br />
+    <p>บทที่ 1 ความรอบรู้และการตระหนักรู้ตนเองด้านสุขภาพตามแนวทางองค์การอนามัยโลก</p>
+    <p>บทที่ 2 กิจกรรมทางกายเพื่อสุขภาพดีมีความสุข</p>
+    <p>บทที่ 3 โภชนาการเพื่อสุขภาพดีมีความสุข</p>
+    <p>บทที่ 4 การได้ยินและการมองเห็นเพื่อสุขภาพดีมีความสุข</p>
+    <p>บทที่ 5 การดูแลตนเองเพื่อชะลอสมองเสื่อมเพื่อสุขภาพดีมีความสุข
+
+</p>
+    <p>บทที่ 6 การดูแลสุขภาพจิตเพื่อสุขภาพดีมีความสุขและสุขภาวะ
+
+</p>
+</span>
+
+  <span className='w-1/2 p-5'>
+  <p className="mt-0 mb-11  box-border table text-3xl font-medium tracking-wide xl:text-3xl leading-[normal]  text-[rgba(17,17,17,1)] underline decoration-sky-500 underline-offset-8">
+  วัตถุประสงค์
+          </p>
+    <p>1.เพื่อให้ผู้เรียนสามารถนำความรู้ที่ได้จากบทเรียนไปใช้ในการดูแลตนเองเพื่อเตรียมพร้อมสู่การเป็นผู้สูงวัยสุขภาพดีมีความสุข</p>
+    <p>
+    2.เพื่อให้ผู้เรียนสามารถถ่ายทอดความรู้และทักษะในการดูแลสุขภาพตนเองแก่ประชาชนทั่วไปและผู้ที่สนใจการดูแลตนเองสู่การเป็นผู้สูงวัยสุขภาพดีมีความสุข
+    </p>
+
+  </span>
+
+  </div>
+  <Footer />
       </>   
     );
 }
