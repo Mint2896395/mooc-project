@@ -82,7 +82,7 @@ const Detail = () => {
                 </div>
                 <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 pl-5 md:w-5/6 lg:w-1/2 ">
                     {/* IMAGE */}
-                    {/*<div class="img-width"><img src="images/course/courseIT-01.jpg"></div>*/}
+                    {/*<div className="img-width"><img src="images/course/courseIT-01.jpg"></div>*/}
                     {/* VDO */}
                     <div className="relative box-border w-full overflow-hidden">
                         <iframe width="546" height="307" src="https://www.youtube.com/embed/ukZNOXnKvs8" title="CHULA MOOC | การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพดีมีความสุข"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
@@ -92,51 +92,56 @@ const Detail = () => {
             </div>
             </div>
       </div> 
-      <div className="box-border w-full max-w-full flex-shrink-0 flex flex-col items-center pt-10">
-            <h2 className="relative float-none mt-0 mb-11 box-border table text-center text-3xl font-medium tracking-wide xl:text-3xl leading-[normal]  text-[rgba(17,17,17,1)] underline decoration-sky-500 underline-offset-8 ">
-            ช่วงเวลาเรียนสำหรับบุคคลทั่วไป
-            </h2>
+        
+        <div className="box-border w-full max-w-full flex-shrink-0 flex flex-col items-center py-10">
+            <div
+                className="flex space-x-3 items-center px-1 py-1 bg-indigo-500 rounded-full drop-shadow-md w-fit">
+                <div className="box-border flex justify-center items-center h-10 w-10 bg-white rounded-[50%]">
+                    <img className="box-border h-6 w-6 " src="https://mooc.chula.ac.th/images/icon/icon-calendar.svg" />
+                </div>
+                <span className="text-white text-xl pr-2 font-bold">ช่วงเวลาเรียนสำหรับบุคคลทั่วไป</span>
+            </div>
         </div>
-        <div className="relative box-border flex w-full max-w-full flex-shrink-0 pl-0 ">
+        <div className="relative box-border md:flex w-full max-w-full flex-shrink-0 pl-0 ">
         <div className="box-border z-[-1]">
         <img src="https://mooc.chula.ac.th/img/upload/การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพ.png" />
         </div>
-    <div className="bg-gray-100 pl-20 pt-10 box-border tracking-normal w-[calc(100%_-_12px)]">
+    <div className="bg-gray-100 pl-10 md:pl-20 pt-10 box-border tracking-normal w-[calc(100%_-_12px)]">
       <div className="box-border flex flex-wrap mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)]">
-        <div className="box-border w-full  max-w-full flex-shrink-0 text-xl leading-8 md:w-1/3 lg:w-1/3 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)] text-[rgba(37,37,37,1)]">
+        <div className="box-border w-full  max-w-full flex-shrink-0 text-lg leading-8 md:w-1/3 lg:w-1/3 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)] text-[rgba(37,37,37,1)]">
           เนื้อหา
         </div>
-        <div className="box-border w-full max-w-full flex-shrink-0 pl-0 text-lg leading-8 md:w-2/3 lg:w-2/3 pr-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
+        <div className="box-border w-full max-w-full flex-shrink-0 pl-0 text-base leading-8 md:w-2/3 lg:w-2/3 pr-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
           8 บทเรียน
         </div>
       </div>
       <div className="box-border flex flex-wrap mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)]">
-        <div className="box-border w-full max-w-full flex-shrink-0 text-xl leading-8 md:w-1/3 lg:w-1/3 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]  text-[rgba(37,37,37,1)]">
+        <div className="box-border w-full max-w-full flex-shrink-0 text-lg leading-8 md:w-1/3 lg:w-1/3 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]  text-[rgba(37,37,37,1)]">
           กลุ่มเป้าหมาย
         </div>
-        <div className="box-border w-full max-w-full flex-shrink-0 pl-0 text-lg leading-8 md:w-2/3 lg:w-2/3 pr-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
+        <div className="box-border w-full max-w-full flex-shrink-0 pl-0 text-base leading-8 md:w-2/3 lg:w-2/3 pr-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
           นักเรียน นิสิต นักศึกษา และบุคคลทั่วไป จำนวน 5,000 คน
         </div>
       </div>
       <div className="box-border flex flex-wrap mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)]">
-        <div className="box-border w-full max-w-full flex-shrink-0 text-xl leading-8 md:w-1/3 lg:w-1/3 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]  text-[rgba(37,37,37,1)]">
+        <div className="box-border w-full max-w-full flex-shrink-0 text-lg leading-8 md:w-1/3 lg:w-1/3 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]  text-[rgba(37,37,37,1)]">
           เกณฑ์การเรียนจบ
         </div>
-        <div className="box-border w-full max-w-full flex-shrink-0 pl-0 text-lg leading-8 md:w-2/3 lg:w-2/3 pr-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
+        <div className="box-border w-full max-w-full flex-shrink-0 pl-0 text-base leading-8 md:w-2/3 lg:w-2/3 pr-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
           ผู้เรียนต้องทำคะแนนรวมทั้งหมดให้ได้ร้อยละ 60 ขึ้นไป
         </div>
       </div>
       <div className="box-border flex flex-wrap mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)]">
-        <div className="box-border w-full max-w-full flex-shrink-0 text-xl leading-8 md:w-1/3 lg:w-1/3 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]  text-[rgba(37,37,37,1)]">
+        <div className="box-border w-full max-w-full flex-shrink-0 text-lg  leading-8 md:w-1/3 lg:w-1/3 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]  text-[rgba(37,37,37,1)]">
           แพลตฟอร์ม
         </div>
-        <div className="box-border w-full max-w-full flex-shrink-0 pl-0 text-lg leading-8 md:w-2/3 lg:w-2/3 pr-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
+        <div className="box-border w-full max-w-full flex-shrink-0 pl-0 text-base leading-8 md:w-2/3 lg:w-2/3 pr-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
           myCourseVille
         </div>
       </div>
     </div>
   </div>
-  <div className='flex p-10'>
+  <div className='md:flex p-10'>
   <span className="box-border w-1/2 p-5">
     <p className="mt-0 mb-11  box-border table text-3xl font-medium tracking-wide xl:text-3xl leading-[normal]  text-[rgba(17,17,17,1)] underline decoration-sky-500 underline-offset-8">
     เกี่ยวกับรายวิชา

@@ -4,6 +4,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Script from 'next/script'
+import 'flowbite';
 
 const courses = () => {
     return (
@@ -26,12 +27,13 @@ const courses = () => {
           
           <hr className="my-6 box-content h-0 overflow-visible border-solid" />
         </center>
-        <div className="mx-20">
-            <div className="relative mb-20 box-border rounded-lg mt-[-120px] z-[1] bg-gradient-to-r from-cyan-500 to-blue-500 p-10">
-                <div className="box-border gap-1 flex">
+        <div className="md:mx-20 mx-5">
+            <div className="relative mb-20 box-border rounded-lg mt-[-120px] z-[1] bg-gradient-to-r from-cyan-500 to-blue-500 md:p-10 p-5">
+                <div className="box-border gap-1 md:flex md:columns-3 columns-1">
                 <div className="box-border w-full max-w-full flex-shrink-0 md:w-1/3 lg:w-1/3 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
+
                     <select
-                    className="mb-5 box-border block w-full rounded-lg bg-white bg-no-repeat text-center align-middle text-base font-normal normal-case font-[inherit] leading-[normal] text-[rgba(99,99,99,1)] bg-[16px_12px]"
+                    className=" mb-5 box-border block w-full rounded-lg bg-white bg-no-repeat text-center align-middle text-base font-normal normal-case font-[inherit] leading-[normal] text-[rgba(99,99,99,1)] bg-[16px_12px]"
                     name="learner_type"
                     >
                     <option
