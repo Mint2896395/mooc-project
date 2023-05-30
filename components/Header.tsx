@@ -54,7 +54,7 @@ const Header = () => {
             <div className="mx-0 box-border h-[0.8px] bg-[#0e0e52]" />
             <div className="mx-0 box-border h-[0.8px] bg-[#39399e]" />
             <div className="flex flex-col items-center justify-center bg-blue-900">
-                <div className="mx-0 box-border md:h-12">
+                <div className="mx-0 box-border md:h-14">
                     <div className="relative float-left box-border min-h-[1px] w-full px-3.5 md:float-left md:w-full lg:float-left lg:w-full">
                         {/*Main menu*/}
                         <div className="relative mb-0 box-border md:rounded">
@@ -77,7 +77,7 @@ const Header = () => {
                                         หมวดวิชา
                                         <b className="inline-block w-0 h-0 align-middle text-[#ffc74c] ml-0.5 border-t-4 border-t-[\9] border-x-4 border-x-transparent border-dashed" />
                                     </Link>
-                                    <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 z-20">
+                                    <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 z-50">
                                         <li className="">
                                             <Link
                                                 className="rounded-t bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
@@ -136,7 +136,7 @@ const Header = () => {
                                         ประเภทผู้เรียน
                                         <b className="inline-block w-0 h-0 align-middle text-[#ffc74c] ml-0.5 border-t-4 border-t-[\9] border-x-4 border-x-transparent border-dashed" />
                                     </Link>
-                                    <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 z-20">
+                                    <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 z-50">
                                         <li className="">
                                             <Link
                                                 className="rounded-t bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
@@ -195,7 +195,7 @@ const Header = () => {
                                         เกี่ยวกับเรา
                                         <b className="inline-block w-0 h-0 align-middle text-[#ffc74c] ml-0.5 border-t-4 border-t-[\9] border-x-4 border-x-transparent border-dashed" />
                                     </Link>
-                                    <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 z-20">
+                                    <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 z-50">
                                         <li className="">
                                             <Link
                                                 className="rounded-t bg-blue-200 hover:bg-blue-400 py-2 px-4 block whitespace-no-wrap"
