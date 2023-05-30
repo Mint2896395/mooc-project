@@ -3,6 +3,9 @@ import Header from 'components/Header';
 import Head from "next/head";
 import Link from "next/link";
 import Script from 'next/script'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import your icons
+import { faCalendar, faBook, faPenToSquare, faFilePen, faBullseye, faThumbtack, faLaptop, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const Detail = () => {
     return (
@@ -95,9 +98,9 @@ const Detail = () => {
         
         <div className="box-border w-full max-w-full flex-shrink-0 flex flex-col items-center py-10">
             <div
-                className="flex space-x-3 items-center px-1 py-1 bg-indigo-500 rounded-full drop-shadow-md w-fit">
+                className="flex space-x-3 items-center px-1 py-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full drop-shadow-md w-fit">
                 <div className="box-border flex justify-center items-center h-10 w-10 bg-white rounded-[50%]">
-                    <img className="box-border h-6 w-6 " src="https://mooc.chula.ac.th/images/icon/icon-calendar.svg" />
+                    <FontAwesomeIcon icon={faCalendar} style={{width: '20px'}} className='text-blue-400 box-border inline-block not-italic leading-none' />
                 </div>
                 <span className="text-white text-xl pr-2 font-bold">ช่วงเวลาเรียนสำหรับบุคคลทั่วไป</span>
             </div>
@@ -141,41 +144,191 @@ const Detail = () => {
       </div>
     </div>
   </div>
-  <div className='md:flex p-10'>
-  <span className="box-border w-1/2 p-5">
-    <p className="mt-0 mb-11  box-border table text-3xl font-medium tracking-wide xl:text-3xl leading-[normal]  text-[rgba(17,17,17,1)] underline decoration-sky-500 underline-offset-8">
-    เกี่ยวกับรายวิชา
-          </p>
-    <p>
-    วิชา การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพดีมีความสุข (Aging Society and The Oral Health Care) เป็นการนำเสนอความรู้เรื่องการดูแลสุขภาพตนเองซึ่งเป็นเรื่องที่สำคัญ เพื่อให้ประชาชนมีสุขภาพดีและมีความสุขในทุกช่วงวัย โดยจะมุ่งเน้นการสร้างความรอบรู้ด้านสุขภาพในมิติต่าง ๆ ตามแนวทางการบูรณาการดูแลผู้สูงอายุขององค์การอนามัยโลก ซึ่งเป็นผลผลิตจากการประชุมผู้เชี่ยวชาญ และความร่วมมือกับกรมอนามัย กรมการแพทย์ สำนักอนามัย สสส. ภายใต้โครงการบูรณาการสหศาสตร์เพื่อรองรับสังคมสูงวัย (จุฬาอารี) เพื่อให้ผู้เรียนมีความรู้และทักษะที่จำเป็นก่อนเข้าสู่วัยผู้สูงอายุ สำหรับเนื้อหาวิชาจะประกอบด้วย ความรอบรู้ และการตระหนักรู้ตนเองด้านสุขภาพ กิจกรรมทางกาย โภชนาการเพื่อสุขภาพดี การได้ยิน และการมองเห็น การดูแลตนเองเพื่อชะลอสมองเสื่อม การดูแลสุขภาพช่องปาก และการดูแลสุขภาพจิต เป็นต้น
-    </p>
-    <br />
-    <p>หัวข้อวิชา การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพดีมีความสุข</p>
-    <br />
-    <p>บทที่ 1 ความรอบรู้และการตระหนักรู้ตนเองด้านสุขภาพตามแนวทางองค์การอนามัยโลก</p>
-    <p>บทที่ 2 กิจกรรมทางกายเพื่อสุขภาพดีมีความสุข</p>
-    <p>บทที่ 3 โภชนาการเพื่อสุขภาพดีมีความสุข</p>
-    <p>บทที่ 4 การได้ยินและการมองเห็นเพื่อสุขภาพดีมีความสุข</p>
-    <p>บทที่ 5 การดูแลตนเองเพื่อชะลอสมองเสื่อมเพื่อสุขภาพดีมีความสุข
+  <div className='md:flex px-10 pt-10'>
+    <span className="box-border w-1/2 p-5 space-y-3.5 > * + *">
+        <div className="box-border w-full max-w-full flex-shrink-0 flex flex-col  pb-5">
+            <div
+                className="flex space-x-3 items-center px-1 py-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full drop-shadow-md w-fit">
+                <div className="box-border flex justify-center items-center h-10 w-10 bg-white rounded-[50%]">
+                    <FontAwesomeIcon icon={faBook} style={{width: '20px'}} className='text-blue-400 box-border inline-block not-italic leading-none' />
+                </div>
+                <span className="text-white text-xl pr-2 font-bold">เกี่ยวกับรายวิชา</span>
+            </div>
+        </div>  
+        <p>
+        วิชา การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพดีมีความสุข (Aging Society and The Oral Health Care) เป็นการนำเสนอความรู้เรื่องการดูแลสุขภาพตนเองซึ่งเป็นเรื่องที่สำคัญ เพื่อให้ประชาชนมีสุขภาพดีและมีความสุขในทุกช่วงวัย โดยจะมุ่งเน้นการสร้างความรอบรู้ด้านสุขภาพในมิติต่าง ๆ ตามแนวทางการบูรณาการดูแลผู้สูงอายุขององค์การอนามัยโลก ซึ่งเป็นผลผลิตจากการประชุมผู้เชี่ยวชาญ และความร่วมมือกับกรมอนามัย กรมการแพทย์ สำนักอนามัย สสส. ภายใต้โครงการบูรณาการสหศาสตร์เพื่อรองรับสังคมสูงวัย (จุฬาอารี) เพื่อให้ผู้เรียนมีความรู้และทักษะที่จำเป็นก่อนเข้าสู่วัยผู้สูงอายุ สำหรับเนื้อหาวิชาจะประกอบด้วย ความรอบรู้ และการตระหนักรู้ตนเองด้านสุขภาพ กิจกรรมทางกาย โภชนาการเพื่อสุขภาพดี การได้ยิน และการมองเห็น การดูแลตนเองเพื่อชะลอสมองเสื่อม การดูแลสุขภาพช่องปาก และการดูแลสุขภาพจิต เป็นต้น
+        </p>
+    </span>
 
-</p>
-    <p>บทที่ 6 การดูแลสุขภาพจิตเพื่อสุขภาพดีมีความสุขและสุขภาวะ
-
-</p>
-</span>
-
-  <span className='w-1/2 p-5'>
-  <p className="mt-0 mb-11  box-border table text-3xl font-medium tracking-wide xl:text-3xl leading-[normal]  text-[rgba(17,17,17,1)] underline decoration-sky-500 underline-offset-8">
-  วัตถุประสงค์
-          </p>
-    <p>1.เพื่อให้ผู้เรียนสามารถนำความรู้ที่ได้จากบทเรียนไปใช้ในการดูแลตนเองเพื่อเตรียมพร้อมสู่การเป็นผู้สูงวัยสุขภาพดีมีความสุข</p>
-    <p>
-    2.เพื่อให้ผู้เรียนสามารถถ่ายทอดความรู้และทักษะในการดูแลสุขภาพตนเองแก่ประชาชนทั่วไปและผู้ที่สนใจการดูแลตนเองสู่การเป็นผู้สูงวัยสุขภาพดีมีความสุข
-    </p>
-
-  </span>
+    <span className='w-1/2 p-5 space-y-3.5 > * + *'>
+        <div className="box-border w-full max-w-full flex-shrink-0 flex flex-col pb-5">
+            <div
+                className="flex space-x-3 items-center px-1 py-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full drop-shadow-md w-fit">
+                <div className="box-border flex justify-center items-center h-10 w-10 bg-white rounded-[50%]">
+                    <FontAwesomeIcon icon={faPenToSquare} style={{width: '20px'}} className='text-blue-400 box-border inline-block not-italic leading-none' />
+                </div>
+                <span className="text-white text-xl pr-2 font-bold">เนื้อหารายวิชา</span>
+            </div>
+        </div>  
+        <p>หัวข้อวิชา การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพดีมีความสุข</p>
+        <p>บทที่ 1 ความรอบรู้และการตระหนักรู้ตนเองด้านสุขภาพตามแนวทางองค์การอนามัยโลก</p>
+        <p>บทที่ 2 กิจกรรมทางกายเพื่อสุขภาพดีมีความสุข</p>
+        <p>บทที่ 3 โภชนาการเพื่อสุขภาพดีมีความสุข</p>
+        <p>บทที่ 4 การได้ยินและการมองเห็นเพื่อสุขภาพดีมีความสุข</p>
+        <p>บทที่ 5 การดูแลตนเองเพื่อชะลอสมองเสื่อมเพื่อสุขภาพดีมีความสุข</p>
+        <p>บทที่ 6 การดูแลสุขภาพจิตเพื่อสุขภาพดีมีความสุขและสุขภาวะ</p>
+    </span>
 
   </div>
+  <div className='md:flex px-10 pt-10'>
+    <span className="box-border w-1/2 p-5 space-y-3.5 > * + *">
+        <div className="box-border w-full max-w-full flex-shrink-0 flex flex-col  pb-5">
+            <div
+                className="flex space-x-3 items-center px-1 py-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full drop-shadow-md w-fit">
+                <div className="box-border flex justify-center items-center h-10 w-10 bg-white rounded-[50%]">
+                    <FontAwesomeIcon icon={faFilePen} style={{width: '20px'}} className='text-blue-400 box-border inline-block not-italic leading-none' />
+                </div>
+                <span className="text-white text-xl pr-2 font-bold">เกณฑ์การวัดและประเมินผล</span>
+            </div>
+        </div>  
+        <p>
+        การวัดและประเมินผลผ่านแบบทดสอบย่อย (Quiz) และแบบทดสอบหลังเรียน (Posttest) โดยจะแบ่งเป็นคะแนนจาก Quiz เท่ากับ 50 คะแนน และคะแนนจาก Posttest เท่ากับ 50 คะแนน ทั้งนี้ผู้เรียนต้องทำคะแนนรวมทั้งหมดให้ได้ร้อยละ 60 ขึ้นไปจึงจะสามารถขอรับ Certificate of Completion ได้
+        </p>
+    </span>
+
+    <span className='w-1/2 p-5 space-y-3.5 > * + *'>
+        <div className="box-border w-full max-w-full flex-shrink-0 flex flex-col pb-5">
+            <div
+                className="flex space-x-3 items-center px-1 py-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full drop-shadow-md w-fit">
+                <div className="box-border flex justify-center items-center h-10 w-10 bg-white rounded-[50%]">
+                    <FontAwesomeIcon icon={faBullseye} style={{width: '20px'}} className='text-blue-400 box-border inline-block not-italic leading-none' />
+                </div>
+                <span className="text-white text-xl pr-2 font-bold">วัตถุประสงค์</span>
+            </div>
+        </div>  
+        <p>1.เพื่อให้ผู้เรียนสามารถนำความรู้ที่ได้จากบทเรียนไปใช้ในการดูแลตนเองเพื่อเตรียมพร้อมสู่การเป็นผู้สูงวัยสุขภาพดีมีความสุข</p>
+        <p>
+        2.เพื่อให้ผู้เรียนสามารถถ่ายทอดความรู้และทักษะในการดูแลสุขภาพตนเองแก่ประชาชนทั่วไปและผู้ที่สนใจการดูแลตนเองสู่การเป็นผู้สูงวัยสุขภาพดีมีความสุข
+        </p>
+    </span>
+
+  </div>
+  <div className='md:flex px-10 pt-10'>
+    <span className="box-border w-1/2 p-5 space-y-3.5 > * + *">
+        <div className="box-border w-full max-w-full flex-shrink-0 flex flex-col  pb-5">
+            <div
+                className="flex space-x-3 items-center px-1 py-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full drop-shadow-md w-fit">
+                <div className="box-border flex justify-center items-center h-10 w-10 bg-white rounded-[50%]">
+                    <FontAwesomeIcon icon={faThumbtack} style={{width: '20px'}} className='text-blue-400 box-border inline-block not-italic leading-none' />
+                </div>
+                <span className="text-white text-xl pr-2 font-bold">หมายเหตุ</span>
+            </div>
+        </div>  
+        <p>1. ผู้เรียนจะมีสิทธิ์ทำแบบทดสอบหลังเรียน (Posttest) เมื่อเข้าร่วมกิจกรรมการเรียน (Course Progress) มากกว่า 80% ขึ้นไป</p>
+        <p>
+        2. แบบทดสอบหลังเรียน (Posttest) ในแต่ละวิชาจะสามารถทำได้แค่ครั้งเดียวเท่านั้น
+        </p>
+    </span>
+
+  </div>
+  <div className="box-border w-full max-w-full flex-shrink-0 flex flex-col items-center py-10 mb-10">
+        <div
+            className="flex space-x-3 items-center px-1 py-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full drop-shadow-md w-fit mb-10">
+            <div className="box-border flex justify-center items-center h-10 w-10 bg-white rounded-[50%]">
+                <FontAwesomeIcon icon={faLaptop} style={{width: '20px'}} className='text-blue-400 box-border inline-block not-italic leading-none' />
+            </div>
+            <span className="text-white text-xl pr-2 font-bold">อาจารย์ผู้สอน
+            </span>
+        </div>
+        <img className="box-border h-44 w-auto align-middle pb-5" src="https://mooc.chula.ac.th/img/upload/ผศ. ดร.ทรงศักดิ์ หมัดสะและ.png"></img>
+        <span className="box-border text-base underline decoration-sky-500 underline-offset-8 pb-5">
+        ผศ. ดร.ทรงศักดิ์ หมัดสะ
+        </span>
+        <p className='text-sm'>ภาควิชาภาษาตะวันออก คณะนิติศาสตร์</p>
+        <p className='text-sm'>มหาวิทยาลัยขอนแก่น</p>
+    </div>
+    <center className="box-border bg-gradient-to-r from-cyan-100 to-blue-100">
+        <div className="relative box-border h-64 ">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+              <p className="my-0 box-border whitespace-nowrap text-4xl text-[rgba(112,112,112,1)] tracking-[3.2px]">
+                  คอร์สแนะนำ
+              </p>
+              </div>
+          </div>
+        <hr className="my-6 box-content h-0 overflow-visible border-solid" />
+      </center>
+      <div className="relative box-border justify-center lg:columns-3 columns-1 md:columns-2 space-y-3 px-10 top-[-120px]">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg">
+            <img className="w-full" src="https://lawlibrarykku.online/getclassimg/_LW013215_พระธรรมนูญศาลยุติธรรม" alt="Sunset in the mountains" />
+            <div className="px-6 py-4">
+                <div className="font-bold text-base mb-2">พระธรรมนูญศาลยุติธรรม</div>
+                <div className="box-border flex flex-row">
+                    <p className="text-gray-700 text-base">
+                    LW013215
+                    </p>
+                    <div className="box-border w-full max-w-full flex-shrink-0 pl-0 lg:w-1/3 ">
+                        <div className="float-right box-border rounded-sm text-center text-xs font-medium bg-[#4d40f7] text-[#ffee00] p-0.5">
+                            956 ที่ว่าง
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#พระธรรมนูญ</span>
+            </div>
+        </div>
+        <div className="max-w-sm rounded overflow-hidden shadow-lg">
+            <img className="w-full" src="https://lawlibrarykku.online/getclassimg/_LW014112_การระงับและการไกล่เกลี่ยข้อพิพาท" alt="Sunset in the mountains" />
+            <div className="px-6 py-4">
+                <div className="font-bold text-base mb-2">การระงับและการไกล่เกลี่ยข้อพิพาท</div>
+                <div className="box-border flex flex-row">
+                    <p className="text-gray-700 text-base">
+                    LW014112
+                    </p>
+                    <div className="box-border w-full max-w-full flex-shrink-0 pl-0 lg:w-1/3 ">
+                        <div className="float-right box-border rounded-sm text-center text-xs font-medium bg-[#4d40f7] text-[#ffee00] p-0.5">
+                            999 ที่ว่าง
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#ข้อพิพาท</span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#ไกล่เกลี่ย</span>
+            </div>
+        </div>
+        <div className="max-w-sm rounded overflow-hidden shadow-lg">
+            <img className="w-full" src="https://lawlibrarykku.online/getclassimg/___LW012501 กฎหมายอาญา : บทบัญญัติทั่วไป" alt="Sunset in the mountains" />
+            <div className="px-6 py-4">
+                <div className="font-bold text-base mb-2">กฎหมายอาญา : บทบัญญัติทั่วไป</div>
+                <div className="box-border flex flex-row">
+                    <p className="text-gray-700 text-base">
+                    LW012501
+                    </p>
+                    <div className="box-border w-full max-w-full flex-shrink-0 pl-0 lg:w-1/3 ">
+                      <div className="float-right box-border rounded-sm text-center text-xs font-medium bg-[#4d40f7] text-[#ffee00] p-0.5">
+                            999 ที่ว่าง
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#กฎหมาย</span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#กฎหมายอาญา</span>
+            </div>
+        </div>
+    </div>
+      <div className="relative box-border w-full max-w-full flex flex-col items-center top-[-90px]">
+        <div className="box-border ">
+          <Link
+            className="box-border rounded-3xl text-center font-medium normal-case tracking-normal border border-[rgba(200,0,114,1)] text-[rgba(200,0,114,1)] open:cursor-pointer font-[inherit] leading-[inherit] min-w-[140px] py-2 px-6 text-sm"
+            href="/courses"
+          >
+         <FontAwesomeIcon icon={faArrowLeft} style={{width: '10px'}} className='text-[rgba(200,0,114,1)] box-border inline-block not-italic leading-none' />
+         &nbsp;&nbsp;ย้อนกลับ
+          </Link>
+        </div>
+      </div>
   <Footer />
       </>   
     );
