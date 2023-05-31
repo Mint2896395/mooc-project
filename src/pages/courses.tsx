@@ -165,9 +165,9 @@ const courses = () => {
                 กฎหมาย
                 </h2>
             </div>
-            <div className="box-border justify-center lg:columns-3 columns-1 md:columns-2 space-y-3 ">
+            <div className="box-border grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 md:mx-10 mx-5 ">
                 <Link href="/detail">
-                    <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer mb-5">
+                    <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer ">
                         <img className="w-full" src="https://lawlibrarykku.online/getclassimg/LW011101_กฎหมายกับสังคม" alt="Sunset in the mountains" />
                         <div className="px-6 py-4">
                             <div className="font-bold text-base mb-2">กฎหมายกับสังคม</div>
@@ -189,7 +189,7 @@ const courses = () => {
                     </div>
                 </Link>
                 <Link href="/detail">
-                    <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer mb-5 ">
+                    <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer ">
                         <img className="w-full" src="https://lawlibrarykku.online/getclassimg/LW011201_หลักกฎหมายเอกชน" alt="Sunset in the mountains" />
                         <div className="px-6 py-4">
                             <div className="font-bold text-base mb-2">หลักกฎหมายเอกชน</div>
@@ -211,7 +211,7 @@ const courses = () => {
                     </div>
                 </Link>
                 <Link href="/detail">
-                    <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer mb-5">
+                    <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer ">
                         <img className="w-full" src="https://lawlibrarykku.online/getclassimg/LW012102_นิติปรัชญา" alt="Sunset in the mountains" />
                         <div className="px-6 py-4">
                             <div className="font-bold text-base mb-2">นิติปรัชญา</div>
@@ -232,7 +232,7 @@ const courses = () => {
                     </div>
                 </Link>
                 <Link href="/detail">
-                    <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer mb-5 ">
+                    <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer ">
                         <img className="w-full" src="https://lawlibrarykku.online/getclassimg/_LW013215_พระธรรมนูญศาลยุติธรรม" alt="Sunset in the mountains" />
                         <div className="px-6 py-4">
                             <div className="font-bold text-base mb-2">พระธรรมนูญศาลยุติธรรม</div>
@@ -253,7 +253,7 @@ const courses = () => {
                     </div>
                 </Link>
                 <Link href="/detail">
-                    <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer mb-5">
+                    <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer ">
                         <img className="w-full" src="https://lawlibrarykku.online/getclassimg/_LW014112_การระงับและการไกล่เกลี่ยข้อพิพาท" alt="Sunset in the mountains" />
                         <div className="px-6 py-4">
                             <div className="font-bold text-base mb-2">การระงับและการไกล่เกลี่ยข้อพิพาท</div>
@@ -275,24 +275,24 @@ const courses = () => {
                     </div>
                 </Link>
                 <Link href="/detail">
-                    <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer mb-5 ">
-                        <img className="w-full" src="https://lawlibrarykku.online/getclassimg/___LW012501 กฎหมายอาญา : บทบัญญัติทั่วไป" alt="Sunset in the mountains" />
+                    <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer ">
+                        <img className="w-full" src="https://lawlibrarykku.online/getclassimg/LW013401 กฎหมายระหว่างประเทศแผนกคดีบุคคล" alt="Sunset in the mountains" />
                         <div className="px-6 py-4">
-                            <div className="font-bold text-base mb-2">กฎหมายอาญา : บทบัญญัติทั่วไป</div>
+                            <div className="font-bold text-base mb-2">กฎหมายระหว่างประเทศแผนกคดีบุคคล</div>
                             <div className="box-border flow-root">
                                 <p className="text-gray-700 text-base float-left">
-                                LW012501
+                                LW013401
                                 </p>
                                 <div className="box-border float-right ">
-                                    <div className="float-right box-border rounded-sm text-center text-xs font-medium bg-[#f03b3b] text-white p-0.5">
-                                        คอร์สเต็ม
+                                    <div className="float-right box-border rounded-sm text-center text-xs font-medium bg-[#4d40f7] text-[#ffee00] p-0.5">
+                                        999 ที่ว่าง
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="px-6 pt-4 pb-2">
-                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#กฎหมาย</span>
-                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#กฎหมายอาญา</span>
+                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#ระหว่างประเทศ</span>
+                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#แผนกคดีบุคคล</span>
                         </div>
                     </div>
                 </Link>

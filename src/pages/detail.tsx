@@ -257,9 +257,9 @@ const Detail = () => {
           </div>
         <hr className="my-6 box-content h-0 overflow-visible border-solid" />
       </center>
-      <div className="relative box-border justify-center lg:columns-3 columns-1 md:columns-2 space-y-3 px-10 top-[-120px]">
+      <div className="relative box-border lg:columns-3 columns-1 md:columns-2 top-[-120px] flex justify-center items-center gap-5 mx-10">
       <Link href="/detail">
-            <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer mb-5 ">
+            <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer ">
                 <img className="w-full" src="https://lawlibrarykku.online/getclassimg/_LW013215_พระธรรมนูญศาลยุติธรรม" alt="Sunset in the mountains" />
                 <div className="px-6 py-4">
                     <div className="font-bold text-base mb-2">พระธรรมนูญศาลยุติธรรม</div>
@@ -280,7 +280,7 @@ const Detail = () => {
             </div>
         </Link>
         <Link href="/detail">
-            <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer mb-5">
+            <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer ">
                 <img className="w-full" src="https://lawlibrarykku.online/getclassimg/_LW014112_การระงับและการไกล่เกลี่ยข้อพิพาท" alt="Sunset in the mountains" />
                 <div className="px-6 py-4">
                     <div className="font-bold text-base mb-2">การระงับและการไกล่เกลี่ยข้อพิพาท</div>
@@ -302,27 +302,27 @@ const Detail = () => {
             </div>
         </Link>
         <Link href="/detail">
-            <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer mb-5 ">
-                <img className="w-full" src="https://lawlibrarykku.online/getclassimg/___LW012501 กฎหมายอาญา : บทบัญญัติทั่วไป" alt="Sunset in the mountains" />
-                <div className="px-6 py-4">
-                    <div className="font-bold text-base mb-2">กฎหมายอาญา : บทบัญญัติทั่วไป</div>
-                    <div className="box-border flow-root">
-                        <p className="text-gray-700 text-base float-left">
-                        LW012501
-                        </p>
-                        <div className="box-border float-right ">
-                            <div className="float-right box-border rounded-sm text-center text-xs font-medium bg-[#f03b3b] text-white p-0.5">
-                                คอร์สเต็ม
-                            </div>
+          <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer ">
+              <img className="w-full" src="https://lawlibrarykku.online/getclassimg/LW013401 กฎหมายระหว่างประเทศแผนกคดีบุคคล" alt="Sunset in the mountains" />
+              <div className="px-6 py-4">
+                  <div className="font-bold text-base mb-2">กฎหมายระหว่างประเทศแผนกคดีบุคคล</div>
+                  <div className="box-border flow-root">
+                      <p className="text-gray-700 text-base float-left">
+                      LW013401
+                      </p>
+                      <div className="box-border float-right ">
+                        <div className="float-right box-border rounded-sm text-center text-xs font-medium bg-[#4d40f7] text-[#ffee00] p-0.5">
+                              999 ที่ว่าง
                         </div>
-                    </div>
-                </div>
-                <div className="px-6 pt-4 pb-2">
-                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#กฎหมาย</span>
-                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#กฎหมายอาญา</span>
-                </div>
-            </div>
-        </Link>
+                      </div>
+                  </div>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#ระหว่างประเทศ</span>
+                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#แผนกคดีบุคคล</span>
+              </div>
+          </div>
+      </Link>
     </div>
       <div className="relative box-border w-full max-w-full flex flex-col items-center top-[-90px]">
         <div className="box-border ">
