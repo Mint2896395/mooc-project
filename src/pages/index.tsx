@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           </div>
         <hr className="my-6 box-content h-0 overflow-visible border-solid" />
       </center>
-      <div className="relative box-border lg:columns-3 columns-1 md:columns-2 top-[-120px] flex justify-center items-center gap-5 mx-10">
+      <div className="relative box-border top-[-120px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 md:mx-20 mx-5 ">
       <Link href="/detail">
           <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer ">
               <img className="w-full" src="https://lawlibrarykku.online/getclassimg/_LW013215_พระธรรมนูญศาลยุติธรรม" alt="Sunset in the mountains" />
@@ -113,7 +113,7 @@ const Home: NextPage = () => {
           <Link className="box-border rounded-3xl text-center font-medium normal-case tracking-normal border border-[rgba(200,0,114,1)] text-[rgba(200,0,114,1)] open:cursor-pointer font-[inherit] leading-[inherit] w-[140px] py-2 px-6 text-sm" href="/courses">ดูทั้งหมด</Link>
         </div>
       </div>
-      <div className="box-border flex justify-center items-center  lg:columns-3 columns-1 md:columns-2 gap-5 mx-10">
+      <div className="box-border grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 md:mx-20 mx-5 ">
         <Link href="/detail">
             <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer mb-5">
                 <img className="w-full" src="https://lawlibrarykku.online/getclassimg/LW011101_กฎหมายกับสังคม" alt="Sunset in the mountains" />
@@ -179,6 +179,149 @@ const Home: NextPage = () => {
                 </div>
             </div>
         </Link>
+      </div>
+      <div className="mt-16 mb-36 py-24 box-border bg-[url('https://mooc.chula.ac.th/images/index/categoryBG.jpg')] ">
+        <div className=" flex justify-center items-center box-border pr-[var(--bs-gutter-x,_0.75rem)] pl-[var(--bs-gutter-x,_0.75rem)]">
+          <div className="box-border w-[88%]">
+            <div className="box-border flex flex-wrap mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)]">
+              <div className="box-border w-full max-w-full flex-shrink-0 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
+                <h1 className="mt-0 mb-11 box-border text-center text-4xl font-medium tracking-wide xl:text-4xl leading-[normal] font-[Chulalongkorn-B] text-[rgba(17,17,17,1)]">
+                  หมวดวิชา
+                </h1>
+              </div>
+            </div>
+            <div className="box-border flex flex-wrap justify-center mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)]">
+              <div className="box-border w-full max-w-full flex-shrink-0 md:w-5/6 lg:w-3/4 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">
+                <ul className="my-0 box-border flex justify-center pl-0 gap-5">
+                  <li className="float-left box-border w-[calc(20%)] max-w-[214px] bg-blue-400 hover:bg-[rgba(130,139,196,1)] rounded-md flex items-center justify-center">
+                    <a
+                      className="box-border rounded-md hover:block text-[rgba(13,110,253,1)] "
+                      href="https://mooc.chula.ac.th/course/1"
+                    >
+                      <div className="float-none box-border table ">
+                        <img
+                          className="box-border h-24 w-auto align-middle "
+                          src="https://mooc.chula.ac.th/img/upload/c-language.svg"
+                        />
+                      </div>
+                      <div className="box-border table h-12 w-full text-center ">
+                        <p className="my-0 box-border table-cell align-middle text-xl leading-6 tracking-wide text-white ">
+                          ภาษา
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li className="float-left box-border w-[calc(20%)] max-w-[214px] bg-orange-400 hover:bg-[rgba(130,139,196,1)] rounded-md flex items-center justify-center">
+                    <a
+                      className="box-border rounded-md hover:block text-[rgba(13,110,253,1)] "
+                      href="https://mooc.chula.ac.th/course/2"
+                    >
+                      <div className="float-none box-border table ">
+                        <img
+                          className="box-border h-24 w-auto align-middle "
+                          src="https://mooc.chula.ac.th/img/upload/c-technology.svg"
+                        />
+                      </div>
+                      <div className="box-border table h-12 w-full text-center ">
+                        <p className="my-0 box-border table-cell align-middle text-xl leading-6 tracking-wide text-white ">
+                          เทคโนโลยี
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li className="float-left box-border w-[calc(20%)] max-w-[214px] bg-sky-400 hover:bg-[rgba(130,139,196,1)] rounded-md flex items-center justify-center">
+                    <a
+                      className="box-border rounded-md hover:block text-[rgba(13,110,253,1)] "
+                      href="https://mooc.chula.ac.th/course/3"
+                    >
+                      <div className="float-none box-border table ">
+                        <img
+                          className="box-border h-24 w-auto align-middle "
+                          src="https://mooc.chula.ac.th/img/upload/c-management.svg"
+                        />
+                      </div>
+                      <div className="box-border table h-12 w-full text-center ">
+                        <p className="my-0 box-border table-cell align-middle text-xl leading-6 tracking-wide text-white ">
+                          การจัดการ
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li className="float-left box-border w-[calc(20%)] max-w-[214px] bg-pink-300 hover:bg-[rgba(130,139,196,1)] rounded-md flex items-center justify-center">
+                    <a
+                      className="box-border rounded-md hover:block text-[rgba(13,110,253,1)] "
+                      href="https://mooc.chula.ac.th/course/3"
+                    >
+                      <div className="float-none box-border table ">
+                        <img
+                          className="box-border h-24 w-auto align-middle "
+                          src="https://mooc.chula.ac.th/img/upload/c-art.svg"
+                        />
+                      </div>
+                      <div className="box-border table h-12 w-full text-center ">
+                        <p className="my-0 box-border table-cell align-middle text-xl leading-6 tracking-wide text-white ">
+                          กฎหมาย
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li className="float-left box-border w-[calc(20%)] max-w-[214px] bg-green-400 hover:bg-[rgba(130,139,196,1)] rounded-md flex items-center justify-center">
+                    <a
+                      className="box-border rounded-md hover:block text-[rgba(13,110,253,1)] "
+                      href="https://mooc.chula.ac.th/course/5"
+                    >
+                      <div className="float-none box-border table ">
+                        <img
+                          className="box-border h-24 w-auto align-middle "
+                          src="https://mooc.chula.ac.th/img/upload/c-health.svg"
+                        />
+                      </div>
+                      <div className="box-border table h-12 w-full text-center ">
+                        <p className="my-0 box-border table-cell align-middle text-xl leading-6 tracking-wide text-white ">
+                          สุขภาพ
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <center className="box-border bg-gradient-to-r from-cyan-300 to-blue-400 h-64 md:mr-[55%]">
+      </center>
+      <div className="relative box-border top-[-125px] items-top grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 md:mx-20 mx-5 ">
+      <div className="md:w-1/3 text-white ">
+        <p className="text-5xl text-start">ข่าวสาร</p>
+        <p className="text-4xl">และบทความ</p>
+      </div>
+      <Link href="/detail">
+          <div className="max-w-lg rounded overflow-hidden transform transition duration-500 hover:scale-105 hover:bg-white cursor-pointer ">
+              <img className="object-contain h-64 w-[50vw] mx-auto" src="https://mooc.chula.ac.th/img/upload/341670743_2875385015928843_9040996893728401192_n.jpg" alt="Sunset in the mountains" />
+              <div className="px-6 py-4">
+                  <p className="text-blue-700 text-sm float-left">
+                  18 เมษายน 2566
+                  </p>
+                  <br />
+                  <div className="font-bold text-base mb-2">ศูนย์นวัตกรรมการเรียนรู้ จุฬาฯ ขอเชิญเข้าร่วม</div>
+                  <p className="text-xm">ศูนย์นวัตกรรมการเรียนรู้ จุฬาลงกรณ์มหาวิทยาลัย ขอเชิญผู้ที่สนใจเข้าร่วมกิจกรรมเพื่อพัฒนาทักษะการจำ</p>
+              </div>
+          </div>
+      </Link>
+      <Link href="/detail">
+          <div className="max-w-lg rounded overflow-hidden transform transition duration-500 hover:scale-105 hover:bg-white cursor-pointer ">
+              <img className="object-contain h-64 w-[50vw] mx-auto" src="https://mooc.chula.ac.th/img/upload/Untitled-1.png" alt="Sunset in the mountains" />
+              <div className="px-6 py-4">
+                  <p className="text-blue-700 text-sm float-left">
+                  11 พฤษภาคม 2566
+                  </p>
+                  <br />
+                  <div className="font-bold text-base mb-2">ขอเชิญคณาจารย์ นิสิต นักศึกษา และผู้ที่สนใจทุกท่าน</div>
+                  <p className="text-xm">ขอเชิญคณาจารย์ นิสิต นักศึกษา และผู้ที่สนใจทุกท่านเข้าร่วมกิจกรรมในหัวข้อ Generative AI และ ChatGPT</p>
+              </div>
+          </div>
+      </Link>
       </div>
       <main className="hidden flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
