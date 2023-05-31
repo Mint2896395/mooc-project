@@ -3,8 +3,9 @@ import "~/styles/globals.css";
 import { Noto_Sans_Thai } from '@next/font/google';
  
 const roboto = Noto_Sans_Thai({
-  weight: '400',
   subsets: ['latin'],
+  weight: ['400', '700'],
+  style: ['normal']
 });
 
 const MyApp: AppType = ({ Component, pageProps }) => {

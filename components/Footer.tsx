@@ -74,7 +74,7 @@ const Footer = () => {
                 </li>
             </ul>
             </div>
-            <div className="relative float-left box-border w-1/2 px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/6 min-h-[1px] text-right border-r-[rgba(165,163,159,0.5)] border-r border-solid">
+            <div className="relative float-left box-border w-1/2 px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/6 min-h-[1px] text-right border-r-[rgba(165,163,159,0.5)] border-r border-solid mb-5">
             <ul className="mt-0 mb-2.5 box-border ">
                 <span className="box-border">
                     <span className="box-border text-sm underline decoration-sky-500 underline-offset-8">
@@ -151,7 +151,7 @@ const Footer = () => {
                 />
             </Link>
             </div>
-            <div className="relative float-left box-border w-1/2 px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/6 min-h-[1px] text-left border-l-[rgba(165,163,159,0.5)] border-l border-solid">
+            <div className="relative float-left box-border w-1/2 px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/6 min-h-[1px] md:text-left text-right border-l-[rgba(165,163,159,0.5)] border-l border-solid">
             <ul className="mt-0 mb-2.5 box-border ">
                 <span className="box-border">
                     <span className="box-border text-sm underline decoration-sky-500 underline-offset-8">
@@ -192,9 +192,9 @@ const Footer = () => {
                 </li>
             </ul>
             </div>
-            <div className="relative float-left box-border w-1/2 px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/6 min-h-[1px] text-left border-l-[rgba(165,163,159,0.5)] border-l border-solid leading-5 text-white ">
+            <div className="relative float-left box-border w-1/2 px-3.5 md:float-left md:w-1/6 lg:float-left lg:w-1/6 min-h-[1px] text-left border-l-[rgba(165,163,159,0.5)] border-l border-solid leading-5 text-white-100 ">
             <p className="box-border ">
-                <b className="box-border font-[bold]">
+                <b className="box-border font-bold">
                     <span className="box-border text-xs">
                         <span className="box-border text-sm leading-3">
                         คณะนิติศาสตร์ มหาวิทยาลัยขอนแก่น
@@ -206,7 +206,7 @@ const Footer = () => {
                 123 หมู่ 16 ถ.มิตรภาพ ต.ในเมือง อ.เมือง จ.ขอนแก่น, ประเทศไทย
                 </span>
                 <br />
-                <b className="box-border font-[bold]">
+                <b className="box-border font-bold">
                     <span className="box-border ">โทรศัพท์:</span>
                 </b>
                 <span className="box-border "> </span>
@@ -220,7 +220,7 @@ const Footer = () => {
                 </Link>
                 <span className="box-border "> </span>
                 <br />
-                <b className="box-border font-[bold]">
+                <b className="box-border font-bold">
                     <span className="box-border ">โทรสาร:</span>
                 </b>
                 <span className="box-border "> </span>

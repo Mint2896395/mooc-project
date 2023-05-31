@@ -257,7 +257,7 @@ const Detail = () => {
           </div>
         <hr className="my-6 box-content h-0 overflow-visible border-solid" />
       </center>
-      <div className="relative box-border lg:columns-3 columns-1 md:columns-2 top-[-120px] flex justify-center items-center gap-5 mx-10">
+      <div className="relative box-border top-[-120px] grid lg:grid-cols-3 grid-cols-2 gap-5 md:mx-20 mx-5">
       <Link href="/detail">
             <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer ">
                 <img className="w-full" src="https://lawlibrarykku.online/getclassimg/_LW013215_พระธรรมนูญศาลยุติธรรม" alt="Sunset in the mountains" />
