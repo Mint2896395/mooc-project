@@ -6,6 +6,7 @@ import Script from 'next/script'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import your icons
 import { faCalendar, faBook, faPenToSquare, faFilePen, faBullseye, faThumbtack, faLaptop, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import Carousel from 'components/Carousel';
 
 const Detail = () => {
     return (
@@ -248,7 +249,7 @@ const Detail = () => {
         <p className='text-sm'>มหาวิทยาลัยขอนแก่น</p>
     </div>
     <center className="box-border bg-gradient-to-r from-cyan-100 to-blue-100">
-        <div className="relative box-border h-64 ">
+        <div className="relative box-border md:h-64 h-48 ">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
               <p className="my-0 box-border whitespace-nowrap text-4xl text-[rgba(112,112,112,1)] tracking-[3.2px]">
                   คอร์สแนะนำ
@@ -257,73 +258,9 @@ const Detail = () => {
           </div>
         <hr className="my-6 box-content h-0 overflow-visible border-solid" />
       </center>
-      <div className="relative box-border top-[-120px] grid lg:grid-cols-3 grid-cols-2 gap-5 md:mx-20 mx-5">
-      <Link href="/detail">
-            <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer ">
-                <img className="w-full" src="https://lawlibrarykku.online/getclassimg/_LW013215_พระธรรมนูญศาลยุติธรรม" alt="Sunset in the mountains" />
-                <div className="px-6 py-4">
-                    <div className="font-bold text-base mb-2">พระธรรมนูญศาลยุติธรรม</div>
-                    <div className="box-border flow-root">
-                        <p className="text-gray-700 text-base float-left">
-                        LW013215
-                        </p>
-                        <div className="box-border float-right ">
-                            <div className="float-right box-border rounded-sm text-center text-xs font-medium bg-[#4d40f7] text-[#ffee00] p-0.5">
-                                56 ที่ว่าง
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="px-6 pt-4 pb-2">
-                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#พระธรรมนูญ</span>
-                </div>
-            </div>
-        </Link>
-        <Link href="/detail">
-            <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer ">
-                <img className="w-full" src="https://lawlibrarykku.online/getclassimg/_LW014112_การระงับและการไกล่เกลี่ยข้อพิพาท" alt="Sunset in the mountains" />
-                <div className="px-6 py-4">
-                    <div className="font-bold text-base mb-2">การระงับและการไกล่เกลี่ยข้อพิพาท</div>
-                    <div className="box-border flow-root">
-                        <p className="text-gray-700 text-base float-left">
-                        LW014112
-                        </p>
-                        <div className="box-border float-right ">
-                            <div className="float-right box-border rounded-sm text-center text-xs font-medium bg-[#4d40f7] text-[#ffee00] p-0.5">
-                                199 ที่ว่าง
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="px-6 pt-4 pb-2">
-                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#ข้อพิพาท</span>
-                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#ไกล่เกลี่ย</span>
-                </div>
-            </div>
-        </Link>
-        <Link href="/detail">
-          <div className="max-w-lg rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer ">
-              <img className="w-full" src="https://lawlibrarykku.online/getclassimg/LW013401 กฎหมายระหว่างประเทศแผนกคดีบุคคล" alt="Sunset in the mountains" />
-              <div className="px-6 py-4">
-                  <div className="font-bold text-base mb-2">กฎหมายระหว่างประเทศแผนกคดีบุคคล</div>
-                  <div className="box-border flow-root">
-                      <p className="text-gray-700 text-base float-left">
-                      LW013401
-                      </p>
-                      <div className="box-border float-right ">
-                        <div className="float-right box-border rounded-sm text-center text-xs font-medium bg-[#4d40f7] text-[#ffee00] p-0.5">
-                              999 ที่ว่าง
-                        </div>
-                      </div>
-                  </div>
-              </div>
-              <div className="px-6 pt-4 pb-2">
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#ระหว่างประเทศ</span>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#แผนกคดีบุคคล</span>
-              </div>
-          </div>
-      </Link>
-    </div>
+    
+    <Carousel />
+      
       <div className="relative box-border w-full max-w-full flex flex-col items-center top-[-90px]">
         <div className="box-border ">
           <Link
