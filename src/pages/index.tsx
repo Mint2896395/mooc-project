@@ -6,6 +6,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Script from 'next/script'
 import Carousel from 'components/Carousel';
+import CardSlider from "components/CardSlider";
 
 
 const Home: NextPage = () => {
@@ -29,7 +30,7 @@ const Home: NextPage = () => {
           </div>
         <hr className="my-6 box-content h-0 overflow-visible border-solid" />
       </center>
-      <Carousel />
+      <CardSlider />
       <div className="relative box-border w-full max-w-full flex flex-col items-center top-[-90px]">
         <div className="box-border ">
           <Link
