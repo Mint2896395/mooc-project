@@ -1,17 +1,26 @@
 import Link from "next/link";
-import Script from 'next/script'
 // import the library
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import your icons
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from 'react';
 
 const Header = () => {
+    const [menuState, setMenuState] = useState('menu');
+    const [navLinksClass, setNavLinksClass] = useState('hidden');
+  
+    const onToggleMenu = () => {
+      const updatedState = menuState === 'menu' ? 'close' : 'menu';
+      setMenuState(updatedState);
+      setNavLinksClass(updatedState === 'close' ? '' : 'hidden');
+    };
+
     return (
         <div className="mx-0 box-border">
             {/*header1*/}
             <div className="navbar-header ">
-                <button className="relative z-10 float-right mr-3.5 box-border cursor-pointer h-0 overflow-visible rounded bg-transparent bg-none normal-case text-inherit md:hidden leading-[inherit]" aria-expanded="true" type="button">
+                <button onClick={onToggleMenu} className="relative z-10 float-right mr-3.5 box-border cursor-pointer h-0 overflow-visible rounded bg-transparent bg-none normal-case text-inherit md:hidden leading-[inherit]" aria-expanded="true" type="button">
                     <h2 className="mt-5 mb-2.5 box-border text-3xl font-medium text-inherit">
                         <FontAwesomeIcon icon={faBars} style={{width: '40px'}} className='text-white box-border inline-block not-italic leading-none' />
                     </h2>
@@ -54,12 +63,11 @@ const Header = () => {
             <div className="mx-0 box-border h-[0.8px] bg-[#0e0e52]" />
             <div className="mx-0 box-border h-[0.8px] bg-[#39399e]" />
             <div className="flex flex-col items-center justify-center bg-blue-900">
-                <div className="mx-0 box-border md:h-14">
-                    <div className="relative float-left box-border min-h-[1px] w-full px-3.5 md:float-left md:w-full lg:float-left lg:w-full">
+                <div className={`nav-links ${navLinksClass} mx-0 box-border md:h-14 md:block transition-[max-height] duration-500 ease-[ease-out] `}>
+                    <div className="md:relative box-border w-full ">
                         {/*Main menu*/}
-                        <div className="relative mb-0 box-border md:rounded">
-                            <div className="static box-border  overflow-x-visible pl-2.5 pr-0 shadow-[rgba(255,_255,_255,_0.1)_0px_1px_0px_inset] md:block md:h-auto md:w-auto md:overflow-visible md:pb-0 md:shadow-[none]">
-                                <ul className="static my-0 box-border pl-0 md:float-left py-4 md:py-0">
+                            <div className="box-border relative  overflow-x-visible pl-2.5 pr-0 md:block md:h-auto md:overflow-visible md:pb-0 md:shadow-[none] md:static  bg-blue-900 w-full " >
+                                <ul className="md:static my-0 box-border pl-0 md:float-left py-4 md:py-0 ">
                                     {/* Classic list */}
                                     <li className="static box-border block font-[Noto_Sans_Thai] text-sm md:float-left mx-2 h-8 md:w-auto w-[80vw]">
                                     <Link
@@ -224,7 +232,6 @@ const Header = () => {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
                     </div>
                     {/*END Main menu*/}
                 </div>

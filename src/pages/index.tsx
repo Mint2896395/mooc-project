@@ -4,10 +4,7 @@ import Slider from "components/Slider";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Script from 'next/script'
-import Carousel from 'components/Carousel';
 import CardSlider from "components/CardSlider";
-
 
 const Home: NextPage = () => {
   return (

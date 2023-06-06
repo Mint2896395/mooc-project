@@ -2,7 +2,6 @@ import Footer from 'components/Footer';
 import Header from 'components/Header';
 import Head from "next/head";
 import Link from "next/link";
-import Script from 'next/script'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import your icons
 import { faCalendar, faBook, faPenToSquare, faFilePen, faBullseye, faThumbtack, faLaptop, faArrowLeft } from '@fortawesome/free-solid-svg-icons';

@@ -16,6 +16,7 @@
     "jsx": "preserve",
     "incremental": true,
     "noUncheckedIndexedAccess": true,
+    "types": ["jquery"],
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]

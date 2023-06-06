@@ -3,8 +3,6 @@ import Header from "components/Header";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Script from 'next/script'
-import 'flowbite';
 
 const courses = () => {
     return (

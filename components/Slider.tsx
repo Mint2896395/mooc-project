@@ -1,6 +1,4 @@
 import 'flowbite';
-import Link from "next/link";
-import Script from 'next/script'
 
 const Slider = () => {
     return (
