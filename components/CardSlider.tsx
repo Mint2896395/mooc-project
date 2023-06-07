@@ -1,10 +1,20 @@
 import React from "react";
+declare global {
+  interface Window {
+      $:any;
+      jQuery:any;
+  }
+}
+var $ = require("jquery");
+if (typeof window !== "undefined") {
+  window.$ = window.jQuery = require("jquery");
+}
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-let productsp = [
+const productsp = [
   {
     id: 1,
     name: "การระงับและการไกล่เกลี่ยข้อพิพาท",
@@ -60,10 +70,7 @@ let productsp = [
     seat: "56 ที่ว่าง"
   },
 ];
-var $ = require("jquery");
-if (typeof window !== "undefined") {
-  window.$ = window.jQuery = require("jquery");
-}
+
 
 // This is for Next.js. On Rect JS remove this line
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
