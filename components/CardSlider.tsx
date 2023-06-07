@@ -1,14 +1,17 @@
 import React from "react";
+import * as $ from "jquery";
+
 declare global {
   interface Window {
-      $:any;
-      jQuery:any;
+    $: any;
+    jQuery: any;
   }
 }
-var $ = require("jquery");
+
 if (typeof window !== "undefined") {
-  window.$ = window.jQuery = require("jquery");
+  window.$ = window.jQuery = $;
 }
+
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
