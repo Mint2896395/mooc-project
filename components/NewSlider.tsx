@@ -38,7 +38,7 @@ const NewSlider = () => {
     nav: true,
     dots: true,
     autoplay: true,
-    smartSpeed: 1000,
+    smartSpeed: 200,
     navClass: ["owl-prevX", "owl-nextX"],
     navText: [prevIconX, nextIconX],
   };
@@ -52,12 +52,38 @@ const NewSlider = () => {
         <ul id="owl-carousel-ul-x" className="owl-carousel owl-loaded owl-drag flex ">
           <OwlCarousel className="" loop {...options}>
             {/* Item 1 */}
-
-                <img
-                src="https://law.kku.ac.th/wp/wp-content/uploads/2023/05/DSC_1938.jpg"
-                className="w-full h-[654px] object-cover object-center "
-                alt="..."
-                />
+                 <div className="w-full font-[Noto_Sans_Thai]">
+                    <img
+                    src="https://law.kku.ac.th/wp/wp-content/uploads/2023/05/DSC_1938.jpg"
+                    className="w-full h-[654px] object-cover object-center "
+                    alt="..."
+                    />
+                    <div className="absolute top-[45%] left-[60%] w-1/3 box-border flex-wrap content-start flex bg-gray-800 opacity-80 p-[24px]">
+                        <div className="relative box-border w-full text-left mb-5 ">
+                            <div className="box-bordera ">
+                            <h3 className="clear-both mt-0 mb-2 box-border text-4xl font-bold capitalize leading-none tracking-normal text-[rgba(243,239,237,1)]">Law Student Life</h3>		
+                            </div>
+                        </div>
+                        <div className="relative box-border w-full text-lg font-light leading-7 mb-5 text-[rgba(213,208,208,1)]">
+                            <div className="box-border ">
+                                <p className="mt-0 mb-4 box-border ">
+                                    <span className="box-border ">มีแหล่งคลังข้อมูลความรู้ นักศึกษาสามารถแสวงหาความรู้หรือสามารถเรียนรู้ได้ด้วยตัวเอง ตลอดจนสร้างสรรค์ความรู้ใหม่เพื่อต่อยอดความรู้เดิม สามารถพัฒนาการคิดวิเคราะห์และประยุกต์ใช้ความรู้ให้เกิดประโยชน์ได้เหมาะสมกับตนเองและสถานการณ์ได้มากขึ้น โดยมีเทคโนโลยีที่ทันสมัยเป็นเครื่องมือเชื่อมโยงความรู้และเสริมประสิทธิภาพการเรียนรู้ที่เข้าถึงได้ทุกที่ทุกเวลา (Real Time)</span>
+                                </p>						
+                            </div>
+                        </div>
+                        <div className="relative box-border w-full text-right mr-5 ">
+                            <div className="box-border ">
+                                <div className="box-border ">
+                                    <a className="box-border inline-block w-auto rounded-none border-2 border-solid bg-transparent/0 text-center text-sm font-normal uppercase leading-none text-[rgba(179,149,115,1)] shadow-[none] tracking-[4px] border-[rgba(179,149,115,1)]" role="button" href="#">
+                                    <span className="box-border flex justify-center p-[14px]">
+                                        <span className="order-10 box-border inline-block flex-grow ">learn more</span>
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {/* Item 2 */}
 
                 <img
