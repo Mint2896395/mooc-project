@@ -4,28 +4,20 @@ import { useRouter } from 'next/router';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import your icons
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 
 const Header = () => {
   const router = useRouter();
-  const [menuState, setMenuState] = useState("menu");
-  const [navLinksClass, setNavLinksClass] = useState("hidden");
-
-  const onToggleMenu = () => {
-    const updatedState = menuState === "menu" ? "close" : "menu";
-    setMenuState(updatedState);
-    setNavLinksClass(updatedState === "close" ? "" : "hidden");
-  };
 
   return (
     <header className="box-border bg-white py-3.5 block">
       <div className="box-border pr-[var(--bs-gutter-x,_0.75rem)] pl-[var(--bs-gutter-x,_0.75rem)] ">
-        <div className="box-border w-[88%] py-0 px-[15px] my-0 mx-auto ">
+        <div className="box-border md:w-[88%] w-full py-0 md:px-[15px] my-0 mx-auto ">
           <div className="box-border flex flex-wrap mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)] items-center justify-center h-full">
-            <div className="box-border w-2/3 max-w-full flex-shrink-0 md:w-1/3 lg:w-1/4 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)] flex ">
+            <div className="order-2 box-border max-w-full flex-shrink-0 w-[85%] md:w-1/3 lg:w-1/4 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)] flex justify-center items-center">
               <Link
-                className="float-left box-border hover:block "
+                className="md:float-left box-border hover:block "
                 title="หน้าแรก"
                 href="/"
               >
@@ -35,16 +27,16 @@ const Header = () => {
                   src="https://lawlibrarykku.online/LOGO_law-kku1.png"
                 />
               </Link>
-              <span className="w-full pl-3 text-black leading-3 ">
+              <span className="pl-3 text-black leading-3 ">
                 <h6 className="text-2xl font-semibold tracking-[0.1px]">School of Law</h6>
                 <p className="text-[#949494] text-[15px] tracking-[0.5px] ">Khon Kaen University</p>
               </span>
             </div>
-            <div className="box-border w-1/3 max-w-full flex-shrink-0 md:w-2/3 lg:w-3/4 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]  ">
+            <div className="order-3 flex box-border max-w-full flex-shrink-0 md:w-2/3 lg:w-3/4 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]  ">
               {/* MAIN - MENU :: PC & IPAD PRO */}
               {/* ENG */}
               {/* THAI */}
-              <div className="box-border hidden lg:block ">
+              <div className="box-border hidden md:block md:w-[95%] ">
                 <ul className="float-right my-0 box-border pl-0 ">
                   {/* Classic list */}
                   <li className="float-left mr-7 box-border ">
@@ -210,445 +202,135 @@ const Header = () => {
                   </li>
                 </ul>
               </div>
-              {/* MAIN - MENU :: IPAD & MOBILE */}
-              <div className="box-border block md:block lg:hidden ">
-                <ul className="float-right my-0 box-border pl-0 ">
-                  <li className="block first:mr-6 ">
-                    <div className="relative box-border flex w-full flex-wrap items-stretch overflow-hidden rounded-2xl ">
-                      <input
-                        className="relative box-border block rounded bg-white bg-clip-padding text-sm font-normal open:rounded-r-none font-[inherit] leading-[normal] w-[1%] text-[rgba(219,95,142,1)] min-w-[200px] shadow-[none]"
-                        placeholder="ค้นหาคอร์ส"
-                        type="search"
-                      />
-                      <div className="-ml-px box-border rounded-l-none ">
-                        <button
-                          className="relative box-border inline-block cursor-pointer rounded-none bg-transparent text-center align-middle text-base font-normal normal-case open:cursor-pointer font-[inherit] leading-[normal] z-[2] text-[rgba(219,95,142,1)] min-h-[30px]"
-                          type="button"
-                        >
-                          <i className="absolute box-border " />
-                        </button>
-                      </div>
-                    </div>
+              <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                style={{ color: "#c3c6cb", width: "24px" }}
+                className="box-border not-italic leading-none max-w-full flex-shrink-0 order-3 align-middle my-auto md:border-l border-gray-300 pl-2 mx-auto"
+              />
+            </div>
+            {/* MOBILE - Menu */}
+            <div className="order-1 hamburger-menu md:hidden block">
+              <input id="menu__toggle" type="checkbox" />
+              <label className="menu__btn" htmlFor="menu__toggle">
+                <span></span>
+              </label>
+
+              <ul className="menu__box">
+                <div id="accordion-flush" data-accordion="collapse" data-active-classes="border-b border-gray-200" data-inactive-classes="">
+                  <li className="border-b border-gray-200">
+                    <Link  className={`${router.pathname == "/" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-[#949494]"} font-[Noto_Sans_Thai] flex items-center justify-between w-full py-5 text-left  pl-5 pr-2`}  href="/"> 
+                      <span>หน้าแรก</span>
+                    </Link>
                   </li>
-                  <li className="float-left box-border ">
-                    {/* HAMBURGER - MENU */}
-                    <button
-                      className="float-right box-border inline-block cursor-pointer rounded-none bg-transparent text-center align-middle text-xl font-normal normal-case leading-7 open:cursor-pointer font-[inherit] text-[rgba(219,95,142,1)]"
-                      type="button"
-                    >
-                      <i className="box-border " />
+                  <li id="accordion-flush-heading-1">
+                    <button type="button" className={`${router.pathname == "/courses" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300 border-b-gray-200" : "font-light text-[#949494]"} font-[Noto_Sans_Thai] flex items-center justify-between w-full py-5 text-left pl-5 pr-2 border-b border-gray-200`} data-accordion-target="#accordion-flush-body-1" aria-expanded="false" aria-controls="accordion-flush-body-1">
+                      <span>หมวดวิชา</span>
+                      <svg data-accordion-icon className="w-6 h-6 shrink-0 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                     </button>
                   </li>
-                  {/* Modal */}
-                  <div
-                    className="fixed top-0 left-0 box-border hidden h-full w-full overflow-hidden open:opacity-0 z-[9999]"
-                    aria-hidden="true"
-                    aria-labelledby="myModalLabel"
-                    role="dialog"
-                    tabIndex={-1}
-                  >
-                    <div className=" max-w-[500px]" role="document">
-                      <div className="relative float-left box-border flex w-full flex-shrink-0 items-center justify-between rounded-none bg-white ">
-                        <a
-                          className="absolute top-1/2 float-left mb-5 box-border hover:block text-[rgba(13,110,253,1)]"
-                          href="https://mooc.chula.ac.th/index"
-                        >
-                          <img
-                            className="box-border h-8 w-auto align-middle "
-                            src="https://mooc.chula.ac.th/images/cumooc-logo.svg"
-                          />
-                        </a>
-                        <button
-                          className="absolute top-1/2 box-border inline-block cursor-pointer rounded-none bg-transparent text-center align-middle text-base font-normal normal-case leading-normal opacity-100 open:cursor-pointer font-[inherit] text-[rgba(33,37,41,1)] z-[99]"
-                          aria-label="Close"
-                          type="button"
-                        >
-                          <i className="box-border text-base text-[rgba(149,149,149,1)]" />
-                        </button>
-                      </div>
-                      <div className="pointer-events-auto relative box-border flex h-full w-full flex-col overflow-y-auto rounded-none bg-white bg-clip-padding pt-0 ">
-                        {/* MAINMENU */}
-                        <div className="relative box-border ">
-                          <div className="fixed box-border h-full w-full bg-white z-[100] shadow-[rgba(50,_50,_50,_0.1)_0px_2px_2px_0px]">
-                            <div className="relative box-border h-full overflow-auto ">
-                              <div className="box-border ">
-                                <div className="relative box-border overflow-x-hidden ">
-                                  <div className="relative left-0 box-border w-[2000px]">
-                                    <div className="float-left box-border w-80 ">
-                                      <ul className="my-0 box-border pl-0 ">
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-base tracking-normal hover:block text-[#949494] font-[Noto_Sans_Thai] leading-[normal]"
-                                              href="https://mooc.chula.ac.th/home"
-                                            >
-                                              หน้าแรก
-                                            </a>
-                                          </div>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-base tracking-normal hover:block text-[#949494] font-[Noto_Sans_Thai] leading-[normal]"
-                                              href="#"
-                                            >
-                                              หมวดหมู่คอร์ส
-                                              <img
-                                                className="absolute top-1/2 mr-0 box-border h-auto w-5 cursor-pointer align-middle "
-                                                src="https://mooc.chula.ac.th/images/icon/icon-chevronR.svg"
-                                              />
-                                            </a>
-                                          </div>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-base tracking-normal hover:block text-[#949494] font-[Noto_Sans_Thai] leading-[normal]"
-                                              href="#"
-                                            >
-                                              ประเภทผู้เรียน
-                                              <img
-                                                className="absolute top-1/2 mr-0 box-border h-auto w-5 cursor-pointer align-middle "
-                                                src="https://mooc.chula.ac.th/images/icon/icon-chevronR.svg"
-                                              />
-                                            </a>
-                                          </div>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-base tracking-normal hover:block text-[#949494] font-[Noto_Sans_Thai] leading-[normal]"
-                                              href="https://mooc.chula.ac.th/knowledge"
-                                            >
-                                              คลังความรู้
-                                            </a>
-                                          </div>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-base tracking-normal hover:block text-[#949494] font-[Noto_Sans_Thai] leading-[normal]"
-                                              href="https://mooc.chula.ac.th/news"
-                                            >
-                                              ข่าวสารประชาสัมพันธ์
-                                            </a>
-                                          </div>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-base tracking-normal hover:block text-[#949494] font-[Noto_Sans_Thai] leading-[normal]"
-                                              href="https://mooc.chula.ac.th/faq/1"
-                                            >
-                                              คำถามที่พบบ่อย
-                                            </a>
-                                          </div>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-base tracking-normal hover:block text-[#949494] font-[Noto_Sans_Thai] leading-[normal]"
-                                              href="#"
-                                            >
-                                              เกี่ยวกับเรา
-                                              <img
-                                                className="absolute top-1/2 mr-0 box-border h-auto w-5 cursor-pointer align-middle "
-                                                src="https://mooc.chula.ac.th/images/icon/icon-chevronR.svg"
-                                              />
-                                            </a>
-                                          </div>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-base tracking-normal hover:block text-[#949494] font-[Noto_Sans_Thai] leading-[normal]"
-                                              href=""
-                                            >
-                                              การใช้งาน
-                                            </a>
-                                          </div>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-base tracking-normal hover:block text-[#949494] font-[Noto_Sans_Thai] leading-[normal]"
-                                              href="https://mooc.chula.ac.th/privacy-policy"
-                                            >
-                                              นโยบายความเป็นส่วนตัว
-                                            </a>
-                                          </div>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-base tracking-normal hover:block text-[#949494] font-[Noto_Sans_Thai] leading-[normal]"
-                                              href="https://mooc.chula.ac.th/cookies-policy"
-                                            >
-                                              นโยบายคุกกี้
-                                            </a>
-                                          </div>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block pt-4 text-sm leading-5 tracking-normal hover:block text-[rgba(70,70,70,1)] font-[Sarabun,_sans-serif]"
-                                              href="#"
-                                            >
-                                              <img
-                                                className="mr-3 box-border w-5 align-middle leading-5 mt-[-3px]"
-                                                src="https://mooc.chula.ac.th/images/icon/flag-th.svg"
-                                              />
-                                              TH
-                                              <img
-                                                className="absolute top-1/2 mr-0 box-border h-auto w-5 cursor-pointer align-middle "
-                                                src="https://mooc.chula.ac.th/images/icon/icon-chevronR.svg"
-                                              />
-                                            </a>
-                                          </div>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    {/* LANG */}
-                                    <div className="float-left box-border hidden w-80 ">
-                                      <div className="box-border text-right ">
-                                        <div className="relative float-left box-border w-full bg-neutral-100 ">
-                                          <a
-                                            className="relative box-border block text-sm font-normal leading-6 tracking-normal hover:block text-[rgba(85,85,85,1)] font-[Sarabun,_sans-serif]"
-                                            href="#"
-                                          >
-                                            ย้อนกลับ
-                                            <img
-                                              className="absolute top-1/2 right-auto mr-0 box-border h-auto w-5 cursor-pointer align-middle "
-                                              src="https://mooc.chula.ac.th/images/icon/icon-chevronL.svg"
-                                            />
-                                          </a>
-                                        </div>
-                                      </div>
-                                      <ul className="float-left my-0 box-border w-full pl-0 ">
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-sm leading-5 tracking-normal hover:block text-[#949494] font-[Sarabun,_sans-serif]"
-                                              href="https://mooc.chula.ac.th/lang_th"
-                                            >
-                                              <img
-                                                className="mr-3 box-border w-5 align-middle leading-5 mt-[-3px]"
-                                                src="https://mooc.chula.ac.th/images/icon/flag-th.svg"
-                                              />
-                                              TH
-                                            </a>
-                                          </div>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-sm leading-5 tracking-normal hover:block text-[#949494] font-[Sarabun,_sans-serif]"
-                                              href="https://mooc.chula.ac.th/lang_en"
-                                            >
-                                              <img
-                                                className="mr-3 box-border w-5 align-middle leading-5 mt-[-3px]"
-                                                src="https://mooc.chula.ac.th/images/icon/flag-en.svg"
-                                              />
-                                              EN
-                                            </a>
-                                          </div>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    {/* COURSE */}
-                                    <div className="float-left box-border hidden w-80 ">
-                                      <div className="box-border text-right ">
-                                        <div className="relative float-left box-border w-full bg-neutral-100 ">
-                                          <a
-                                            className="relative box-border block text-sm font-normal leading-6 tracking-normal hover:block text-[rgba(85,85,85,1)] font-[Sarabun,_sans-serif]"
-                                            href="#"
-                                          >
-                                            ย้อนกลับ
-                                            <img
-                                              className="absolute top-1/2 right-auto mr-0 box-border h-auto w-5 cursor-pointer align-middle "
-                                              src="https://mooc.chula.ac.th/images/icon/icon-chevronL.svg"
-                                            />
-                                          </a>
-                                        </div>
-                                      </div>
-                                      <ul className="float-left my-0 box-border w-full pl-0 ">
-                                        <li className="float-left box-border w-full ">
-                                          <a
-                                            className="box-border hover:block text-[rgba(13,110,253,1)]"
-                                            href="https://mooc.chula.ac.th/course/1"
-                                          >
-                                            ภาษา
-                                          </a>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <a
-                                            className="box-border hover:block text-[rgba(13,110,253,1)]"
-                                            href="https://mooc.chula.ac.th/course/2"
-                                          >
-                                            เทคโนโลยี
-                                          </a>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <a
-                                            className="box-border hover:block text-[rgba(13,110,253,1)]"
-                                            href="https://mooc.chula.ac.th/course/3"
-                                          >
-                                            การจัดการ
-                                          </a>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <a
-                                            className="box-border hover:block text-[rgba(13,110,253,1)]"
-                                            href="https://mooc.chula.ac.th/course/4"
-                                          >
-                                            ศิลปะและการพัฒนาตนเอง
-                                          </a>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <a
-                                            className="box-border hover:block text-[rgba(13,110,253,1)]"
-                                            href="https://mooc.chula.ac.th/course/5"
-                                          >
-                                            สุขภาพ
-                                          </a>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <a
-                                            className="box-border hover:block text-[rgba(13,110,253,1)]"
-                                            href="https://mooc.chula.ac.th/course-all"
-                                          >
-                                            คอร์สทั้งหมด
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    {/* LEARNER TYPE */}
-                                    <div className="float-left box-border hidden w-80 ">
-                                      <div className="box-border text-right ">
-                                        <div className="relative float-left box-border w-full bg-neutral-100 ">
-                                          <a
-                                            className="relative box-border block text-sm font-normal leading-6 tracking-normal hover:block text-[rgba(85,85,85,1)] font-[Sarabun,_sans-serif]"
-                                            href="#"
-                                          >
-                                            ย้อนกลับ
-                                            <img
-                                              className="absolute top-1/2 right-auto mr-0 box-border h-auto w-5 cursor-pointer align-middle "
-                                              src="https://mooc.chula.ac.th/images/icon/icon-chevronL.svg"
-                                            />
-                                          </a>
-                                        </div>
-                                      </div>
-                                      <ul className="float-left my-0 box-border w-full pl-0 ">
-                                        <li className="float-left box-border w-full ">
-                                          <a
-                                            className="box-border hover:block text-[rgba(13,110,253,1)]"
-                                            href="https://mooc.chula.ac.th/learner/Chula"
-                                          >
-                                            นิสิตและบุคลากรจุฬาฯ
-                                          </a>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <a
-                                            className="box-border hover:block text-[rgba(13,110,253,1)]"
-                                            href="https://mooc.chula.ac.th/learner/Guest"
-                                          >
-                                            บุคคลทั่วไป
-                                          </a>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-base tracking-normal hover:block text-[#949494] font-[Noto_Sans_Thai] leading-[normal]"
-                                              href="https://mooc.chula.ac.th/learner-partner"
-                                            >
-                                              Partner
-                                            </a>
-                                          </div>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    {/* ABOUT */}
-                                    <div className="float-left box-border hidden w-80 ">
-                                      <div className="box-border text-right ">
-                                        <div className="relative float-left box-border w-full bg-neutral-100 ">
-                                          <a
-                                            className="relative box-border block text-sm font-normal leading-6 tracking-normal hover:block text-[rgba(85,85,85,1)] font-[Sarabun,_sans-serif]"
-                                            href="#"
-                                          >
-                                            ย้อนกลับ
-                                            <img
-                                              className="absolute top-1/2 right-auto mr-0 box-border h-auto w-5 cursor-pointer align-middle "
-                                              src="https://mooc.chula.ac.th/images/icon/icon-chevronL.svg"
-                                            />
-                                          </a>
-                                        </div>
-                                      </div>
-                                      <ul className="float-left my-0 box-border w-full pl-0 ">
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-base tracking-normal hover:block text-[#949494] font-[Noto_Sans_Thai] leading-[normal]"
-                                              href="https://mooc.chula.ac.th/about"
-                                            >
-                                              เกี่ยวกับเรา
-                                            </a>
-                                          </div>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-base tracking-normal hover:block text-[#949494] font-[Noto_Sans_Thai] leading-[normal]"
-                                              href="https://mooc.chula.ac.th/contact"
-                                            >
-                                              ติดต่อเรา
-                                            </a>
-                                          </div>
-                                        </li>
-                                        <li className="float-left box-border w-full ">
-                                          <div className="relative float-left box-border w-full ">
-                                            <a
-                                              className="relative box-border block text-base tracking-normal hover:block text-[#949494] font-[Noto_Sans_Thai] leading-[normal]"
-                                              target="_blank"
-                                              href=""
-                                            >
-                                              คลิปอื่น
-                                            </a>
-                                          </div>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div id="accordion-flush-body-1" className="hidden" aria-labelledby="accordion-flush-heading-1">
+                    <ul className="py-5 border-b border-gray-200 dark:border-gray-700">
+                      <li className="pb-5">
+                        <Link  className={`${router.pathname == "/2-1" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/2-1"> 
+                          <span>ภาษา</span>
+                        </Link>
+                      </li>
+                      <li className="pb-5">
+                        <Link  className={`${router.pathname == "/2-2" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/2-2"> 
+                          <span>เทคโนโลยี</span>
+                        </Link>
+                      </li>
+                      <li className="pb-5">
+                        <Link  className={`${router.pathname == "/2-3" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/2-3"> 
+                          <span>การจัดการ</span>
+                        </Link>
+                      </li>
+                      <li className="pb-5">
+                        <Link  className={`${router.pathname == "/2-4" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/2-1"> 
+                          <span>ศิลปะและการพัฒนาตนเอง</span>
+                        </Link>
+                      </li>
+                      <li className="pb-5">
+                        <Link  className={`${router.pathname == "/2-4" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/2-1"> 
+                          <span>สุขภาพ</span>
+                        </Link>
+                      </li>
+                      <li className="pb-5">
+                        <Link  className={`${router.pathname == "/courses" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/courses"> 
+                          <span>คอร์สทั้งหมด</span>
+                        </Link>
+                      </li>
+                    </ul>
                   </div>
-                </ul>
-              </div>
+                  <li id="accordion-flush-heading-2">
+                    <button type="button" className={`${router.pathname == "/3" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-[#949494]"} font-[Noto_Sans_Thai] flex items-center justify-between w-full py-5 text-left pl-5 pr-2 border-b border-gray-200`} data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                      <span>ประเภทผู้เรียน</span>
+                      <svg data-accordion-icon className="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                  </li>
+                  <div id="accordion-flush-body-2" className="hidden" aria-labelledby="accordion-flush-heading-2">
+                    <ul className="py-5 border-b border-gray-200 dark:border-gray-700">
+                      <li className="pb-5">
+                        <Link  className={`${router.pathname == "/3-1" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/3-1"> 
+                          <span>นิสิตและบุคลากรจุฬาฯ</span>
+                        </Link>
+                      </li>
+                      <li className="pb-5">
+                        <Link  className={`${router.pathname == "/3-2" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/3-2"> 
+                          <span>บุคคลทั่วไป</span>
+                        </Link>
+                      </li>
+                      <li className="pb-5">
+                        <Link  className={`${router.pathname == "/3-3" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/3-3"> 
+                          <span>Partner</span>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <li className="border-b border-gray-200">
+                    <Link  className={`${router.pathname == "/4" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-[#949494]"} font-[Noto_Sans_Thai] flex items-center justify-between w-full py-5 text-left  pl-5 pr-2`}  href="/4"> 
+                      <span>คลังความรู้</span>
+                    </Link>
+                  </li>
+                  <li className="border-b border-gray-200">
+                    <Link  className={`${router.pathname == "/5" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-[#949494]"} font-[Noto_Sans_Thai] flex items-center justify-between w-full py-5 text-left  pl-5 pr-2`}  href="/5"> 
+                      <span>ข่าวประชาสัมพันธ์</span>
+                    </Link>
+                  </li>
+                  <li className="border-b border-gray-200">
+                    <Link  className={`${router.pathname == "/6" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-[#949494]"} font-[Noto_Sans_Thai] flex items-center justify-between w-full py-5 text-left  pl-5 pr-2`}  href="/6"> 
+                      <span>คำถามที่พบบ่อย</span>
+                    </Link>
+                  </li>
+                  <li id="accordion-flush-heading-3">
+                    <button type="button" className={`${router.pathname == "/3" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-[#949494]"} font-[Noto_Sans_Thai] flex items-center justify-between w-full py-5 text-left pl-5 pr-2 border-b border-gray-200`} data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+                      <span>เกี่ยวกับเรา</span>
+                      <svg data-accordion-icon className="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                  </li>
+                  <div id="accordion-flush-body-3" className="hidden" aria-labelledby="accordion-flush-heading-3">
+                  <ul className="py-5 border-b border-gray-200 dark:border-gray-700">
+                      <li className="pb-5">
+                        <Link  className={`${router.pathname == "/6-1" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/6-1"> 
+                          <span>เกี่ยวกับเรา</span>
+                        </Link>
+                      </li>
+                      <li className="pb-5">
+                        <Link  className={`${router.pathname == "/6-2" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/6-2"> 
+                          <span>ติดต่อเรา</span>
+                        </Link>
+                      </li>
+                      <li className="pb-5">
+                        <Link  className={`${router.pathname == "/6-3" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/6-3"> 
+                          <span>คลิปอื่น</span>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </ul>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="mx-0 box-border">
-        {/*header1*/}
-        <div className="navbar-header ">
-          <button
-            onClick={onToggleMenu}
-            className="relative z-10 float-right mr-3.5 box-border h-0 cursor-pointer overflow-visible rounded bg-transparent bg-none normal-case leading-[inherit] text-inherit md:hidden"
-            aria-expanded="true"
-            type="button"
-          >
-            <h2 className="mb-2.5 mt-5 box-border text-3xl font-medium text-inherit">
-              <FontAwesomeIcon
-                icon={faBars}
-                style={{ width: "40px" }}
-                className="box-border inline-block not-italic leading-none text-white"
-              />
-            </h2>
-          </button>
         </div>
       </div>
     </header>
