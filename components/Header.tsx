@@ -49,7 +49,7 @@ const Header = () => {
                   {/* Classic list */}
                   <li className="float-left mr-7 box-border ">
                     <Link
-                      className={`${router.pathname == "/" ? "font-normal text-[#d1693a]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`} 
+                      className={`${router.pathname == "/" ? "font-normal text-[var(--global-color-primary)]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`} 
                       href="/"
                     >
                       หน้าแรก
@@ -57,7 +57,7 @@ const Header = () => {
                   </li>
                   <li className="dropdown float-left mr-7 box-border">
                     <Link
-                      className={`${router.pathname == "/courses" ? "font-normal text-[#d1693a]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
+                      className={`${router.pathname == "/courses" ? "font-normal text-[var(--global-color-primary)]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
                       href="/courses"
                     >
                       หมวดวิชา
@@ -116,7 +116,7 @@ const Header = () => {
                   </li>
                   <li className="dropdown float-left mr-7 box-border">
                     <Link
-                      className={`${router.pathname == "/1" ? "font-normal text-[#d1693a]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
+                      className={`${router.pathname == "/1" ? "font-normal text-[var(--global-color-primary)]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
                       href="/1"
                     >
                       ประเภทผู้เรียน
@@ -151,7 +151,7 @@ const Header = () => {
                   </li>
                   <li className="float-left mr-7 box-border">
                     <Link
-                      className={`${router.pathname == "/2" ? "font-normal text-[#d1693a]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
+                      className={`${router.pathname == "/2" ? "font-normal text-[var(--global-color-primary)]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
                       href="/2"
                     >
                       คลังความรู้
@@ -159,7 +159,7 @@ const Header = () => {
                   </li>
                   <li className="float-left mr-7 box-border">
                     <Link
-                      className={`${router.pathname == "/3" ? "font-normal text-[#d1693a]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
+                      className={`${router.pathname == "/3" ? "font-normal text-[var(--global-color-primary)]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
                       href="/3"
                     >
                       ข่าวประชาสัมพันธ์
@@ -167,7 +167,7 @@ const Header = () => {
                   </li>
                   <li className="float-left mr-7 box-border">
                     <Link
-                      className={`${router.pathname == "/4" ? "font-normal text-[#d1693a]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
+                      className={`${router.pathname == "/4" ? "font-normal text-[var(--global-color-primary)]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
                       href="/4"
                     >
                       คำถามที่พบบ่อย
@@ -175,7 +175,7 @@ const Header = () => {
                   </li>
                   <li className="dropdown float-left mr-7 box-border">
                     <Link
-                      className={`${router.pathname == "/5" ? "font-normal text-[#d1693a]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
+                      className={`${router.pathname == "/5" ? "font-normal text-[var(--global-color-primary)]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
                       href="/5"
                     >
                       เกี่ยวกับเรา

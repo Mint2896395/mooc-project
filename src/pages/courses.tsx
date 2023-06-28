@@ -22,7 +22,7 @@ const courses = () => {
           
           <hr className="my-6 box-content h-0 overflow-visible border-solid" />
         </center>
-        <div className="mx-5 flex flex-col justify-center items-center">
+        <div className="mx-5 flex flex-col justify-center items-center ">
             <div className="max-w-3xl mb-20 box-border rounded-lg mt-[-120px] z-[1] bg-gradient-to-r from-cyan-500 to-blue-500 md:p-10 p-5">
                 <div className="box-border gap-1 md:flex md:columns-3 columns-1">
                 <div className="box-border w-full max-w-full flex-shrink-0 md:w-1/3 lg:w-1/3 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]">

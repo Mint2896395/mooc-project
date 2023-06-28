@@ -117,9 +117,9 @@ const CardSlider = () => {
   };
 
   return (
-    <div className="relative top-[-120px]">
+    <div className="md:order-1 order-2 relative top-[-120px] max-w-[1600px] md:w-[88%] w-full mx-auto ">
       <div
-        className="m-5 box-border flex h-full justify-start transition duration-700 ease-out md:m-10"
+        className="m-5 box-border flex h-full transition duration-700 ease-out md:m-10"
         id="owl-carousel-products"
       >
         <ul id="owl-carousel-ul" className="owl-carousel owl-loaded owl-drag">
@@ -129,17 +129,17 @@ const CardSlider = () => {
                   return (
                     <>
                       <Link href={product.url}>
-                        <div className="w-full scale-95 transform cursor-pointer overflow-hidden border-0 border-b-2 border-solid border-blue-600 transition duration-500 hover:scale-100 md:h-full md:max-w-lg ">
+                        <div className="w-full scale-95 transform cursor-pointer overflow-hidden border-0 border-b-2 border-solid border-[var(--global-color-primary)] transition duration-500 hover:scale-100 md:h-full md:max-w-lg ">
                           <img
                             className="w-full rounded-xl"
                             src={product.src}
                             alt={product.name}
                           />
                           <div className="md:py-4">
-                            <div className="mb-5 h-8 min-h-0 text-base font-bold md:mb-0 md:min-h-full">
+                            <div className="mb-5 h-10 min-h-0 md:text-2xl text-lg font-semibold md:font-bold md:mb-0 md:min-h-full">
                               {product.name}
                             </div>
-                            <p className="mb-2 text-sm text-gray-700">
+                            <p className="md:mb-5 mb-2 md:text-lg text-sm text-gray-700">
                               {product.code}
                             </p>
                             <div className="mb-2 box-border grid grid-cols-1 md:grid-cols-2">

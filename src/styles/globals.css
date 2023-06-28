@@ -2,25 +2,50 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+:root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+    --global-color-primary: #d1693a;
+    --global-color-secondary: #078ec9;
+    --e-icon-list-icon-size: 35px;
+    --e-icon-list-icon-size-2: 20px;
+    --spacer-size: 227px;
+    --space-between: 3%;
+
+    @media(max-width: 1024px) {
+        --e-icon-list-icon-size: 23px;
+        --spacer-size: 25px;
+    }
+}
+
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
 #owl-carousel-products .owl-nav {
     position: absolute;
-    top: 4rem;
+    top: 40%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
     right: 0;
     left: -2%;
     width: 104%;
 }
 
+@media(max-width: 488px) {
+    #owl-carousel-products .owl-nav {
+        top: 20%;
+        transform: translateY(-50%);
+        transition: all 0.3s ease-in-out;
+    }
+}
+
 #owl-carousel-slides .owl-nav {
     position: absolute;
-    top: 300px;
     width: 96%;
     z-index: 990;
     margin-left: 2%;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     transition: all 0.3s ease-in-out;
 }

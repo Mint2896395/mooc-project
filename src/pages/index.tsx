@@ -19,25 +19,27 @@ const Home: NextPage = () => {
       </Head>
       {/* <Slider /> */}
       <NewSlider />
-      <center className="box-border bg-gradient-to-r from-cyan-100 to-blue-100">
-        <div className="relative box-border h-64 ">
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform ">
-            <p className="my-0 box-border whitespace-nowrap text-4xl tracking-[3.2px] text-[rgba(112,112,112,1)]">
+      <center className="box-border bg-gradient-to-r from-cyan-100 to-blue-100 pt-[45px]">
+        <div className="relative box-border md:h-64 h-36">
+          <div className="absolute left-1/2 md:top-1/2 top-8 -translate-x-1/2 -translate-y-1/2 transform ">
+            <p className="my-0 box-border whitespace-nowrap md:text-4xl text-2xl fonnt-semibold tracking-[3.2px] text-[rgba(112,112,112,1)]">
               คอร์สใหม่
             </p>
           </div>
         </div>
         <hr className="my-6 box-content h-0 overflow-visible border-solid" />
       </center>
-      <CardSlider />
-      <div className="relative top-[-90px] box-border flex w-full max-w-full flex-col items-center">
-        <div className="box-border ">
-          <Link
-            className="box-border min-w-[140px] rounded-3xl border border-[rgba(200,0,114,1)] px-6 py-2 text-center font-[inherit] text-sm font-medium normal-case leading-[inherit] tracking-normal text-[rgba(200,0,114,1)] open:cursor-pointer"
-            href="/courses"
-          >
-            ดูทั้งหมด
-          </Link>
+      <div className="flex flex-col">
+        <CardSlider />
+        <div className="md:order-2 relative md:top-[-90px] top-[-120px] box-border flex w-full max-w-full flex-col items-center">
+          <div className="box-border ">
+            <Link
+              className="box-border min-w-[140px] rounded-3xl border border-[var(--global-color-primary)] md:px-6 px-5 py-1 text-center font-[inherit] md:text-base text-sm font-medium normal-case leading-[inherit] tracking-normal text-[var(--global-color-primary)] cursor-pointer"
+              href="/courses"
+            >
+              ดูทั้งหมด
+            </Link>
+          </div>
         </div>
       </div>
       <div className="flow-root">
@@ -45,12 +47,12 @@ const Home: NextPage = () => {
           คอร์สที่กำลังเปิด
         </h2>
         <div className="float-right box-border pr-10 pt-3">
-          <Link
-            className="box-border w-[140px] rounded-3xl border border-[rgba(200,0,114,1)] px-6 py-2 text-center font-[inherit] text-sm font-medium normal-case leading-[inherit] tracking-normal text-[rgba(200,0,114,1)] open:cursor-pointer"
-            href="/courses"
-          >
-            ดูทั้งหมด
-          </Link>
+            <Link
+              className="box-border min-w-[140px] rounded-3xl border border-[var(--global-color-primary)] md:px-6 px-5 py-1 text-center font-[inherit] md:text-base text-sm font-medium normal-case leading-[inherit] tracking-normal text-[var(--global-color-primary)] cursor-pointer"
+              href="/courses"
+            >
+              ดูทั้งหมด
+            </Link>
         </div>
       </div>
       <div className="mx-5 box-border grid grid-cols-1 gap-5 md:mx-20 md:grid-cols-2 lg:grid-cols-3 ">

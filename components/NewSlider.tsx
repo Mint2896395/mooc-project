@@ -55,18 +55,18 @@ const NewSlider = () => {
                  <div className="w-full font-[Noto_Sans_Thai]">
                     <img
                     src="https://law.kku.ac.th/wp/wp-content/uploads/2023/05/DSC_1938.jpg"
-                    className="w-full h-[654px] object-cover object-center "
+                    className="w-full h-[168px] md:h-[654px] object-cover object-center "
                     alt="..."
                     />
-                    <div className="absolute top-[45%] left-[60%] w-1/3 box-border flex-wrap content-start flex bg-gray-800 opacity-80 p-[24px]">
-                        <div className="relative box-border w-full text-left mb-5 ">
+                    <div className="absolute md:top-[45%] md:left-[60%] top-[5%] left-[20%] md:w-1/3 w-2/3 box-border flex-wrap content-start flex bg-gray-800 opacity-80 md:p-[24px] p-2">
+                        <div className="relative box-border w-full text-left md:mb-5 mb-[1px]">
                             <div className="box-bordera ">
-                            <h3 className="clear-both mt-0 mb-2 box-border text-4xl font-bold capitalize leading-none tracking-normal text-[rgba(243,239,237,1)]">Law Student Life</h3>		
+                            <h3 className="clear-both mt-0 mb:mb-2 mb-[1px] box-border md:text-4xl text-base font-bold capitalize leading-none tracking-normal text-[rgba(243,239,237,1)]">Law Student Life</h3>		
                             </div>
                         </div>
-                        <div className="relative box-border w-full text-lg font-light leading-7 mb-5 text-[rgba(213,208,208,1)]">
+                        <div className="relative box-border w-full md:text-lg text-xs font-light md:leading-7 leading-0 md:mb-5 mb-0 text-[rgba(213,208,208,1)]">
                             <div className="box-border ">
-                                <p className="mt-0 mb-4 box-border ">
+                                <p className="mt-0 md:mb-4 mb-1 box-border ">
                                     <span className="box-border ">มีแหล่งคลังข้อมูลความรู้ นักศึกษาสามารถแสวงหาความรู้หรือสามารถเรียนรู้ได้ด้วยตัวเอง ตลอดจนสร้างสรรค์ความรู้ใหม่เพื่อต่อยอดความรู้เดิม สามารถพัฒนาการคิดวิเคราะห์และประยุกต์ใช้ความรู้ให้เกิดประโยชน์ได้เหมาะสมกับตนเองและสถานการณ์ได้มากขึ้น โดยมีเทคโนโลยีที่ทันสมัยเป็นเครื่องมือเชื่อมโยงความรู้และเสริมประสิทธิภาพการเรียนรู้ที่เข้าถึงได้ทุกที่ทุกเวลา (Real Time)</span>
                                 </p>						
                             </div>
@@ -74,8 +74,8 @@ const NewSlider = () => {
                         <div className="relative box-border w-full text-right mr-5 ">
                             <div className="box-border ">
                                 <div className="box-border ">
-                                    <a className="box-border inline-block w-auto rounded-none border-2 border-solid bg-transparent/0 text-center text-sm font-normal uppercase leading-none text-[rgba(179,149,115,1)] shadow-[none] tracking-[4px] border-[rgba(179,149,115,1)]" role="button" href="#">
-                                    <span className="box-border flex justify-center p-[14px]">
+                                    <a className="box-border inline-block w-auto rounded-none border-2 border-solid bg-transparent/0 text-center md:text-sm text-xs font-normal uppercase leading-none text-[rgba(179,149,115,1)] shadow-[none] tracking-[4px] border-[rgba(179,149,115,1)]" role="button" href="#">
+                                    <span className="box-border flex justify-center md:p-[14px] p-1 ">
                                         <span className="order-10 box-border inline-block flex-grow ">learn more</span>
                                     </span>
                                     </a>
@@ -88,28 +88,28 @@ const NewSlider = () => {
 
                 <img
                 src="https://mooc.chula.ac.th/img/upload/PDPA.png"
-                className="w-full h-[654px] object-cover object-center "
+                className="w-full h-[168px] md:h-[654px] object-cover object-center "
                 alt="..."
                 />
             {/* Item 3 */}
 
                 <img
                 src="https://mooc.chula.ac.th/img/upload/Feed%20Website%20CHULA%20MOOC%20%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%99%206.png"
-                className="w-full h-[654px] object-cover object-center "
+                className="w-full h-[168px] md:h-[654px] object-cover object-center "
                 alt="..."
                 />
             {/* Item 4 */}
 
                 <img
                 src="https://mooc.chula.ac.th/img/upload/หน้าปกที่1.2.png"
-                className="w-full h-[654px] object-cover object-center "
+                className="w-full h-[168px] md:h-[654px] object-cover object-center "
                 alt="..."
                 />
             {/* Item 5 */}
 
                 <img
                 src="https://lawlibrarykku.online/img/site_bg.353dfaa9.jpg"
-                className="w-full h-[654px] object-cover object-center "
+                className="w-full h-[168px] md:h-[654px] object-cover object-center "
                 alt="..."
                 />
           </OwlCarousel>
