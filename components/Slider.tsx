@@ -12,7 +12,7 @@ const Slider = () => {
         <div className="relative h-56 overflow-hidden md:h-96">
           {/* Item 1 */}
           <div
-            className="hidden d uration-700 ease-in-out"
+            className="hidden duration-700 ease-in-out"
             data-carousel-item=""
           >
             <img

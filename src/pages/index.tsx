@@ -1,10 +1,9 @@
-import Footer from "components/Footer";
-import Header from "components/Header";
 import Slider from "components/Slider";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import CardSlider from "components/CardSlider";
+import NewSlider from "components/NewSlider";
 
 const Home: NextPage = () => {
   return (
@@ -18,7 +17,8 @@ const Home: NextPage = () => {
           rel="stylesheet"
         />
       </Head>
-      <Slider />
+      {/* <Slider /> */}
+      <NewSlider />
       <center className="box-border bg-gradient-to-r from-cyan-100 to-blue-100">
         <div className="relative box-border h-64 ">
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform ">

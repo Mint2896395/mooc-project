@@ -6,10 +6,18 @@
     display: block;
 }
 
-.owl-nav {
+#owl-carousel-products .owl-nav {
     position: absolute;
     top: 4rem;
     right: 0;
     left: -2%;
     width: 104%;
+}
+
+#owl-carousel-slides .owl-nav {
+    position: absolute;
+    top: 320px;
+    width: 96%;
+    z-index: 990;
+    margin-left: 2%;
 }

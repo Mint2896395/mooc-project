@@ -30,14 +30,14 @@ const Header = () => {
                 href="/"
               >
                 <img
-                  className="box-border mx-auto w-12 align-middle"
+                  className="box-border mx-auto w-14 align-middle"
                   width="100%"
                   src="https://lawlibrarykku.online/LOGO_law-kku1.png"
                 />
               </Link>
-              <span className="w-full pl-2 text-black leading-3 ">
-                <h6 className="text-lg">คณะนิติศาสตร์ มหาวิทยาลัยขอนแก่น</h6>
-                <p className="text-[#949494] text-[15px] tracking-[0.1px]">Faculty of Law, Khon Kaen University</p>
+              <span className="w-full pl-3 text-black leading-3 ">
+                <h6 className="text-2xl font-semibold tracking-[0.1px]">School of Law</h6>
+                <p className="text-[#949494] text-[15px] tracking-[0.5px] ">Khon Kaen University</p>
               </span>
             </div>
             <div className="box-border w-1/3 max-w-full flex-shrink-0 md:w-2/3 lg:w-3/4 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]  ">
