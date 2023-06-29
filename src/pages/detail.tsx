@@ -1,5 +1,5 @@
 import Footer from "components/Footer";
-import Header from "components/Header";
+import Header from "components/Navbar";
 import Head from "next/head";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

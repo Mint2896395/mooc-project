@@ -35,10 +35,10 @@ const GotoTop = () => {
                     id="to-top-button"
                     onClick={goToTop}
                     title="Go To Top"
-                    className="fixed z-50 bottom-10 right-10 p-2 border-0 w-10 h-10 rounded-full shadow-md bg-[color:var(--global-color-primary)] hover:bg-orange-400 text-white text-lg font-semibold transition-colors duration-300"
+                    className="fixed z-50 bottom-10 right-10 p-2 w-10 h-10 rounded-full shadow-md bg-[color:var(--global-color-primary)] border-2 border-solid border-orange-200 hover:bg-orange-400 text-white text-lg font-semibold transition-colors duration-300 flex justify-center items-center select-none"
                 >
                     <svg
-                        className="relative ml-0 h-2.5 w-6 align-middle overflow-hidden rotate-180"
+                        className=" fill-white h-2.5 w-6 overflow-hidden rotate-180"
                         xmlSpace="preserve"
                         enableBackground="new 57 35.171 26 16.043"
                         viewBox="57 35.171 26 16.043"

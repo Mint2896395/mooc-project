@@ -129,14 +129,14 @@ const CardSlider = () => {
                   return (
                     <>
                       <Link href={product.url}>
-                        <div className="w-full scale-95 transform cursor-pointer overflow-hidden border-0 border-b-2 border-solid border-[var(--global-color-primary)] transition duration-500 hover:scale-100 md:h-full md:max-w-lg ">
+                        <div className="group w-full scale-95 transform cursor-pointer overflow-hidden border-0 border-b-2 border-solid border-[var(--global-color-primary)] transition duration-500 hover:scale-100 md:h-full md:max-w-lg ">
                           <img
                             className="w-full rounded-xl"
                             src={product.src}
                             alt={product.name}
                           />
                           <div className="md:py-4">
-                            <div className="mb-5 h-10 min-h-0 md:text-2xl text-lg font-semibold md:font-bold md:mb-0 md:min-h-full">
+                            <div className="mb-5 h-10 min-h-0 md:text-2xl text-lg font-semibold md:font-bold md:mb-0 md:min-h-full group-hover:text-gray-500">
                               {product.name}
                             </div>
                             <p className="md:mb-5 mb-2 md:text-lg text-sm text-gray-700">

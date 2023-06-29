@@ -1,17 +1,18 @@
 import Link from "next/link";
 import { useRouter } from 'next/router';
 // import the library
-import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import your icons
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import React, { useState } from "react";
+import Image from "next/image";
+import { navItems } from "../constant";
+import NavLink from "./NavLink";
 
-const Header = () => {
+const Navbar = () => {
   const router = useRouter();
 
   return (
-    <header className="box-border bg-white py-3.5 block overflow-hidden z-50 shadow-md ">
+    <nav className="box-border bg-white py-3.5 block overflow-hidden z-50 shadow-md ">
       <div className="box-border pr-[var(--bs-gutter-x,_0.75rem)] pl-[var(--bs-gutter-x,_0.75rem)] ">
         <div className="box-border md:w-[88%] w-full py-0 md:px-[15px] my-0 mx-auto ">
           <div className="box-border flex flex-wrap mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)] items-center justify-center h-full">
@@ -21,10 +22,12 @@ const Header = () => {
                 title="หน้าแรก"
                 href="/"
               >
-                <img
+                <Image
                   className="box-border mx-auto w-14 align-middle"
-                  width="100%"
-                  src="https://lawlibrarykku.online/LOGO_law-kku1.png"
+                  src="/LOGO_law-kku1.png"
+                  width={100}
+                  height={100}
+                  alt="Law-KKU-Logo"
                 />
               </Link>
               <span className="pl-3 text-black leading-3 ">
@@ -39,167 +42,9 @@ const Header = () => {
               <div className="box-border hidden md:block md:w-[95%] ">
                 <ul className="float-right my-0 box-border pl-0 ">
                   {/* Classic list */}
-                  <li className="float-left mr-7 box-border ">
-                    <Link
-                      className={`${router.pathname == "/" ? "font-normal text-[var(--global-color-primary)]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`} 
-                      href="/"
-                    >
-                      หน้าแรก
-                    </Link>
-                  </li>
-                  <li className="dropdown float-left mr-7 box-border">
-                    <Link
-                      className={`${router.pathname == "/courses" ? "font-normal text-[var(--global-color-primary)]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
-                      href="/courses"
-                    >
-                      หมวดวิชา
-                      <b className="ml-0.5 inline-block h-0 w-0 border-x-4 border-t-4 border-dashed border-x-transparent border-t-[\9] align-middle text-[#ffc74c]" />
-                    </Link>
-                    <ul className="dropdown-menu absolute z-50 hidden text-gray-700 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                      <li className="">
-                        <Link
-                          className="whitespace-no-wrap block rounded-t bg-orange-200 px-4 py-2 hover:bg-orange-400"
-                          href="#"
-                        >
-                          ภาษา
-                        </Link>
-                      </li>
-                      <li className="">
-                        <Link
-                          className="whitespace-no-wrap block bg-orange-200 px-4 py-2 hover:bg-orange-400"
-                          href="#"
-                        >
-                          เทคโนโลยี
-                        </Link>
-                      </li>
-                      <li className="">
-                        <Link
-                          className="whitespace-no-wrap block bg-orange-200 px-4 py-2 hover:bg-orange-400"
-                          href="#"
-                        >
-                          การจัดการ
-                        </Link>
-                      </li>
-                      <li className="">
-                        <Link
-                          className="whitespace-no-wrap block bg-orange-200 px-4 py-2 hover:bg-orange-400"
-                          href="#"
-                        >
-                          ศิลปะและการพัฒนาตนเอง
-                        </Link>
-                      </li>
-                      <li className="">
-                        <Link
-                          className="whitespace-no-wrap block bg-orange-200 px-4 py-2 hover:bg-orange-400"
-                          href="#"
-                        >
-                          สุขภาพ
-                        </Link>
-                      </li>
-                      <li className="">
-                        <Link
-                          className="whitespace-no-wrap block rounded-b bg-orange-200 px-4 py-2 hover:bg-orange-400"
-                          href="#"
-                        >
-                          คอร์สทั้งหมด
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="dropdown float-left mr-7 box-border">
-                    <Link
-                      className={`${router.pathname == "/1" ? "font-normal text-[var(--global-color-primary)]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
-                      href="/1"
-                    >
-                      ประเภทผู้เรียน
-                      <b className="ml-0.5 inline-block h-0 w-0 border-x-4 border-t-4 border-dashed border-x-transparent border-t-[\9] align-middle text-[#ffc74c]" />
-                    </Link>
-                    <ul className="dropdown-menu absolute z-50 hidden text-gray-700 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                      <li className="">
-                        <Link
-                          className="whitespace-no-wrap block rounded-t bg-orange-200 px-4 py-2 hover:bg-orange-400"
-                          href="#"
-                        >
-                          นิสิตและบุคลากรจุฬาฯ
-                        </Link>
-                      </li>
-                      <li className="">
-                        <Link
-                          className="whitespace-no-wrap block bg-orange-200 px-4 py-2 hover:bg-orange-400"
-                          href="#"
-                        >
-                          บุคคลทั่วไป
-                        </Link>
-                      </li>
-                      <li className="">
-                        <Link
-                          className="whitespace-no-wrap block rounded-b bg-orange-200 px-4 py-2 hover:bg-orange-400"
-                          href="#"
-                        >
-                          Partner
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="float-left mr-7 box-border">
-                    <Link
-                      className={`${router.pathname == "/2" ? "font-normal text-[var(--global-color-primary)]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
-                      href="/2"
-                    >
-                      คลังความรู้
-                    </Link>
-                  </li>
-                  <li className="float-left mr-7 box-border">
-                    <Link
-                      className={`${router.pathname == "/3" ? "font-normal text-[var(--global-color-primary)]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
-                      href="/3"
-                    >
-                      ข่าวประชาสัมพันธ์
-                    </Link>
-                  </li>
-                  <li className="float-left mr-7 box-border">
-                    <Link
-                      className={`${router.pathname == "/4" ? "font-normal text-[var(--global-color-primary)]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
-                      href="/4"
-                    >
-                      คำถามที่พบบ่อย
-                    </Link>
-                  </li>
-                  <li className="dropdown float-left mr-7 box-border">
-                    <Link
-                      className={`${router.pathname == "/5" ? "font-normal text-[var(--global-color-primary)]" : "font-light text-[#949494]"} box-border text-lg hover:block font-[Noto_Sans_Thai] leading-[50px]`}
-                      href="/5"
-                    >
-                      เกี่ยวกับเรา
-                      <b className="ml-0.5 inline-block h-0 w-0 border-x-4 border-t-4 border-dashed border-x-transparent border-t-[\9] align-middle text-[#ffc74c]" />
-                    </Link>
-                    <ul className="dropdown-menu absolute z-50 hidden text-gray-700 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                      <li className="">
-                        <Link
-                          className="whitespace-no-wrap block rounded-t bg-orange-200 px-4 py-2 hover:bg-orange-400"
-                          href="#"
-                        >
-                          เกี่ยวกับเรา
-                        </Link>
-                      </li>
-                      <li className="">
-                        <Link
-                          className="whitespace-no-wrap block bg-orange-200 px-4 py-2 hover:bg-orange-400"
-                          href="#"
-                        >
-                          ติดต่อเรา
-                        </Link>
-                      </li>
-                      <li className="">
-                        <Link
-                          className="whitespace-no-wrap block rounded-b bg-orange-200 px-4 py-2 hover:bg-orange-400"
-                          href="#"
-                        >
-                          คลิปอื่น
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
+                  {navItems.map((item) => (
+                    <NavLink key={item.id} item={item} />
+                  ))}
                 </ul>
               </div>
               <FontAwesomeIcon
@@ -333,9 +178,9 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </header>
+    </nav>
 
   );
 };
 
-export default Header;
+export default Navbar;

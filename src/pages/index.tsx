@@ -1,4 +1,3 @@
-import Slider from "components/Slider";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -17,7 +16,6 @@ const Home: NextPage = () => {
           rel="stylesheet"
         />
       </Head>
-      {/* <Slider /> */}
       <NewSlider />
       <center className="box-border bg-gradient-to-r from-cyan-100 to-blue-100 pt-[45px]">
         <div className="relative box-border md:h-64 h-36">

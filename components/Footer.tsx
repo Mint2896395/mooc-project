@@ -3,7 +3,7 @@ import "flowbite";
 
 const Footer = () => {
   return (
-    <div className="mx-0 box-border flex flex-col bg-[#403f3f] text-[13px] text-[#d8d7cf]">
+    <footer className="mx-0 box-border flex flex-col bg-[#403f3f] text-[13px] text-[#d8d7cf]">
       <br className="box-border hidden md:block" />
       <br />
       <br className="box-border hidden md:block" />
@@ -146,7 +146,7 @@ const Footer = () => {
             href="send.php?a_id=60"
           >
             <img
-              className="mx-auto box-border w-[50%] align-middle"
+              className="mx-auto box-border max-w-[125px] align-middle"
               src="https://lawlibrarykku.online/LOGO_law-kku1.png"
             />
           </Link>
@@ -256,7 +256,7 @@ const Footer = () => {
             href="send.php?a_id=60"
           >
             <img
-              className="mx-auto box-border w-[80%] align-middle"
+              className="mx-auto box-border max-w-[125px] align-middle"
               src="https://lawlibrarykku.online/LOGO_law-kku1.png"
             />
           </Link>
@@ -564,7 +564,7 @@ const Footer = () => {
         src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"
         defer
       />
-    </div>
+    </footer>
   );
 };
 
