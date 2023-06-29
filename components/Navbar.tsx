@@ -42,7 +42,7 @@ const Navbar = () => {
               <div className="box-border hidden md:block md:w-[95%] ">
                 <ul className="float-right my-0 box-border pl-0 ">
                   {/* Classic list */}
-                  {navItems.map((item) => (
+                  {navItems.map((item: any) => (
                     <NavLink key={item.id} item={item} />
                   ))}
                 </ul>
