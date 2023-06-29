@@ -11,7 +11,7 @@ const Header = () => {
   const router = useRouter();
 
   return (
-    <header className="box-border bg-white py-3.5 block">
+    <header className="box-border bg-white py-3.5 block overflow-hidden z-50 shadow-md ">
       <div className="box-border pr-[var(--bs-gutter-x,_0.75rem)] pl-[var(--bs-gutter-x,_0.75rem)] ">
         <div className="box-border md:w-[88%] w-full py-0 md:px-[15px] my-0 mx-auto ">
           <div className="box-border flex flex-wrap mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)] items-center justify-center h-full">
@@ -55,7 +55,7 @@ const Header = () => {
                       หมวดวิชา
                       <b className="ml-0.5 inline-block h-0 w-0 border-x-4 border-t-4 border-dashed border-x-transparent border-t-[\9] align-middle text-[#ffc74c]" />
                     </Link>
-                    <ul className="dropdown-menu absolute z-50 hidden pt-1 text-gray-700">
+                    <ul className="dropdown-menu absolute z-50 hidden text-gray-700 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                       <li className="">
                         <Link
                           className="whitespace-no-wrap block rounded-t bg-orange-200 px-4 py-2 hover:bg-orange-400"
@@ -114,7 +114,7 @@ const Header = () => {
                       ประเภทผู้เรียน
                       <b className="ml-0.5 inline-block h-0 w-0 border-x-4 border-t-4 border-dashed border-x-transparent border-t-[\9] align-middle text-[#ffc74c]" />
                     </Link>
-                    <ul className="dropdown-menu absolute z-50 hidden pt-1 text-gray-700">
+                    <ul className="dropdown-menu absolute z-50 hidden text-gray-700 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                       <li className="">
                         <Link
                           className="whitespace-no-wrap block rounded-t bg-orange-200 px-4 py-2 hover:bg-orange-400"
@@ -173,7 +173,7 @@ const Header = () => {
                       เกี่ยวกับเรา
                       <b className="ml-0.5 inline-block h-0 w-0 border-x-4 border-t-4 border-dashed border-x-transparent border-t-[\9] align-middle text-[#ffc74c]" />
                     </Link>
-                    <ul className="dropdown-menu absolute z-50 hidden pt-1 text-gray-700">
+                    <ul className="dropdown-menu absolute z-50 hidden text-gray-700 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                       <li className="">
                         <Link
                           className="whitespace-no-wrap block rounded-t bg-orange-200 px-4 py-2 hover:bg-orange-400"
@@ -228,7 +228,7 @@ const Header = () => {
                       <svg data-accordion-icon className="w-6 h-6 shrink-0 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                     </button>
                   </li>
-                  <div id="accordion-flush-body-1" className="hidden" aria-labelledby="accordion-flush-heading-1">
+                  <div id="accordion-flush-body-1" className="hidden " aria-labelledby="accordion-flush-heading-1">
                     <ul className="py-5 border-b border-gray-200 dark:border-gray-700">
                       <li className="pb-5">
                         <Link  className={`${router.pathname == "/2-1" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/2-1"> 
