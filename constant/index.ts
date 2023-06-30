@@ -44,7 +44,7 @@ export const navItems = [
       {
         id: 6,
         title: 'คอร์สทั้งหมด',
-        path: '/คอร์สทั้งหมด',
+        path: '/courses',
         cName: 'submenu-item'
       },
     ]

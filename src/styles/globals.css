@@ -90,6 +90,11 @@ html {
   }
   #menu__toggle:checked + .menu__btn > span {
     transform: rotate(45deg);
+    position: fixed;
+    top: 35px;
+    left: 20px;
+    width: 26px;
+    height: auto;
   }
   #menu__toggle:checked + .menu__btn > span::before {
     top: 0;
@@ -116,7 +121,7 @@ html {
   .menu__btn > span::after {
     display: block;
     position: absolute;
-    width: 100%;
+    width: 26px;
     height: 2px;
     background-color: #616161;
     transition-duration: .25s;

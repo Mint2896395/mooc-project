@@ -7,6 +7,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import { navItems } from "../constant";
 import NavLink from "./NavLink";
+import MobileNavLink from "./MobileNavLink";
 
 const Navbar = () => {
   const router = useRouter();
@@ -62,116 +63,11 @@ const Navbar = () => {
 
               <ul className="menu__box">
                 <div id="accordion-flush" data-accordion="collapse" data-active-classes="border-b border-gray-200" data-inactive-classes="">
-                  <li className="border-b border-gray-200">
-                    <Link  className={`${router.pathname == "/" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-[#949494]"} font-[Noto_Sans_Thai] flex items-center justify-between w-full py-5 text-left  pl-5 pr-2`}  href="/"> 
-                      <span>หน้าแรก</span>
-                    </Link>
-                  </li>
-                  <li id="accordion-flush-heading-1">
-                    <button type="button" className={`${router.pathname == "/courses" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300 border-b-gray-200" : "font-light text-[#949494]"} font-[Noto_Sans_Thai] flex items-center justify-between w-full py-5 text-left pl-5 pr-2 border-b border-gray-200`} data-accordion-target="#accordion-flush-body-1" aria-expanded="false" aria-controls="accordion-flush-body-1">
-                      <span>หมวดวิชา</span>
-                      <svg data-accordion-icon className="w-6 h-6 shrink-0 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                  </li>
-                  <div id="accordion-flush-body-1" className="hidden " aria-labelledby="accordion-flush-heading-1">
-                    <ul className="py-5 border-b border-gray-200 dark:border-gray-700">
-                      <li className="pb-5">
-                        <Link  className={`${router.pathname == "/2-1" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/2-1"> 
-                          <span>ภาษา</span>
-                        </Link>
-                      </li>
-                      <li className="pb-5">
-                        <Link  className={`${router.pathname == "/2-2" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/2-2"> 
-                          <span>เทคโนโลยี</span>
-                        </Link>
-                      </li>
-                      <li className="pb-5">
-                        <Link  className={`${router.pathname == "/2-3" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/2-3"> 
-                          <span>การจัดการ</span>
-                        </Link>
-                      </li>
-                      <li className="pb-5">
-                        <Link  className={`${router.pathname == "/2-4" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/2-1"> 
-                          <span>ศิลปะและการพัฒนาตนเอง</span>
-                        </Link>
-                      </li>
-                      <li className="pb-5">
-                        <Link  className={`${router.pathname == "/2-4" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/2-1"> 
-                          <span>สุขภาพ</span>
-                        </Link>
-                      </li>
-                      <li className="pb-5">
-                        <Link  className={`${router.pathname == "/courses" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/courses"> 
-                          <span>คอร์สทั้งหมด</span>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <li id="accordion-flush-heading-2">
-                    <button type="button" className={`${router.pathname == "/3" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-[#949494]"} font-[Noto_Sans_Thai] flex items-center justify-between w-full py-5 text-left pl-5 pr-2 border-b border-gray-200`} data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
-                      <span>ประเภทผู้เรียน</span>
-                      <svg data-accordion-icon className="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                  </li>
-                  <div id="accordion-flush-body-2" className="hidden" aria-labelledby="accordion-flush-heading-2">
-                    <ul className="py-5 border-b border-gray-200 dark:border-gray-700">
-                      <li className="pb-5">
-                        <Link  className={`${router.pathname == "/3-1" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/3-1"> 
-                          <span>นิสิตและบุคลากรจุฬาฯ</span>
-                        </Link>
-                      </li>
-                      <li className="pb-5">
-                        <Link  className={`${router.pathname == "/3-2" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/3-2"> 
-                          <span>บุคคลทั่วไป</span>
-                        </Link>
-                      </li>
-                      <li className="pb-5">
-                        <Link  className={`${router.pathname == "/3-3" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/3-3"> 
-                          <span>Partner</span>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <li className="border-b border-gray-200">
-                    <Link  className={`${router.pathname == "/4" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-[#949494]"} font-[Noto_Sans_Thai] flex items-center justify-between w-full py-5 text-left  pl-5 pr-2`}  href="/4"> 
-                      <span>คลังความรู้</span>
-                    </Link>
-                  </li>
-                  <li className="border-b border-gray-200">
-                    <Link  className={`${router.pathname == "/5" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-[#949494]"} font-[Noto_Sans_Thai] flex items-center justify-between w-full py-5 text-left  pl-5 pr-2`}  href="/5"> 
-                      <span>ข่าวประชาสัมพันธ์</span>
-                    </Link>
-                  </li>
-                  <li className="border-b border-gray-200">
-                    <Link  className={`${router.pathname == "/6" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-[#949494]"} font-[Noto_Sans_Thai] flex items-center justify-between w-full py-5 text-left  pl-5 pr-2`}  href="/6"> 
-                      <span>คำถามที่พบบ่อย</span>
-                    </Link>
-                  </li>
-                  <li id="accordion-flush-heading-3">
-                    <button type="button" className={`${router.pathname == "/3" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-[#949494]"} font-[Noto_Sans_Thai] flex items-center justify-between w-full py-5 text-left pl-5 pr-2 border-b border-gray-200`} data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
-                      <span>เกี่ยวกับเรา</span>
-                      <svg data-accordion-icon className="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                  </li>
-                  <div id="accordion-flush-body-3" className="hidden" aria-labelledby="accordion-flush-heading-3">
-                  <ul className="py-5 border-b border-gray-200 dark:border-gray-700">
-                      <li className="pb-5">
-                        <Link  className={`${router.pathname == "/6-1" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/6-1"> 
-                          <span>เกี่ยวกับเรา</span>
-                        </Link>
-                      </li>
-                      <li className="pb-5">
-                        <Link  className={`${router.pathname == "/6-2" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/6-2"> 
-                          <span>ติดต่อเรา</span>
-                        </Link>
-                      </li>
-                      <li className="pb-5">
-                        <Link  className={`${router.pathname == "/6-3" ? "font-normal text-[var(--global-color-primary)] border-l-4 border-orange-300" : "font-light text-blue-600"} font-[Noto_Sans_Thai] flex items-center justify-between w-full text-left pl-10 pr-2`}  href="/6-3"> 
-                          <span>คลิปอื่น</span>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
+
+                  {navItems.map((item: any) => (
+                    <MobileNavLink key={item.id} item={item} />
+                  ))}
+
                 </div>
               </ul>
             </div>
