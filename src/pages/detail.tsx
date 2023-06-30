@@ -28,7 +28,6 @@ const Detail = () => {
           rel="stylesheet"
         />
       </Head>
-      <Header />
       <div className="relative box-border ">
         <div className="box-border w-full bg-gradient-to-r from-cyan-100 to-blue-100 p-10 ">
           <div className="box-border ">
@@ -353,7 +352,6 @@ const Detail = () => {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

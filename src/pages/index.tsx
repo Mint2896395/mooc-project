@@ -61,7 +61,7 @@ const Home: NextPage = () => {
           <div className="box-border w-[88%]">
             <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
               <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)]">
-                <h1 className="mb-11 mt-0 box-border text-center font-[Chulalongkorn-B] text-4xl font-medium leading-[normal] tracking-wide text-[rgba(17,17,17,1)] xl:text-4xl">
+                <h1 className="mb-11 mt-0 box-border text-center font-[Noto_Sans_Thai] text-4xl leading-[normal] tracking-wide text-[rgba(17,17,17,1)] xl:text-4xl">
                   หมวดวิชา
                 </h1>
               </div>

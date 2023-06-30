@@ -7,7 +7,6 @@ import Layout from '../../components/layout'
 const roboto = Noto_Sans_Thai({
   subsets: ['latin'],
   weight: ['300', '400', '600', '700'],
-  style: ['normal']
 });
 
 const MyApp: AppType = ({ Component, pageProps }) => {

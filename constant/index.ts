@@ -57,8 +57,8 @@ export const navItems = [
     children: [
       {
         id: 1,
-        title: 'นิสิตและบุคลากรจุฬาฯ',
-        path: '/นิสิตและบุคลากรจุฬาฯ',
+        title: 'นิสิตและบุคลากร มข.',
+        path: '/นิสิตและบุคลากร_มข',
         cName: 'submenu-item'
       },
       {
@@ -228,8 +228,8 @@ export const footerLinks = [
     links: [
        {
         id: 1,
-        title: 'นิสิตและบุคลากรจุฬาฯ',
-        path: '/นิสิตและบุคลากรจุฬาฯ',
+        title: 'นิสิตและบุคลากร มข.',
+        path: '/นิสิตและบุคลากร_มข',
         cName: 'submenu-item',
       },
       {
