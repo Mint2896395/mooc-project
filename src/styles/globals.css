@@ -162,3 +162,20 @@ html {
   .menu__item:hover {
     background-color: #CFD8DC;
   }
+
+  nav .m-menu__overlay {
+    background-color: rgba(103, 103, 103, 0.5);
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 5;
+    display: none;
+    position: fixed; 
+    inset: 0;
+    overflow: hidden;
+    overscroll-behavior: contain;
+  }
+
+  nav #menu__toggle:checked ~ .m-menu__overlay {
+    display: block;
+  }

@@ -60,6 +60,7 @@ const Navbar = () => {
               <label className="menu__btn" htmlFor="menu__toggle">
                 <span></span>
               </label>
+              <label className="m-menu__overlay" htmlFor="menu__toggle"></label>
 
               <ul className="menu__box">
                 <div id="accordion-flush" data-accordion="collapse" data-active-classes="border-b border-gray-200" data-inactive-classes="">
