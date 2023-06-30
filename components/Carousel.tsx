@@ -165,3 +165,87 @@ function Carousel() {
 }
 
 export default Carousel;
+
+{/* <div className="mx-5 box-border grid grid-cols-1 gap-5 md:mx-20 md:grid-cols-2 lg:grid-cols-3 ">
+<Link href="/detail">
+  <div className="mb-5 max-w-lg transform cursor-pointer overflow-hidden rounded shadow-lg transition duration-500 hover:scale-105">
+    <img
+      className="w-full"
+      src="https://lawlibrarykku.online/getclassimg/LW011101_กฎหมายกับสังคม"
+      alt="Sunset in the mountains"
+    />
+    <div className="px-6 py-4">
+      <div className="mb-2 text-base font-bold">กฎหมายกับสังคม</div>
+      <div className="box-border flow-root">
+        <p className="float-left text-base text-gray-700">LW011101</p>
+        <div className="float-right box-border ">
+          <div className="float-right box-border rounded-sm bg-[#4d40f7] p-0.5 text-center text-xs font-medium text-[#ffee00]">
+            66 ที่ว่าง
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="px-6 pb-2 pt-4">
+      <span className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
+        #กฎหมาย
+      </span>
+      <span className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
+        #สังคม
+      </span>
+    </div>
+  </div>
+</Link>
+<Link href="/detail">
+  <div className="mb-5 max-w-lg transform cursor-pointer overflow-hidden rounded shadow-lg transition duration-500 hover:scale-105 ">
+    <img
+      className="w-full"
+      src="https://lawlibrarykku.online/getclassimg/LW011201_หลักกฎหมายเอกชน"
+      alt="Sunset in the mountains"
+    />
+    <div className="px-6 py-4">
+      <div className="mb-2 text-base font-bold">หลักกฎหมายเอกชน</div>
+      <div className="box-border flow-root">
+        <p className="float-left text-base text-gray-700">LW011201</p>
+        <div className="float-right box-border ">
+          <div className="float-right box-border rounded-sm bg-[#4d40f7] p-0.5 text-center text-xs font-medium text-[#ffee00]">
+            166 ที่ว่าง
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="px-6 pb-2 pt-4">
+      <span className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
+        #กฎหมาย
+      </span>
+      <span className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
+        #เอกชน
+      </span>
+    </div>
+  </div>
+</Link>
+<Link href="/detail">
+  <div className="mb-5 max-w-lg transform cursor-pointer overflow-hidden rounded shadow-lg transition duration-500 hover:scale-105">
+    <img
+      className="w-full"
+      src="https://lawlibrarykku.online/getclassimg/LW012102_นิติปรัชญา"
+      alt="Sunset in the mountains"
+    />
+    <div className="px-6 py-4">
+      <div className="mb-2 text-base font-bold">นิติปรัชญา</div>
+      <div className="box-border flow-root">
+        <p className="float-left text-base text-gray-700">LW012102</p>
+        <div className="float-right box-border ">
+          <div className="float-right box-border rounded-sm bg-[#f03b3b] p-0.5 text-center text-xs font-medium text-white">
+            คอร์สเต็ม
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="px-6 pb-2 pt-4">
+      <span className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
+        #นิติกรรม
+      </span>
+    </div>
+  </div>
+</Link>
+</div> */}

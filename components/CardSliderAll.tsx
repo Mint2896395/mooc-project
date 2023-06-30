@@ -28,46 +28,47 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 // This is for React JS, Remove this for Next.js
 // import OwlCarousel from 'react-owl-carousel';
 
-const CardSlider = () => {
+const CardSliderAll = () => {
   const options = {
     margin: 5,
     responsiveClass: true,
-    nav: true,
-    dots: false,
-    autoplay: false,
+    nav: false,
+    dots: true,
+    center: true,
+    autoplay: true,
     smartSpeed: 1000,
     navClass: ["owl-prev", "owl-next"],
     navText: [prevIcon, nextIcon],
     responsive: {
       0: {
-        items: 1,
+        items: 1.5,
       },
       400: {
         margin: 0,
-        items: 2,
+        items: 1.5,
       },
       600: {
-        items: 2,
+        items: 2.5,
       },
       700: {
-        items: 3,
+        items: 3.5,
       },
       1000: {
-        items: 3,
+        items: 3.5,
       },
     },
   };
 
   return (
-    <div className="md:order-1 order-2 relative top-[-120px] max-w-[1600px] md:w-[88%] w-full mx-auto ">
+    <div className="md:order-1 order-2 relative w-full mx-0 ">
       <div
-        className="m-4 box-border flex h-full transition duration-700 ease-out md:m-10"
+        className="box-border flex h-full transition duration-700 ease-out"
         id="owl-carousel-products"
       >
         <ul id="owl-carousel-ul" className="owl-carousel owl-loaded owl-drag">
           <OwlCarousel loop {...options}>
             {coursesp && coursesp.length > 0
-              ? coursesp.filter((course) => course.status == 'feature').map((course) => {
+              ? coursesp.map((course) => {
                   return (
                     <>
                       <Link href={course.url} key={course.id}>
@@ -80,7 +81,7 @@ const CardSlider = () => {
                             alt={course.name}
                           />
                           <div className="md:py-4">
-                            <div className="mb-5 h-10 min-h-0 md:text-2xl text-base font-semibold md:font-bold md:mb-0 md:min-h-full group-hover:text-gray-500">
+                            <div className="mb-5 md:h-10 h-5 min-h-0 md:text-2xl text-base font-semibold md:font-bold md:mb-0 md:min-h-full group-hover:text-gray-500">
                               {course.name}
                             </div>
                             <p className="md:mb-5 mb-2 md:text-lg text-sm text-gray-700">
@@ -111,4 +112,4 @@ const CardSlider = () => {
     </div>
   );
 };
-export default CardSlider;
+export default CardSliderAll;

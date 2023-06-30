@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import CardSlider from "components/CardSlider";
 import NewSlider from "components/NewSlider";
+import CardSliderAll from "components/CardSliderAll";
 
 
 const Home: NextPage = () => {
@@ -41,11 +42,11 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="flow-root">
-        <h2 className="float-left mb-11 mt-0 box-border table pl-10 text-3xl font-medium leading-[normal] tracking-wide  text-[rgba(17,17,17,1)] underline decoration-sky-500 underline-offset-8 xl:text-3xl">
+      <div className="md:flow-root flex flex-col text-center">
+        <h2 className="md:float-left md:mb-11 mt-0 box-border table md:pl-10 md:text-3xl text-xl font-medium leading-[normal] tracking-wide  text-[rgba(17,17,17,1)] md:underline decoration-sky-500 underline-offset-8 xl:text-3xl">
           คอร์สที่กำลังเปิด
         </h2>
-        <div className="float-right box-border pr-10 pt-3">
+        <div className="md:float-right box-border md:pr-10 pt-3 md:py-0 py-5">
             <Link
               className="box-border min-w-[140px] rounded-3xl border border-[var(--global-color-primary)] md:px-6 px-5 py-1 text-center font-[inherit] md:text-base text-sm font-medium normal-case leading-[inherit] tracking-normal text-[var(--global-color-primary)] cursor-pointer"
               href="/courses"
@@ -54,89 +55,7 @@ const Home: NextPage = () => {
             </Link>
         </div>
       </div>
-      <div className="mx-5 box-border grid grid-cols-1 gap-5 md:mx-20 md:grid-cols-2 lg:grid-cols-3 ">
-        <Link href="/detail">
-          <div className="mb-5 max-w-lg transform cursor-pointer overflow-hidden rounded shadow-lg transition duration-500 hover:scale-105">
-            <img
-              className="w-full"
-              src="https://lawlibrarykku.online/getclassimg/LW011101_กฎหมายกับสังคม"
-              alt="Sunset in the mountains"
-            />
-            <div className="px-6 py-4">
-              <div className="mb-2 text-base font-bold">กฎหมายกับสังคม</div>
-              <div className="box-border flow-root">
-                <p className="float-left text-base text-gray-700">LW011101</p>
-                <div className="float-right box-border ">
-                  <div className="float-right box-border rounded-sm bg-[#4d40f7] p-0.5 text-center text-xs font-medium text-[#ffee00]">
-                    66 ที่ว่าง
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="px-6 pb-2 pt-4">
-              <span className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-                #กฎหมาย
-              </span>
-              <span className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-                #สังคม
-              </span>
-            </div>
-          </div>
-        </Link>
-        <Link href="/detail">
-          <div className="mb-5 max-w-lg transform cursor-pointer overflow-hidden rounded shadow-lg transition duration-500 hover:scale-105 ">
-            <img
-              className="w-full"
-              src="https://lawlibrarykku.online/getclassimg/LW011201_หลักกฎหมายเอกชน"
-              alt="Sunset in the mountains"
-            />
-            <div className="px-6 py-4">
-              <div className="mb-2 text-base font-bold">หลักกฎหมายเอกชน</div>
-              <div className="box-border flow-root">
-                <p className="float-left text-base text-gray-700">LW011201</p>
-                <div className="float-right box-border ">
-                  <div className="float-right box-border rounded-sm bg-[#4d40f7] p-0.5 text-center text-xs font-medium text-[#ffee00]">
-                    166 ที่ว่าง
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="px-6 pb-2 pt-4">
-              <span className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-                #กฎหมาย
-              </span>
-              <span className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-                #เอกชน
-              </span>
-            </div>
-          </div>
-        </Link>
-        <Link href="/detail">
-          <div className="mb-5 max-w-lg transform cursor-pointer overflow-hidden rounded shadow-lg transition duration-500 hover:scale-105">
-            <img
-              className="w-full"
-              src="https://lawlibrarykku.online/getclassimg/LW012102_นิติปรัชญา"
-              alt="Sunset in the mountains"
-            />
-            <div className="px-6 py-4">
-              <div className="mb-2 text-base font-bold">นิติปรัชญา</div>
-              <div className="box-border flow-root">
-                <p className="float-left text-base text-gray-700">LW012102</p>
-                <div className="float-right box-border ">
-                  <div className="float-right box-border rounded-sm bg-[#f03b3b] p-0.5 text-center text-xs font-medium text-white">
-                    คอร์สเต็ม
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="px-6 pb-2 pt-4">
-              <span className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-                #นิติกรรม
-              </span>
-            </div>
-          </div>
-        </Link>
-      </div>
+      <CardSliderAll />
       <div className="mb-36 mt-16 box-border bg-[url('https://mooc.chula.ac.th/images/index/categoryBG.jpg')] py-24 ">
         <div className=" box-border flex items-center justify-center pl-[var(--bs-gutter-x,_0.75rem)] pr-[var(--bs-gutter-x,_0.75rem)]">
           <div className="box-border w-[88%]">
