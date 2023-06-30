@@ -139,74 +139,113 @@ export const categoryFilters = [
 
 export const footerLinks = [
   {
-    title: 'For developers',
+    id: 1,
+    title: 'LAW KKU',
     links: [
-      'Go Pro!',
-      'Explore development work',
-      'Development blog',
-      'Code podcast',
-      'Open-source projects',
-      'Refer a Friend',
-      'Code of conduct',
+      {
+        id: 1,
+        title: 'เกี่ยวกับเรา',
+        path: '/about_us',
+        cName: 'submenu-item'
+      },
+      {
+        id: 2,
+        title: 'คำถามที่พบบ่อย',
+        path: '/คำถามที่พบบ่อย',
+        cName: 'submenu-item'
+      },
+      {
+        id: 3,
+        title: 'การใช้งาน',
+        path: '/การใช้งาน',
+        cName: 'submenu-item'
+      },
+      {
+        id: 4,
+        title: 'ติดต่อเรา',
+        path: '/contact_us',
+        cName: 'submenu-item'
+      },
+      {
+        id: 5,
+        title: 'นโยบายความเป็นส่วนตัว',
+        path: '/นโยบายความเป็นส่วนตัว',
+        cName: 'submenu-item'
+      },
+      {
+        id: 6,
+        title: 'นโยบายคุกกี้',
+        path: '/นโยบายคุกกี้',
+        cName: 'submenu-item'
+      },
     ],
   },
   {
-    title: 'Hire developers',
+    id: 2,
+    title: 'หมวดวิชา',
     links: [
-      'Post a job opening',
-      'Post a freelance project',
-      'Search for developers',
+      {
+        id: 1,
+        title: 'ภาษา',
+        path: '/ภาษา',
+        cName: 'submenu-item'
+      },
+      {
+        id: 2,
+        title: 'เทคโนโลยี',
+        path: '/เทคโนโลยี',
+        cName: 'submenu-item'
+      },
+      {
+        id: 3,
+        title: 'การจัดการ',
+        path: '/การจัดการ',
+        cName: 'submenu-item'
+      },
+      {
+        id: 4,
+        title: 'ศิลปะและการพัฒนาตนเอง',
+        path: '/ศิลปะและการพัฒนาตนเอง',
+        cName: 'submenu-item'
+      },
+      {
+        id: 5,
+        title: 'สุขภาพ',
+        path: '/สุขภาพ',
+        cName: 'submenu-item'
+      },
+      {
+        id: 6,
+        title: 'คอร์สทั้งหมด',
+        path: '/courses',
+        cName: 'submenu-item'
+      },
     ],
   },
   {
-    title: 'Brands',
+    id: 3,
+    title: 'ประเภทผู้เรียน',
     links: [
-      'Advertise with us',
+       {
+        id: 1,
+        title: 'นิสิตและบุคลากรจุฬาฯ',
+        path: '/นิสิตและบุคลากรจุฬาฯ',
+        cName: 'submenu-item'
+      },
+      {
+        id: 2,
+        title: 'บุคคลทั่วไป',
+        path: '/บุคคลทั่วไป',
+        cName: 'submenu-item'
+      },
+      {
+        id: 3,
+        title: 'Partner',
+        path: '/Partner',
+        cName: 'submenu-item'
+      },
     ],
   },
-  {
-    title: 'Company',
-    links: [
-      'About',
-      'Careers',
-      'Support',
-      'Media kit',
-      'Testimonials',
-      'API',
-      'Terms of service',
-      'Privacy policy',
-      'Cookie policy',
-    ],
-  },
-  {
-    title: 'Directories',
-    links: [
-      'Development jobs',
-      'Developers for hire',
-      'Freelance developers for hire',
-      'Tags',
-      'Places',
-    ],
-  },
-  {
-    title: 'Development assets',
-    links: [
-      'Code Marketplace',
-      'GitHub Marketplace',
-      'NPM Registry',
-      'Packagephobia',
-    ],
-  },
-  {
-    title: 'Development Resources',
-    links: [
-      'Freelancing',
-      'Development Hiring',
-      'Development Portfolio',
-      'Development Education',
-      'Creative Process',
-      'Development Industry Trends',
-    ],
-  },
+ 
 ];
 

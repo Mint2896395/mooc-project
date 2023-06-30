@@ -4,6 +4,7 @@ import Link from "next/link";
 import CardSlider from "components/CardSlider";
 import NewSlider from "components/NewSlider";
 
+
 const Home: NextPage = () => {
   return (
     <>

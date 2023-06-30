@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import * as $ from "jquery";
 
 declare global {
@@ -21,7 +22,7 @@ const productsp = [
   {
     id: 1,
     name: "การระงับและการไกล่เกลี่ยข้อพิพาท",
-    src: "https://lawlibrarykku.online/getclassimg/_LW014112_การระงับและการไกล่เกลี่ยข้อพิพาท",
+    src: "/images/_LW014112_การระงับและการไกล่เกลี่ยข้อพิพาท.jpeg",
     code: "LW014112",
     url: "detail",
     category: "กฎหมาย",
@@ -30,7 +31,7 @@ const productsp = [
   {
     id: 2,
     name: "พระธรรมนูญศาลยุติธรรม",
-    src: "https://lawlibrarykku.online/getclassimg/_LW013215_พระธรรมนูญศาลยุติธรรม",
+    src: "/images/_LW013215_พระธรรมนูญศาลยุติธรรม.jpeg",
     code: "LW013215",
     url: "detail",
     category: "กฎหมาย",
@@ -39,7 +40,7 @@ const productsp = [
   {
     id: 3,
     name: "กฎหมายระหว่างประเทศแผนกคดีบุคคล",
-    src: "https://lawlibrarykku.online/getclassimg/LW013401 กฎหมายระหว่างประเทศแผนกคดีบุคคล",
+    src: "/images/_LW013401_กฎหมายระหว่างประเทศแผนกคดีบุคคล.jpeg",
     code: "LW013401",
     url: "detail",
     category: "กฎหมาย",
@@ -48,7 +49,7 @@ const productsp = [
   {
     id: 4,
     name: "พระธรรมนูญศาลยุติธรรม",
-    src: "https://lawlibrarykku.online/getclassimg/_LW013215_พระธรรมนูญศาลยุติธรรม",
+    src: "/images/_LW013215_พระธรรมนูญศาลยุติธรรม.jpeg",
     code: "LW013215",
     url: "detail",
     category: "กฎหมาย",
@@ -57,7 +58,7 @@ const productsp = [
   {
     id: 5,
     name: "พระธรรมนูญศาลยุติธรรม",
-    src: "https://lawlibrarykku.online/getclassimg/_LW013215_พระธรรมนูญศาลยุติธรรม",
+    src: "/images/_LW013215_พระธรรมนูญศาลยุติธรรม.jpeg",
     code: "LW013215",
     url: "detail",
     category: "กฎหมาย",
@@ -66,7 +67,7 @@ const productsp = [
   {
     id: 6,
     name: "พระธรรมนูญศาลยุติธรรม",
-    src: "https://lawlibrarykku.online/getclassimg/_LW013215_พระธรรมนูญศาลยุติธรรม",
+    src: "/images/_LW013215_พระธรรมนูญศาลยุติธรรม.jpeg",
     code: "LW013215",
     url: "detail",
     category: "กฎหมาย",
@@ -128,11 +129,13 @@ const CardSlider = () => {
               ? productsp.map((product) => {
                   return (
                     <>
-                      <Link href={product.url}>
+                      <Link href={product.url} key={product.id}>
                         <div className="group w-full scale-95 transform cursor-pointer overflow-hidden border-0 border-b-2 border-solid border-[var(--global-color-primary)] transition duration-500 hover:scale-100 md:h-full md:max-w-lg ">
-                          <img
+                          <Image
                             className="w-full rounded-xl"
                             src={product.src}
+                            width={640}
+                            height={360}
                             alt={product.name}
                           />
                           <div className="md:py-4">
