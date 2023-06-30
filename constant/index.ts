@@ -146,37 +146,37 @@ export const footerLinks = [
         id: 1,
         title: 'เกี่ยวกับเรา',
         path: '/about_us',
-        cName: 'submenu-item'
+        cName: 'submenu-item',
       },
       {
         id: 2,
         title: 'คำถามที่พบบ่อย',
         path: '/คำถามที่พบบ่อย',
-        cName: 'submenu-item'
+        cName: 'submenu-item',
       },
       {
         id: 3,
         title: 'การใช้งาน',
         path: '/การใช้งาน',
-        cName: 'submenu-item'
+        cName: 'submenu-item',
       },
       {
         id: 4,
         title: 'ติดต่อเรา',
         path: '/contact_us',
-        cName: 'submenu-item'
+        cName: 'submenu-item',
       },
       {
         id: 5,
         title: 'นโยบายความเป็นส่วนตัว',
         path: '/นโยบายความเป็นส่วนตัว',
-        cName: 'submenu-item'
+        cName: 'submenu-item',
       },
       {
         id: 6,
         title: 'นโยบายคุกกี้',
         path: '/นโยบายคุกกี้',
-        cName: 'submenu-item'
+        cName: 'submenu-item',
       },
     ],
   },
@@ -188,7 +188,7 @@ export const footerLinks = [
         id: 1,
         title: 'ภาษา',
         path: '/ภาษา',
-        cName: 'submenu-item'
+        cName: 'submenu-item',
       },
       {
         id: 2,
@@ -200,25 +200,25 @@ export const footerLinks = [
         id: 3,
         title: 'การจัดการ',
         path: '/การจัดการ',
-        cName: 'submenu-item'
+        cName: 'submenu-item',
       },
       {
         id: 4,
         title: 'ศิลปะและการพัฒนาตนเอง',
         path: '/ศิลปะและการพัฒนาตนเอง',
-        cName: 'submenu-item'
+        cName: 'submenu-item',
       },
       {
         id: 5,
         title: 'สุขภาพ',
         path: '/สุขภาพ',
-        cName: 'submenu-item'
+        cName: 'submenu-item',
       },
       {
         id: 6,
         title: 'คอร์สทั้งหมด',
         path: '/courses',
-        cName: 'submenu-item'
+        cName: 'submenu-item',
       },
     ],
   },
@@ -230,7 +230,7 @@ export const footerLinks = [
         id: 1,
         title: 'นิสิตและบุคลากรจุฬาฯ',
         path: '/นิสิตและบุคลากรจุฬาฯ',
-        cName: 'submenu-item'
+        cName: 'submenu-item',
       },
       {
         id: 2,

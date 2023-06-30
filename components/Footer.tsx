@@ -1,42 +1,45 @@
 import Link from "next/link";
 import "flowbite";
-import { footerLinks } from "../constant";
 import Image from "next/image";
+import React from 'react';
+
+import { footerLinks } from "../constant";
 
 type ColumnProps = {
-  id: number;
+  id: any;
   title: string;
   links: {
       id: number;
       title: string;
       path: string;
-      cName: string;
   }[];
-}
+};
 
-const FooterColumn = ({ id, title, links }: ColumnProps) => (
-  <ul className="mb-2.5 mt-0 box-border " key={id}>
-    <span className="box-border">
-      <span className="box-border text-sm underline decoration-sky-500 underline-offset-8">
-        {title}
+const FooterColumn = ({ title, links }: ColumnProps) => {
+  return (
+    <ul className="mb-2.5 mt-0 box-border ">
+      <span className="box-border">
+        <span className="box-border text-sm underline decoration-sky-500 underline-offset-8">
+          {title}
+        </span>
       </span>
-    </span>
-    <br />
-    <br />
-    {links.map((link) => (
-      <li className="box-border">
-        <Link
-          className="box-border bg-transparent "
-          target="_blank"
-          href={link.path}
-          key={link.id}
-        >
-          {link.title}
-        </Link>
-      </li>
-    ))}
-  </ul>
-);
+      <br />
+      <br />
+      {links.map((link: any) => (
+        <li className="box-border">
+          <Link
+            className="box-border bg-transparent "
+            target="_blank"
+            href={link.path}
+            key={link.id}
+          >
+            {link.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )
+};
 
 const FooterMobile = ({ id, title, links }: ColumnProps) => (
   <>
@@ -143,7 +146,6 @@ const FooterContact = () => (
 
 const Footer = () => {
   return (
-    <>
       <footer className="mx-0 box-border flex flex-col bg-[#403f3f] text-[14px] text-[#d8d7cf]">
         <br className="box-border hidden md:block" />
         <br />
@@ -151,10 +153,14 @@ const Footer = () => {
         <br />
         <div className="mx-auto hidden w-full justify-center md:block md:w-[768px] xl:w-[1200px]">
           <div className="relative float-left box-border min-h-[1px] w-1/2 border-r border-solid border-r-[rgba(165,163,159,0.5)] px-3.5 text-right md:float-left md:w-1/5 lg:float-left lg:w-1/5">
-            <FooterColumn id={footerLinks[0].id} title={footerLinks[0].title} links={footerLinks[0].links} />
+            <FooterColumn  id={footerLinks[0]?.id ?? ''}
+            title={footerLinks[0]?.title ?? ''}
+            links={footerLinks[0]?.links ?? []} />
           </div>
           <div className="relative float-left box-border min-h-[1px] w-1/2 border-r border-solid border-r-[rgba(165,163,159,0.5)] px-3.5 text-right md:float-left md:w-1/5 lg:float-left lg:w-1/5">
-            <FooterColumn id={footerLinks[1].id} title={footerLinks[1].title} links={footerLinks[1].links} />
+          <FooterColumn id={footerLinks[1]?.id ?? ''}
+            title={footerLinks[1]?.title ?? ''}
+            links={footerLinks[1]?.links ?? []} />
           </div>
 
           <div className="relative float-left box-border min-h-[1px] w-1/2 px-3.5 md:float-left md:w-1/3 lg:float-left lg:w-1/5">
@@ -173,7 +179,9 @@ const Footer = () => {
             </Link>
           </div>
           <div className="relative float-left box-border min-h-[1px] w-1/2 border-l border-solid border-l-[rgba(165,163,159,0.5)] px-3.5 text-right md:float-left md:w-1/5 md:text-left lg:float-left lg:w-1/5">
-            <FooterColumn id={footerLinks[2].id} title={footerLinks[2].title} links={footerLinks[2].links} />
+          <FooterColumn  id={footerLinks[2]?.id ?? ''}
+            title={footerLinks[2]?.title ?? ''}
+            links={footerLinks[2]?.links ?? []} />
           </div>
           <div className="text-white-100 relative float-left box-border min-h-[1px] w-1/2 border-l border-solid border-l-[rgba(165,163,159,0.5)] px-3.5 text-left leading-5 md:float-left md:w-1/5 lg:float-left lg:w-1/5 ">
             <FooterContact />
@@ -204,21 +212,21 @@ const Footer = () => {
           </div>
 
           <FooterMobile
-            id={footerLinks[0].id}
-            title={footerLinks[0].title}
-            links={footerLinks[0].links}
+            id={footerLinks[0]?.id ?? ''}
+            title={footerLinks[0]?.title ?? ''}
+            links={footerLinks[0]?.links ?? []}
           />
 
           <FooterMobile
-            id={footerLinks[1].id}
-            title={footerLinks[1].title}
-            links={footerLinks[1].links}
+            id={footerLinks[1]?.id ?? ''}
+            title={footerLinks[1]?.title ?? ''}
+            links={footerLinks[1]?.links ?? []}
           />
 
           <FooterMobile
-            id={footerLinks[2].id}
-            title={footerLinks[2].title}
-            links={footerLinks[2].links}
+            id={footerLinks[2]?.id ?? ''}
+            title={footerLinks[2]?.title ?? ''}
+            links={footerLinks[2]?.links ?? []}
           />
 
           <div className="text-white-100 ml-0.5 box-border min-h-[1px] w-full px-3.5 pt-10 text-center leading-5 ">
@@ -242,7 +250,6 @@ const Footer = () => {
           defer
         />
       </footer>
-    </>
   );
 };
 
