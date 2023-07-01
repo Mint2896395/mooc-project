@@ -1,5 +1,5 @@
 import Detail from "components/Detail";
-import { getAllCourse } from "../lib/helper";
+import getAllCourse from "../lib/helper";
 import { GetStaticProps, GetStaticPaths } from "next";
 
 interface Course {

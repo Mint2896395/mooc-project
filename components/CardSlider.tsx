@@ -17,7 +17,7 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 import CardCourse from "./Card";
-import { getAllCourse } from "~/pages/lib/helper";
+import getAllCourse from "~/pages/lib/helper";
 
 // This is for Next.js. On Rect JS remove this line
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {

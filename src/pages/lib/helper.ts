@@ -1,4 +1,16 @@
-export function getAllCourse(id: any | undefined | null = null): Course[] {
+// Define the course type
+interface Course {
+  id: number;
+  name: string;
+  src: string;
+  code: string;
+  url: string;
+  category: string;
+  seat: string;
+  status: string;
+}
+
+export default function getAllCourse(id: any | undefined | null = null): Course[] {
   // All Courses
   const courses: Course[] = [
     {
@@ -70,14 +82,4 @@ export function getAllCourse(id: any | undefined | null = null): Course[] {
   }
 }
 
-// Define the course type
-interface Course {
-  id: number;
-  name: string;
-  src: string;
-  code: string;
-  url: string;
-  category: string;
-  seat: string;
-  status: string;
-}
+
