@@ -3,7 +3,7 @@ import { getAllCourse } from "../lib/helper";
 import { GetStaticProps, GetStaticPaths } from "next";
 
 interface Course {
-  id: number;
+  id: any;
   name: string;
   src: string;
   code: string;
@@ -34,7 +34,8 @@ export default function Course({course} : CourseProps) {
 export const getStaticProps: GetStaticProps<CourseProps> = async ({
   params,
 }) => {
-  const {id} = params;
+  // const {id} = params;
+  const id = params?.id;
   const course = getAllCourse(id);
 
   return {

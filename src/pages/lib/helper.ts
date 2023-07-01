@@ -1,4 +1,4 @@
-export function getAllCourse(id: any | undefined): Course[] {
+export function getAllCourse(id: any | undefined | null = null): Course[] {
   // All Courses
   const courses: Course[] = [
     {
