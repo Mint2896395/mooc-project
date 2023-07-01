@@ -48,11 +48,14 @@ const Navbar = () => {
                   ))}
                 </ul>
               </div>
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
-                style={{ color: "#c3c6cb", width: "24px" }}
-                className="box-border not-italic leading-none max-w-full flex-shrink-0 order-3 align-middle my-auto md:border-l border-gray-300 pl-2 mx-auto"
-              />
+              <div className="md:border-l border-gray-300 h-[26px] flex justify-center my-auto">
+                <div className="md:block hidden pr-[15px]"></div>
+                <FontAwesomeIcon
+                  icon={faMagnifyingGlass}
+                  style={{ color: "#c3c6cb", width: "26px" }}
+                  className="box-border not-italic max-w-full flex-shrink-0 order-3 align-middle my-auto md:pl-2 md:pr-0 pr-2 mx-auto"
+                />
+              </div>
             </div>
             {/* MOBILE - Menu */}
             <div className="order-1 hamburger-menu md:hidden block">

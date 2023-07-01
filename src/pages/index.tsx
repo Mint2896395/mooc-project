@@ -19,10 +19,10 @@ const Home: NextPage = () => {
         />
       </Head>
       <NewSlider />
-      <center className="box-border bg-gradient-to-r from-cyan-100 to-blue-100 pt-[45px]">
+      <center className="box-border bg-gradient-to-r from-[#ecd5b4] to-[#b39569] pt-[45px]">
         <div className="relative box-border md:h-64 h-36">
           <div className="absolute left-1/2 md:top-1/2 top-8 -translate-x-1/2 -translate-y-1/2 transform ">
-            <p className="my-0 box-border whitespace-nowrap md:text-4xl text-2xl fonnt-semibold tracking-[3.2px] text-[rgba(112,112,112,1)]">
+            <p className="my-0 box-border whitespace-nowrap md:text-4xl text-2xl fonnt-semibold tracking-[3.2px] text-white">
               คอร์สใหม่
             </p>
           </div>
@@ -165,7 +165,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <center className="box-border h-64 bg-gradient-to-r from-cyan-300 to-blue-400 md:mr-[55%]"></center>
+      <center className="box-border h-64 bg-gradient-to-r from-[#ecd5b4] to-[#b39569] md:mr-[55%]"></center>
       <div className="items-top relative top-[-125px] mx-5 box-border grid grid-cols-1 gap-5 md:mx-20 md:grid-cols-2 lg:grid-cols-3 ">
         <div className="text-white md:w-1/3 ">
           <p className="text-start text-5xl">ข่าวสาร</p>
