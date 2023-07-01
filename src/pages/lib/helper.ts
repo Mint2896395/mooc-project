@@ -1,5 +1,6 @@
-//All Courses
-export const coursesp = [
+export function getAllCourse(id: any | undefined): Course[] {
+  // All Courses
+  const courses: Course[] = [
     {
       id: 1,
       name: "การระงับและการไกล่เกลี่ยข้อพิพาท",
@@ -60,5 +61,23 @@ export const coursesp = [
       seat: "99 ที่ว่าง",
       status: "",
     },
-  
   ];
+
+  if (id){
+    return courses.filter(course => course.id == id)
+  } else {
+    return courses
+  }
+}
+
+// Define the course type
+interface Course {
+  id: number;
+  name: string;
+  src: string;
+  code: string;
+  url: string;
+  category: string;
+  seat: string;
+  status: string;
+}

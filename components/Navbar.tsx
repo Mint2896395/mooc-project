@@ -10,7 +10,6 @@ import NavLink from "./NavLink";
 import MobileNavLink from "./MobileNavLink";
 
 const Navbar = () => {
-  const router = useRouter();
 
   return (
     <nav className="box-border bg-white py-3.5 block overflow-hidden z-50 shadow-md ">

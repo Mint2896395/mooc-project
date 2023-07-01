@@ -16,8 +16,8 @@ import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-import { coursesp } from "../constant/course"
 import CardCourse from "./Card";
+import { getAllCourse } from "~/pages/lib/helper";
 
 // This is for Next.js. On Rect JS remove this line
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
@@ -28,6 +28,7 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 // import OwlCarousel from 'react-owl-carousel';
 
 const CardSliderAll = () => {
+  const coursesp = getAllCourse();
   const options = {
     margin: 1,
     responsiveClass: true,
