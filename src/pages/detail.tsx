@@ -30,14 +30,14 @@ const Detail = () => {
         />
       </Head>
       <div className="relative box-border ">
-        <div className="box-border w-full bg-gradient-to-r from-[#ecd5b4] to-[#b39569] md:py-[75px] p-5 ">
-          <div className="box-border w-[88%] mx-auto">
+        <div className="box-border w-full bg-gradient-to-r from-[#b39569] to-[#ecd5b4] md:py-[75px] py-[35px] md:p-5 p-3">
+          <div className="box-border md:w-[88%] w-full mx-auto">
             <div className="box-border flex flex-wrap justify-center ">
               <div className="box-border w-full max-w-full flex-shrink-0 pr-5 md:w-5/6 lg:w-1/2 ">
                 <div className="box-border ">
                   <div className="box-border flex flex-wrap ">
                     <div className="box-border w-full max-w-full flex-shrink-0 ">
-                      <h4 className="mb-2 mt-0 box-border text-xl font-medium leading-[normal] tracking-wide text-white md:text-2xl">
+                      <h4 className="mb-2 mt-0 box-border text-lg font-medium leading-[normal] tracking-wide text-white md:text-2xl">
                         การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพดีมีความสุข
                       </h4>
                     </div>
@@ -45,19 +45,19 @@ const Detail = () => {
                   <div className="box-border flex flex-wrap ">
                     <div className="box-border w-full max-w-full flex-shrink-0 ">
                       <ul className="float-left mb-6 mt-0 box-border w-full pl-0 ">
-                        <li className="float-left mb-0.5 box-border w-full text-base font-normal leading-7 tracking-normal text-white">
+                        <li className="mb-1 float-left box-border w-full md:text-base text-sm font-normal md:leading-7 tracking-normal text-white">
                           <strong className="float-left box-border pr-3 font-semibold text-white">
                             โดย :{" "}
                           </strong>
                           ทีมคณาจารย์จาก CHULA ARi
                         </li>
-                        <li className="float-left mb-0.5 box-border w-full text-base font-normal leading-7 tracking-normal text-white">
+                        <li className="mb-1 float-left box-border w-full md:text-base text-sm font-normal md:leading-7 tracking-normal text-white">
                           <strong className="float-left box-border pr-3 font-semibold text-white">
                             รหัส :{" "}
                           </strong>
                           MOOC5021
                         </li>
-                        <li className="float-left mb-0.5 box-border w-full text-base font-normal leading-7 tracking-normal text-white flex items-center">
+                        <li className="float-left box-border w-full md:text-base text-sm font-normal md:leading-7 tracking-normal text-white flex items-center">
                           <strong className="float-left box-border pr-3.5 font-semibold text-white">
                             หมู่ :{" "}
                           </strong>
@@ -73,7 +73,7 @@ const Detail = () => {
                   </div>
                   <div className="box-border flex flex-wrap ">
                     <div className="box-border w-full max-w-full flex-shrink-0 ">
-                      <h6 className="mb-5 mt-0 box-border text-lg font-semibold leading-[normal] tracking-normal text-white md:text-left text-center">
+                      <h6 className="md:mb-5 mb-2 mt-0 box-border md:text-lg text-base font-semibold leading-[normal] tracking-normal text-white md:text-left text-center">
                         ลงทะเบียนเรียน
                       </h6>
                     </div>
@@ -83,7 +83,7 @@ const Detail = () => {
                       <ul className="my-0 mb-5 box-border pl-0 ">
                         <li className="float-left mr-3.5 box-border last:mr-0 ">
                           <Link
-                            className="float-left box-border min-w-[200px] rounded-[25px] bg-yellow-400 text-center text-base font-normal text-white hover:block"
+                            className="float-left box-border rounded-[25px] bg-yellow-400 text-center md:text-base text-sm font-normal text-white hover:block border-2 border-white px-[13px] pt-[6px] pb-[8px]"
                             target="_blank"
                             href="https://www.mycourseville.com/?q=onlinecourse/course/34730"
                           >

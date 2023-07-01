@@ -60,6 +60,16 @@ html {
     z-index: 9;
     width: 100%;
 }
+
+@media(max-width: 488px) {
+  #owl-carousel-slides .owl-dots {
+    bottom: 5px;
+  }
+  .owl-dots button.owl-dot {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
   
   .owl-dots {
     text-align: center;
