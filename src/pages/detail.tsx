@@ -30,7 +30,7 @@ const Detail = () => {
         />
       </Head>
       <div className="relative box-border ">
-        <div className="box-border w-full bg-gradient-to-r from-[#ecd5b4] to-[#b39569] md:p-10 p-5 ">
+        <div className="box-border w-full bg-gradient-to-r from-[#ecd5b4] to-[#b39569] md:py-[75px] p-5 ">
           <div className="box-border w-[88%] mx-auto">
             <div className="box-border flex flex-wrap justify-center ">
               <div className="box-border w-full max-w-full flex-shrink-0 pr-5 md:w-5/6 lg:w-1/2 ">
@@ -128,13 +128,13 @@ const Detail = () => {
             </span>
           </div>
         </div>
-        <div className="relative box-border w-full max-w-full flex-shrink-0 pl-0 md:flex">
+        <div className="relative box-border w-full max-w-full flex-shrink-0 pl-0 flex flex-col md:flex-row">
           <div className="content-[''] w-[calc(100%_-_14px)] h-[calc(100%_-_14px)] absolute -translate-x-2/4 -translate-y-2/4 border-2 border-solid border-[white] left-2/4 top-2/4"></div>
-          <div className="z-[-1] box-border w-1/2">
+          <div className="z-[-1] box-border md:w-1/2">
             <img src="https://mooc.chula.ac.th/img/upload/การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพ.png" />
           </div>
-          <div className="relative w-1/2 bg-gray-100 z-[-1]">
-            <div className="box-border w-[calc(100%_-_12px)] tracking-[0.01rem] absolute -translate-y-2/4 px-[50px] py-[25px] top-[45%]">
+          <div className="relative md:w-1/2 bg-gray-100 z-[-1] w-full">
+            <div className="box-border w-[calc(100%_-_12px)] tracking-[0.01rem] md:absolute md:-translate-y-2/4 px-[50px] py-[25px] md:top-[45%] ">
               <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
                 <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg leading-8 text-[rgba(37,37,37,1)] md:w-1/3 lg:w-1/3 font-bold">
                   เนื้อหา
