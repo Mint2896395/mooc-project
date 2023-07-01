@@ -129,40 +129,43 @@ const Detail = () => {
           </div>
         </div>
         <div className="relative box-border w-full max-w-full flex-shrink-0 pl-0 md:flex">
-          <div className="z-[-1] box-border">
+          <div className="content-[''] w-[calc(100%_-_14px)] h-[calc(100%_-_14px)] absolute -translate-x-2/4 -translate-y-2/4 border-2 border-solid border-[white] left-2/4 top-2/4"></div>
+          <div className="z-[-1] box-border w-1/2">
             <img src="https://mooc.chula.ac.th/img/upload/การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพ.png" />
           </div>
-          <div className="box-border w-[calc(100%_-_12px)] bg-gray-100 pl-10 pt-10 tracking-normal md:pl-20">
-            <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
-              <div className="mt-[var(--bs-gutter-y)] box-border  w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg leading-8 text-[rgba(37,37,37,1)] md:w-1/3 lg:w-1/3">
-                เนื้อหา
+          <div className="relative w-1/2 bg-gray-100 z-[-1]">
+            <div className="box-border w-[calc(100%_-_12px)] tracking-[0.01rem] absolute -translate-y-2/4 px-[50px] py-[25px] top-[45%]">
+              <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
+                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg leading-8 text-[rgba(37,37,37,1)] md:w-1/3 lg:w-1/3 font-bold">
+                  เนื้อหา
+                </div>
+                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-0 pr-[calc(var(--bs-gutter-x)_/_2)] text-base leading-8 md:w-2/3 lg:w-2/3">
+                  8 บทเรียน
+                </div>
               </div>
-              <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-0 pr-[calc(var(--bs-gutter-x)_/_2)] text-base leading-8 md:w-2/3 lg:w-2/3">
-                8 บทเรียน
+              <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
+                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg leading-8 text-[rgba(37,37,37,1)] md:w-1/3  lg:w-1/3 font-bold">
+                  กลุ่มเป้าหมาย
+                </div>
+                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-0 pr-[calc(var(--bs-gutter-x)_/_2)] text-base leading-8 md:w-2/3 lg:w-2/3">
+                  นักเรียน นิสิต นักศึกษา และบุคคลทั่วไป จำนวน 5,000 คน
+                </div>
               </div>
-            </div>
-            <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
-              <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg leading-8 text-[rgba(37,37,37,1)] md:w-1/3  lg:w-1/3">
-                กลุ่มเป้าหมาย
+              <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
+                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg leading-8 text-[rgba(37,37,37,1)] md:w-1/3  lg:w-1/3 font-bold">
+                  เกณฑ์การเรียนจบ
+                </div>
+                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-0 pr-[calc(var(--bs-gutter-x)_/_2)] text-base leading-8 md:w-2/3 lg:w-2/3">
+                  ผู้เรียนต้องทำคะแนนรวมทั้งหมดให้ได้ร้อยละ 60 ขึ้นไป
+                </div>
               </div>
-              <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-0 pr-[calc(var(--bs-gutter-x)_/_2)] text-base leading-8 md:w-2/3 lg:w-2/3">
-                นักเรียน นิสิต นักศึกษา และบุคคลทั่วไป จำนวน 5,000 คน
-              </div>
-            </div>
-            <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
-              <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg leading-8 text-[rgba(37,37,37,1)] md:w-1/3  lg:w-1/3">
-                เกณฑ์การเรียนจบ
-              </div>
-              <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-0 pr-[calc(var(--bs-gutter-x)_/_2)] text-base leading-8 md:w-2/3 lg:w-2/3">
-                ผู้เรียนต้องทำคะแนนรวมทั้งหมดให้ได้ร้อยละ 60 ขึ้นไป
-              </div>
-            </div>
-            <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
-              <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0  pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg leading-8 text-[rgba(37,37,37,1)] md:w-1/3  lg:w-1/3">
-                แพลตฟอร์ม
-              </div>
-              <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-0 pr-[calc(var(--bs-gutter-x)_/_2)] text-base leading-8 md:w-2/3 lg:w-2/3">
-                myCourseVille
+              <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
+                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0  pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg leading-8 text-[rgba(37,37,37,1)] md:w-1/3  lg:w-1/3 font-bold">
+                  แพลตฟอร์ม
+                </div>
+                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-0 pr-[calc(var(--bs-gutter-x)_/_2)] text-base leading-8 md:w-2/3 lg:w-2/3">
+                  myCourseVille
+                </div>
               </div>
             </div>
           </div>
