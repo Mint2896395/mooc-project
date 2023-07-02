@@ -29,12 +29,12 @@ const CoursesPage = () => {
   const router = useRouter();
   const query = router.query;
   const page = (query.page as string) ?? "1";
-  const perPage = (query.perPage as string) ?? "2";
+  const perPage = (query.perPage as string) ?? "8";
 
   // Lines 27-29: Define limit and skip which is used by DummyJSON API for pagination
   const limit = perPage;
   const skip = (parseInt(page) - 1) * parseInt(limit);
-  const url = `http://localhost:3000/api/course?limit=${limit}&skip=${skip}&select=name,src,code,category`;
+  const url = `/api/course?limit=${limit}&skip=${skip}&select=name,src,code,category`;
 
   // Line 32:  use the useFetch hook to get the products
   const { data } = useFetch<Response>(url);
