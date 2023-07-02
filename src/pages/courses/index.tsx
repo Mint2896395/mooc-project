@@ -1,14 +1,44 @@
-import { type NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
-import getAllCourse from "../lib/helper";
 import CardCourse from "components/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import Pagination from "components/Pagination";
+import { useRouter } from "next/router";
+import { useFetch } from "usehooks-ts";
 
+interface Course {
+  id: number;
+  name: string;
+  src: string;
+  code: string;
+  url: string;
+  category: string;
+  seat: string;
+  status: string;
+};
 
-const courses = () => {
-  const coursesp = getAllCourse();
+interface Response {
+  courses: Course[];
+  total: number;
+  skip: number;
+  limit: number;
+};
+
+const CoursesPage = () => {
+  // 21-25 parse the page and perPage  from router.query
+  const router = useRouter();
+  const query = router.query;
+  const page = (query.page as string) ?? "1";
+  const perPage = (query.perPage as string) ?? "2";
+
+  // Lines 27-29: Define limit and skip which is used by DummyJSON API for pagination
+  const limit = perPage;
+  const skip = (parseInt(page) - 1) * parseInt(limit);
+  const url = `http://localhost:3000/api/course?limit=${limit}&skip=${skip}&select=name,src,code,category`;
+
+  // Line 32:  use the useFetch hook to get the products
+  const { data } = useFetch<Response>(url);
+
     return (
         <>
         <Head>
@@ -26,8 +56,8 @@ const courses = () => {
                   <p className="my-5 mx-auto box-border md:text-2xl text-base text-[rgba(112,112,112,1)] md:tracking-[2px] px-1">
                       หลักสูตรนิติศาสตร์บัณทิตเป็นหลักสูตรในระบบทวิภาคี โดยมีระยะเวลาการศึกษาตลอดหลักสูตร 4 ปีการศึกษา
                   </p>
-                  </div>
               </div>
+            </div>
             
             <hr className="mt-6 box-content h-0 overflow-visible border-solid" />
           </center>
@@ -174,50 +204,26 @@ const courses = () => {
                     กฎหมาย
                     </h2>
                 </div>
+                {!data && <div>Loading...</div>}
                 <div className="box-border grid lg:grid-cols-4 md:grid-cols-4 grid-cols-2 md:gap-1 px-1 ">
-                  {coursesp && coursesp.length > 0
-                  ? coursesp.map((course) => {
+                  {data?.courses?.map((course) => {
                       return (
                         <>
                           <CardCourse key={course.id} course={course} />
                         </>
                       );
                     })
-                  : ""}
+                  }
                 </div>
 
-                <div className="my-10 flex flex-col items-center">
-                    <nav aria-label="Page navigation">
-                        <ul className="inline-flex items-center -space-x-px">
-                            <li>
-                            <Link href="#" className="block px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                                <span className="sr-only">Previous</span>
-                                <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            </Link>
-                            </li>
-                            <li>
-                            <Link href="#" className="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</Link>
-                            </li>
-                            <li>
-                            <Link href="#" className="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</Link>
-                            </li>
-                            <li>
-                            <Link href="#" aria-current="page" className="z-10 px-3 py-2 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</Link>
-                            </li>
-                            <li>
-                            <Link href="#" className="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</Link>
-                            </li>
-                            <li>
-                            <Link href="#" className="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</Link>
-                            </li>
-                            <li>
-                            <Link href="#" className="block px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                                <span className="sr-only">Next</span>
-                                <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                            </Link>
-                            </li>
-                        </ul>
-                    </nav>
+                {/* // we use tailwindCSS classes to create a decent product grid */}
+                <div className="mx-auto container my-10 flex flex-col items-center">
+                  <Pagination
+                    page={parseInt(page)}
+                    perPage={parseInt(perPage)}
+                    itemCount={data?.total ?? 0}
+                  />
+                  {!data && <div>Loading...</div>}
                 </div>
 
               {/* <div className="box-border hidden overflow-y-scroll h-[600px] ">
@@ -799,4 +805,4 @@ const courses = () => {
     );
 }
 
-export default courses
+export default CoursesPage
