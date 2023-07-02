@@ -19,7 +19,7 @@ const Pagination = ({ page, itemCount, perPage }: Props) => {
     totalItems: itemCount,
     page: page,
     itemsPerPage: perPage,
-    maxPageItems: 2,
+    maxPageItems: 5,
   });
 
   const firstPage = 1;
@@ -35,7 +35,7 @@ const Pagination = ({ page, itemCount, perPage }: Props) => {
       {[...arr].map((_, i) => {
         // getPageItem function returns the type of page based on the index.
         // it also automatically calculates if the page is disabled.
-        const { page, disabled,current } = getPageItem(i);
+        const { page, disabled, current } = getPageItem(i);
 
         if (page === "previous") {
           return (
@@ -85,9 +85,9 @@ function PaginationLink({ page, children, ...props }: PaginationLinkProps) {
       href={{ query: q }}
       // toggle the appropriate classes based on active, disabled states.
       className={cn({
-        "p-2": true,
-        "font-bold text-indigo-700": props.active,
-        "text-indigo-400": !props.active,
+        "px-4 py-2": true,
+        "text-white bg-[var(--global-color-primary)] rounded-full": props.active,
+        "text-gray-400 hover:text-[var(--global-color-primary)]": !props.active,
         "pointer-events-none text-gray-200": props.disabled,
       })}
     >

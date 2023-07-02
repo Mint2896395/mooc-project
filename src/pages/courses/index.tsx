@@ -2,7 +2,7 @@ import Head from "next/head";
 import CardCourse from "components/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import Pagination from "components/Pagination";
+import Pagination from "../../../components/Pagination";
 import { useRouter } from "next/router";
 import { useFetch } from "usehooks-ts";
 
@@ -25,18 +25,18 @@ interface Response {
 };
 
 const CoursesPage = () => {
-  // 21-25 parse the page and perPage  from router.query
+  //parse the page and perPage  from router.query
   const router = useRouter();
   const query = router.query;
   const page = (query.page as string) ?? "1";
-  const perPage = (query.perPage as string) ?? "8";
+  const perPage = (query.perPage as string) ?? "4";
 
-  // Lines 27-29: Define limit and skip which is used by DummyJSON API for pagination
+  //Define limit and skip which is used by DummyJSON API for pagination
   const limit = perPage;
   const skip = (parseInt(page) - 1) * parseInt(limit);
   const url = `/api/course?limit=${limit}&skip=${skip}&select=name,src,code,category`;
 
-  // Line 32:  use the useFetch hook to get the products
+  //use the useFetch hook to get the products
   const { data } = useFetch<Response>(url);
 
     return (

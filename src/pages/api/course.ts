@@ -283,7 +283,7 @@ export default function getAllCourse(req: NextApiRequest, res: NextApiResponse<R
     },
   ];
 
-  const { id, limit, skip } = req.query;
+  const { id, skip, limit } = req.query;
   let filteredCourses: Course[];
 
   if (id) {
@@ -296,10 +296,10 @@ export default function getAllCourse(req: NextApiRequest, res: NextApiResponse<R
   const limitedCourses = limit ? filteredCourses.slice(Number(skip), Number(skip) + Number(limit)) : filteredCourses;
 
   const response: Response = {
-    total: filteredCourses.length,
-    limit: limit ? Number(limit) : filteredCourses.length,
-    skip: skip ? Number(skip) : 0,
     courses: limitedCourses,
+    total: filteredCourses.length,
+    skip: skip ? Number(skip) : 0,
+    limit: limit ? Number(limit) : filteredCourses.length,
   };
 
   res.status(200).json(response);
