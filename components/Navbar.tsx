@@ -88,11 +88,11 @@ const Navbar: React.FC = () => {
     </nav>
     <div className={`bg-transparent ${isOpen ? 'h-2 z-[-1]' : 'h-0'}`}></div>
     <div className={`relative bg-white w-full px-5 transition-all duration-300 ease-in-out overflow-hidden box-border ${isOpen ? 'h-15 md:py-5 py-3' : 'h-0'}`}>
-      <div className=" text-black  bg-white flex items-center justify-center z-10">
-        <div className="border rounded overflow-hidden flex">
-          <input type="text" className="px-4 py-2" placeholder="Search..." />
-          <button className="group flex items-center justify-center px-4 border-l">
-            <svg className="h-4 w-4 text-grey-dark group-hover:text-[var(--global-color-primary)]" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <div className="text-[var(--global-color-primary)] bg-white flex items-center justify-center z-10">
+        <div className="border rounded-full overflow-hidden flex">
+          <input type="search" className="px-4 py-2 placeholder-[var(--global-color-primary)] border-transparent focus:border-transparent focus:ring-0 !outline-none" placeholder="ค้นหาคอร์ส" />
+          <button className="flex items-center justify-center px-4 ">
+            <svg className="h-4 w-4 text-grey-dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
             </svg>
           </button>
