@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useRouter } from 'next/router';
+import React, { useState } from 'react';
 // import the library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import your icons
@@ -9,9 +9,16 @@ import { navItems } from "../constant";
 import NavLink from "./NavLink";
 import MobileNavLink from "./MobileNavLink";
 
-const Navbar = () => {
+
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
+  <>
     <nav className="box-border bg-white py-3.5 block overflow-hidden z-50 shadow-md ">
       <div className="box-border pr-[var(--bs-gutter-x,_0.75rem)] pl-[var(--bs-gutter-x,_0.75rem)] ">
         <div className="box-border md:w-[88%] w-full py-0 md:px-[15px] my-0 mx-auto ">
@@ -49,11 +56,12 @@ const Navbar = () => {
               </div>
               <div className="md:border-l border-gray-300 h-[26px] flex justify-center my-auto">
                 <div className="md:block hidden pr-[15px]"></div>
-                <FontAwesomeIcon
-                  icon={faMagnifyingGlass}
-                  style={{ color: "#c3c6cb", width: "26px" }}
-                  className="box-border not-italic max-w-full flex-shrink-0 order-3 align-middle my-auto md:pl-2 md:pr-0 pr-2 mx-auto"
-                />
+
+                <input type="checkbox" name="toggle" id="toggle_search" checked={isOpen} onChange={toggleOpen} className="absolute left-[-100%] top-[-100%]" />
+                <label htmlFor="toggle_search" className="box-border not-italic max-w-full flex-shrink-0 order-3 align-middle my-auto md:pl-2 md:pr-0 pr-2 mx-auto cursor-pointer">
+                  <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: "#c3c6cb", width: "19px" }} />
+                </label>
+
               </div>
             </div>
             {/* MOBILE - Menu */}
@@ -78,7 +86,20 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-
+    <div className={`bg-transparent ${isOpen ? 'h-2 z-[-1]' : 'h-0'}`}></div>
+    <div className={`relative bg-white w-full px-5 transition-all duration-300 ease-in-out overflow-hidden box-border ${isOpen ? 'h-15 md:py-5 py-3' : 'h-0'}`}>
+      <div className=" text-black  bg-white flex items-center justify-center z-10">
+        <div className="border rounded overflow-hidden flex">
+          <input type="text" className="px-4 py-2" placeholder="Search..." />
+          <button className="group flex items-center justify-center px-4 border-l">
+            <svg className="h-4 w-4 text-grey-dark group-hover:text-[var(--global-color-primary)]" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </>
   );
 };
 
