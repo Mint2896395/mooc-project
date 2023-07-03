@@ -84,7 +84,7 @@ export const navItems = [
   {
     id: 5,
     title: 'ข่าวประชาสัมพันธ์',
-    path: '/ข่าวประชาสัมพันธ์',
+    path: '/news',
     cName: 'nav-item'
   },
   {
