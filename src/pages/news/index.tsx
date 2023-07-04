@@ -49,7 +49,7 @@ const CoursesPage = () => {
         </Head>
         <div className="">
           <center className="box-border  ">
-            <div className="relative box-border md:h-64 h-56 ">
+            <div className="relative box-border md:h-64 h-[130px] ">
               <div className="relative top-1/2 left-1/2 text-center transform -translate-x-1/2 -translate-y-1/2 ">
                   <p className="my-0 box-border whitespace-nowrap md:text-4xl text-2xl text-[#b39573] tracking-[3.2px]">
                       ข่าวสาร และบทความ
@@ -57,12 +57,12 @@ const CoursesPage = () => {
               </div>
             </div>
             
-            <hr className="mt-6 box-content h-0 overflow-visible border-solid" />
+            <hr className="md:mt-6 box-content h-0 overflow-visible border-solid" />
           </center>
           <div className="bg-[#f5f5f5] md:pb-20">
             <div className="md:mx-auto md:px-[15px] m-0 p-0 flex flex-col justify-center items-center md:w-[88%] w-full ">
               {!data && <div>Loading...</div>}
-              <div className="box-border grid lg:grid-cols-3 md:grid-cols-3 grid-cols-2 md:gap-5 px-1 md:py-20 ">
+              <div className="box-border grid lg:grid-cols-3 md:grid-cols-3 grid-cols-2 md:gap-5 gap-3 md:px-1 px-2 mx-auto md:py-20 ">
                 {data?.newses?.map((news) => {
                     return (
                       <>

@@ -7,7 +7,14 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      overflow: {
+        clip: 'clip',
+      },
+      margin: {
+        'content-box': 'content-box',
+      },
+    },
   },
   plugins: [
     require("flowbite/plugin")

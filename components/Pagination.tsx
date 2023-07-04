@@ -85,7 +85,7 @@ function PaginationLink({ page, children, ...props }: PaginationLinkProps) {
       href={{ query: q }}
       // toggle the appropriate classes based on active, disabled states.
       className={cn({
-        "px-4 py-2": true,
+        "md:text-base text-xs md:px-4 py-2 px-3": true,
         "text-white bg-[var(--global-color-primary)] rounded-full": props.active,
         "text-gray-400 hover:text-[var(--global-color-primary)]": !props.active,
         "pointer-events-none text-gray-200": props.disabled,
