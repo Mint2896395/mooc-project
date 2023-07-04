@@ -87,40 +87,54 @@ export default function News({ news }: NewsProps) {
                       </div>
                     </div>
                     <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 md:w-full lg:w-1/4 ">
-                      <div className="mb-14 box-border bg-[rgba(254,244,245,1)] py-[25px] px-5">
+                      <div className="mb-14 box-border bg-[#fef8f4] py-[25px] px-5">
                         <div className="box-border flex flex-wrap ">
                           <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 font-[Noto_Sans_Thai]">
-                            <h5 className="relative mt-0 mb-10 box-border pb-2 text-center text-2xl font-medium tracking-wide leading-[normal] text-[rgba(17,17,17,1)]">ข่าวสารและบทความล่าสุด</h5>
+                            <h5 className="relative mt-0 mb-10 box-border pb-2 text-center text-2xl font-medium tracking-wide leading-[normal] text-[rgba(17,17,17,1)] border-b-[3px] border-[var(--global-color-primary)] ">ข่าวสารและบทความล่าสุด</h5>
                           </div>
                         </div>
                         {/* <!-- LASTEST NEWS :: PC & IPAD PRO --> */}
                         <div className="box-border hidden md:hidden lg:block ">
-                          <div className="box-border flex flex-wrap ">
-                            <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 md:w-1/3 lg:w-full ">
-                              <a className="mb-9 box-border hover:block text-[rgba(13,110,253,1)]" href="https://mooc.chula.ac.th/news-detail/11">
-                                <div className="box-border flex flex-wrap ">
-                                  <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 ">
-                                    <div className="mb-3 box-border overflow-hidden rounded-xl ">
-                                      <div className="relative box-border overflow-hidden rounded-xl pt-[78%]">
-                                        <img className="absolute top-1/2 left-1/2 box-border h-full w-auto align-middle " src="https://mooc.chula.ac.th/img/upload/ปกหน้า_ChatGPT ถอยไป.png" />
+                          <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 md:w-1/3 lg:w-full ">
+                            {news?.slice(0, 5).map((news) => {
+                                return (
+                                  <>                                    
+                                    <Link href={`/news/${news.source.id}`} key={news.source.id}>
+                                      <div className="group w-full transform cursor-pointer overflow-hidden md:h-full md:max-w-lg mb-[35px]">
+                                        <div className="box-border flex flex-wrap ">
+                                          <div className="box-border w-full max-w-full flex-shrink-0 ">
+                                            <div className="mb-3.5 box-border overflow-hidden ">
+                                              <div className="relative box-border overflow-hidden pt-[65%] rounded-xl transition-all duration-500 group-hover:bg-[rgba(255,148,27,0.3)]  ">
+                                                <img className="mx-auto absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 w-[100%] align-middle  group-hover:opacity-60 group-hover:mix-blend-luminosity overflow-clip margin-content-box" src={news.urlToImage} />
+                                                {/* <Image
+                                                  className="w-full rounded-xl"
+                                                  src={news.urlToImage}
+                                                  width={640}
+                                                  height={360}
+                                                  alt={news.source.name}
+                                                /> */}
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div className="box-border flex flex-wrap ">
+                                          <div className="box-border w-full max-w-full flex-shrink-0 ">
+                                            <div className="float-left mb-1.5 box-border text-xs font-medium tracking-normal text-[var(--global-color-primary)]">20 มิถุนายน 2566</div>
+                                          </div>
+                                        </div>
+                                        <div className="box-border flex flex-wrap ">
+                                          <div className="box-border w-full max-w-full flex-shrink-0 ">
+                                            <div className="mb-1.5 box-border ">
+                                              <p className="my-0 box-border overflow-hidden text-base font-semibold tracking-normal text-[rgba(37,37,37,1)] group-hover:text-[var(--global-color-primary)]"> {news.title}</p>
+                                            </div>
+                                          </div>
+                                        </div>
                                       </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="box-border flex flex-wrap ">
-                                  <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 ">
-                                    <div className="float-left mb-1 box-border text-xs font-medium tracking-normal text-[rgba(219,95,142,1)]">20 มิถุนายน 2566</div>
-                                  </div>
-                                </div>
-                                <div className="box-border flex flex-wrap ">
-                                  <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 ">
-                                    <div className="mb-0 box-border ">
-                                      <p className="my-0 box-border overflow-hidden text-base font-medium tracking-normal text-[rgba(37,37,37,1)]">ขอเชิญชาวจุฬาฯ และบุคคลทั่วไป เข้าฟังบรรยายในหัวข้อ: ChatGPT ถอยไป!! มาปล่อยพลัง AI ด้วย Microsoft Bing x GPT4</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
+                                    </Link>
+                                  </>
+                                );
+                              })
+                            }
                           </div>
                         </div>
                         {/* <!-- LASTEST NEWS :: IPAD & MOBILE --> */}
@@ -205,6 +219,11 @@ export default function News({ news }: NewsProps) {
 export const getStaticProps: GetStaticProps<NewsProps> = async () => {
   const response = await fetch(`${baseUrl}/api/news`);
   const data = await response.json();
+
+  // Sort the news items by the newest creation date
+  const sortedNews = data.newses.sort((a: News, b: News) => {
+    return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+  });
 
   return {
     props: {
