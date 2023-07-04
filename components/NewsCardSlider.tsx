@@ -99,7 +99,7 @@ const NewsCardSlider = () => {
   };
 
   return (
-    <div className="relative w-full mx-auto md:hidden ">
+    <div className="relative w-full mx-auto md:hidden block">
       <div
         className="box-border flex h-full transition duration-700 ease-out"
         id="owl-carousel-products"
