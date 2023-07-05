@@ -1,4 +1,16 @@
+import useSWR from 'swr'
 import React from "react";
+import CourseItem from 'types/Course';
+
+const fetcher = async (url: string) => {
+  const res = await fetch(url);
+  return res.json();
+};
+
+interface CourseItemProp {
+  courses: CourseItem[];
+}
+
 import * as $ from "jquery";
 
 declare global {
@@ -17,7 +29,6 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 import CardCourse from "./Card";
-import getAllCourse from "~/pages/lib/helper";
 
 // This is for Next.js. On Rect JS remove this line
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
@@ -36,7 +47,13 @@ const prevIcon =
   '<button aria-label="slide backward" class="absolute flex items-center justify-center z-30 left-0 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer md:w-8 md:h-8 w-6 h-6 rounded-full bg-[var(--global-color-primary)] hover:bg-orange-400 text-white" id="prev"><svg class="dark:text-gray-900" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></button>';
 
 const CardSlider = () => {
-  const coursesp = getAllCourse();
+  const { data, error } = useSWR<CourseItemProp>('/api/course', fetcher);
+
+  // Handle the error state
+  if (error) return <div>Failed to load</div>;
+  // Handle the loading state
+  if (!data) return <div>Loading...</div>;
+  
   const options = {
     margin: 5,
     responsiveClass: true,
@@ -74,8 +91,8 @@ const CardSlider = () => {
       >
         <ul id="owl-carousel-ul" className="owl-carousel owl-loaded owl-drag">
           <OwlCarousel loop {...options}>
-            {coursesp && coursesp.length > 0
-              ? coursesp.filter((course) => course.status == 'feature').map((course) => {
+            {data.courses && data.courses.length > 0
+              ? data.courses.filter((course) => course.status == 'feature').map((course) => {
                   return (
                     <>
                       <CardCourse key={course.id} course={course} />

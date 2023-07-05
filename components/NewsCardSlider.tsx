@@ -25,7 +25,6 @@ import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-import CardCourse from "./Card";
 import Link from "next/link";
 
 // This is for Next.js. On Rect JS remove this line

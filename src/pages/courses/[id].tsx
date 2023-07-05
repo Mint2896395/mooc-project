@@ -1,42 +1,40 @@
 import Detail from "components/Detail";
-import getAllCourse from "../lib/helper";
 import { GetStaticProps, GetStaticPaths } from "next";
+import { useRouter } from "next/router";
 import Course from "types/Course";
 
 interface CourseProps {
   course: Course[];
 }
 
+const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
+
 export default function Course({course} : CourseProps) {
-  return (
-    <article>
-      {
-        course.map((c: any) => (
-          <>
-            <Detail key={c.id} course={c} />
-          </>
-        ))
-      }
-    </article>
-  )
+  const router = useRouter();
+  const { id } = router.query;
+
+  const selectedCourse = course.find((courseItem) => courseItem.id === Number(id));
+  
+  return selectedCourse ? <Detail key={selectedCourse.id} course={selectedCourse} /> : null;
+
 }
 
-export const getStaticProps: GetStaticProps<CourseProps> = async ({
-  params,
-}) => {
-  // const {id} = params;
-  const id = params?.id;
-  const course = getAllCourse(id);
+export const getStaticProps: GetStaticProps<CourseProps> = async () => {
+  const response = await fetch(`${baseUrl}/api/course`);
+  const data = await response.json();
 
   return {
-    props: { course },
+    props: { 
+      course: data.courses || [],
+    },
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const courses = getAllCourse();
-  const paths = courses.map((course) => ({
-    params: { id: course.id.toString() },
+   const response = await fetch(`${baseUrl}/api/course`);
+  const data = await response.json();
+  const paths = data.courses.map((courseItem: Course) => ({
+    params: { id: String(courseItem.id) },
   }));
 
   return {

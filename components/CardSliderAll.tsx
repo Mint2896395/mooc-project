@@ -1,4 +1,16 @@
+import useSWR from 'swr'
 import React from "react";
+import CourseItem from 'types/Course';
+
+const fetcher = async (url: string) => {
+  const res = await fetch(url);
+  return res.json();
+};
+
+interface CourseItemProp {
+  courses: CourseItem[];
+}
+
 import * as $ from "jquery";
 
 declare global {
@@ -28,7 +40,13 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 // import OwlCarousel from 'react-owl-carousel';
 
 const CardSliderAll = () => {
-  const coursesp = getAllCourse();
+  const { data, error } = useSWR<CourseItemProp>('/api/course', fetcher);
+
+  // Handle the error state
+  if (error) return <div>Failed to load</div>;
+  // Handle the loading state
+  if (!data) return <div>Loading...</div>;
+
   const options = {
     margin: 1,
     responsiveClass: true,
@@ -68,8 +86,8 @@ const CardSliderAll = () => {
       >
         <ul id="owl-carousel-ul" className="owl-carousel owl-loaded owl-drag">
           <OwlCarousel loop {...options}>
-            {coursesp && coursesp.length > 0
-              ? coursesp.map((course) => {
+            {data.courses && data.courses.length > 0
+              ? data.courses.map((course) => {
                   return (
                     <>
                       <CardCourse key={course.id} course={course} />
