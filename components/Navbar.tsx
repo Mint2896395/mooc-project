@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
           <div className="box-border flex flex-wrap mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)] items-center justify-center h-full">
             <div className="order-2 box-border max-w-full flex-shrink-0 w-[85%] md:w-1/3 lg:w-1/4 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)] ">
               <Link
-                className="box-border flex justify-center items-center"
+                className="box-border flex justify-center items-center mx-5 md:float-left"
                 title="หน้าแรก"
                 href="/"
               >
