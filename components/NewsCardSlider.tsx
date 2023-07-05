@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import NewsItem from 'types/News';
 
 import * as $ from "jquery";
 
@@ -38,20 +39,6 @@ const nextIcon =
 const prevIcon =
   '<button aria-label="slide backward" class="absolute flex items-center justify-center z-30 left-0 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer md:w-8 md:h-8 w-6 h-6 rounded-full bg-[var(--global-color-primary)] hover:bg-orange-400 text-white opacity-90" id="prev"><svg class="dark:text-gray-900" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></button>';
 
-interface NewsItem {
-  source: {
-    id: number;
-    name: string;
-  };
-  author: string;
-  title: string;
-  description: string;
-  url: string;
-  urlToImage: string;
-  publishedAt: string;
-  content: string;
-}
-
 interface NewsItemProp {
   newses: NewsItem[];
 }
@@ -59,7 +46,7 @@ interface NewsItemProp {
 const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
 
 const NewsCardSlider = () => {
-  const [newsItems, setNewsItems] = useState<NewsItem[] | null >(null);
+  const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
 
   useEffect(() => {
 

@@ -1,16 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
-interface Course {
-  id: any;
-  name: string;
-  src: string;
-  code: string;
-  url: string;
-  category: string;
-  seat: string;
-  status: string;
-}
+import Course from "types/Course";
 
 interface CourseProps {
   course: Course;

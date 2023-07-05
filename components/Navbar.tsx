@@ -23,24 +23,24 @@ const Navbar: React.FC = () => {
       <div className="box-border pr-[var(--bs-gutter-x,_0.75rem)] pl-[var(--bs-gutter-x,_0.75rem)] ">
         <div className="box-border md:w-[88%] w-full py-0 md:px-[15px] my-0 mx-auto ">
           <div className="box-border flex flex-wrap mt-[calc(-0px_*_-1)] mr-[calc(1.5rem_/_-2)] ml-[calc(1.5rem_/_-2)] items-center justify-center h-full">
-            <div className="order-2 box-border max-w-full flex-shrink-0 w-[85%] md:w-1/3 lg:w-1/4 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)] flex justify-center items-center">
+            <div className="order-2 box-border max-w-full flex-shrink-0 w-[85%] md:w-1/3 lg:w-1/4 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)] ">
               <Link
-                className="md:float-left box-border hover:block "
+                className="box-border flex justify-center items-center"
                 title="หน้าแรก"
                 href="/"
               >
                 <Image
-                  className="box-border mx-auto w-14 align-middle"
+                  className="box-border mx-0 w-14 align-middle"
                   src="/LOGO_law-kku1.png"
                   width={100}
                   height={100}
                   alt="Law-KKU-Logo"
                 />
+                <span className="pl-3 text-black leading-3 ">
+                  <h6 className="text-2xl font-semibold tracking-[0.1px]">School of Law</h6>
+                  <p className="text-[#949494] text-[15px] tracking-[0.5px] ">Khon Kaen University</p>
+                </span>
               </Link>
-              <span className="pl-3 text-black leading-3 ">
-                <h6 className="text-2xl font-semibold tracking-[0.1px]">School of Law</h6>
-                <p className="text-[#949494] text-[15px] tracking-[0.5px] ">Khon Kaen University</p>
-              </span>
             </div>
             <div className="order-3 flex box-border max-w-full flex-shrink-0 md:w-2/3 lg:w-3/4 pr-[calc(var(--bs-gutter-x)_/_2)] pl-[calc(var(--bs-gutter-x)_/_2)] mt-[var(--bs-gutter-y)]  ">
               {/* MAIN - MENU :: PC & IPAD PRO */}

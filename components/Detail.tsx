@@ -15,17 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import CardSlider from "components/CardSlider";
 import BackButton from "./BackButton";
-
-interface Course {
-  id: number;
-  name: string;
-  src: string;
-  code: string;
-  url: string;
-  category: string;
-  seat: string;
-  status: string;
-}
+import Course from "types/Course";
 
 interface CourseProps {
   course: Course;

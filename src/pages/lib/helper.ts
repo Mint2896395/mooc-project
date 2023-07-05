@@ -1,14 +1,5 @@
 // Define the course type
-interface Course {
-  id: number;
-  name: string;
-  src: string;
-  code: string;
-  url: string;
-  category: string;
-  seat: string;
-  status: string;
-}
+import Course from "types/Course";
 
 export default function getAllCourse(id: any | undefined | null = null): Course[] {
   // All Courses

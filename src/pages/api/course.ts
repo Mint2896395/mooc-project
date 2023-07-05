@@ -1,13 +1,4 @@
-interface Course {
-  id: number;
-  name: string;
-  src: string;
-  code: string;
-  url: string;
-  category: string;
-  seat: string;
-  status: string;
-}
+import Course from "types/Course";
 
 interface Response {
   total: number;

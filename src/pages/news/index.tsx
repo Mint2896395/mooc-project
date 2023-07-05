@@ -3,20 +3,7 @@ import Pagination from "../../../components/Pagination";
 import { useRouter } from "next/router";
 import { useFetch } from "usehooks-ts";
 import CardNews from "components/CardNews";
-
-interface News {
-  source: {
-    id: null | number;
-    name: string;
-  };
-  author: string;
-  title: string;
-  description: string;
-  url: string;
-  urlToImage: string;
-  publishedAt: string;
-  content: string;
-}
+import News from 'types/News';
 
 interface Response {
   total: number;

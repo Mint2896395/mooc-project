@@ -9,20 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import NewsCardSlider from "components/NewsCardSlider";
 import BackButton from "components/BackButton";
-
-interface News {
-  source: {
-    id: number;
-    name: string;
-  };
-  author: string;
-  title: string;
-  description: string;
-  url: string;
-  urlToImage: string;
-  publishedAt: string;
-  content: string;
-}
+import News from 'types/News';
 
 interface NewsProps {
   news: News[];

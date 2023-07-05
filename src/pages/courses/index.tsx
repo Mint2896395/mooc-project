@@ -5,17 +5,8 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Pagination from "../../../components/Pagination";
 import { useRouter } from "next/router";
 import { useFetch } from "usehooks-ts";
+import Course from "types/Course";
 
-interface Course {
-  id: number;
-  name: string;
-  src: string;
-  code: string;
-  url: string;
-  category: string;
-  seat: string;
-  status: string;
-};
 
 interface Response {
   courses: Course[];

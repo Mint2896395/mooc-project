@@ -1,17 +1,7 @@
 import Detail from "components/Detail";
 import getAllCourse from "../lib/helper";
 import { GetStaticProps, GetStaticPaths } from "next";
-
-interface Course {
-  id: any;
-  name: string;
-  src: string;
-  code: string;
-  url: string;
-  category: string;
-  seat: string;
-  status: string;
-}
+import Course from "types/Course";
 
 interface CourseProps {
   course: Course[];
