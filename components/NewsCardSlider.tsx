@@ -63,17 +63,35 @@ const NewsCardSlider = () => {
 
   useEffect(() => {
 
-    const fetchData = async () => {
-      try {
-        const response = await axios.get<NewsItemProp>(`/api/news`);
-        const data = response.data.newses;
-        setNewsItems(data || []);
-      } catch (error) {
-        console.error('Error fetching news data:', error);
-      }
+    const fetchData = () => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', '/api/news');
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            const data = JSON.parse(xhr.responseText) as NewsItemProp;
+            setNewsItems(data.newses || []);
+          } else {
+            console.error('Failed to fetch news data');
+          }
+        }
+      };
+      xhr.send();
     };
+    
+    fetchData();    
 
-    fetchData();
+    // const fetchData = async () => {
+    //   try {
+    //     const response = await axios.get<NewsItemProp>(`/api/news`);
+    //     const data = response.data.newses;
+    //     setNewsItems(data || []);
+    //   } catch (error) {
+    //     console.error('Error fetching news data:', error);
+    //   }
+    // };
+
+    // fetchData();
 
     // const fetchData = async () => {
     //   try {
