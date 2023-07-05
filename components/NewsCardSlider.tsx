@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 import * as $ from "jquery";
 
@@ -51,22 +52,40 @@ interface NewsItem {
   content: string;
 }
 
+interface NewsItemProp {
+  newses: NewsItem[];
+}
+
+const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
+
 const NewsCardSlider = () => {
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
 
   useEffect(() => {
+
     const fetchData = async () => {
       try {
-        const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
-        const response = await fetch(`${baseUrl}/api/news`);
-        const data = await response.json();
-        setNewsItems(data.newses || []);
+        const response = await axios.get<NewsItemProp>(`${baseUrl}/api/news`);
+        const data = response.data.newses;
+        setNewsItems(data || []);
       } catch (error) {
         console.error('Error fetching news data:', error);
       }
     };
 
     fetchData();
+
+    // const fetchData = async () => {
+    //   try {
+    //     const response = await fetch(`${baseUrl}/api/news`);
+    //     const data = await response.json();
+    //     setNewsItems(data.newses || []);
+    //   } catch (error) {
+    //     console.error('Error fetching news data:', error);
+    //   }
+    // };
+
+    // fetchData();
   }, []);
   
   const options = {
