@@ -21,6 +21,13 @@ interface Response {
 
 import { NextApiRequest, NextApiResponse } from 'next';
 
+import express from 'express';
+import cors from 'cors';
+
+const app = express();
+
+app.use(cors());
+
 export default function getAllCourse(req: NextApiRequest, res: NextApiResponse<Response>) {
   // All Courses
   const newses: News[] = [
