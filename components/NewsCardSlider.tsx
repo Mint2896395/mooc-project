@@ -56,7 +56,7 @@ interface NewsItemProp {
   newses: NewsItem[];
 }
 
-const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
+// const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
 
 const NewsCardSlider = () => {
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
@@ -65,7 +65,7 @@ const NewsCardSlider = () => {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get<NewsItemProp>(`${baseUrl}/api/news`);
+        const response = await axios.get<NewsItemProp>(`/api/news`);
         const data = response.data.newses;
         setNewsItems(data || []);
       } catch (error) {
