@@ -60,7 +60,7 @@ interface NewsItemProp {
 const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
 
 const NewsCardSlider = () => {
-  const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
+  const [newsItems, setNewsItems] = useState(null);
 
   useEffect(() => {
 
@@ -96,7 +96,7 @@ const NewsCardSlider = () => {
 
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://vercel.com/api/news`);
+        const response = await fetch(`${baseUrl}/api/news`);
         const data = await response.json();
         setNewsItems(data.newses || []);
       } catch (error) {
