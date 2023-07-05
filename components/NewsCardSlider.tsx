@@ -50,7 +50,7 @@ interface NewsItem {
   content: string;
 }
 
-const baseUrl = process.env.API_BASE_URL || "http://localhost:3000" || "https://mooc-project.vercel.app";
+const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
 
 const NewsCardSlider = () => {
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
