@@ -50,14 +50,13 @@ interface NewsItem {
   content: string;
 }
 
-const baseUrl = process.env.API_BASE_URL || "https://mooc-project.vercel.app";
-
 const NewsCardSlider = () => {
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
         const response = await fetch(`${baseUrl}/api/news`);
         const data = await response.json();
         setNewsItems(data.newses || []);
