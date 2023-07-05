@@ -57,30 +57,30 @@ interface NewsItemProp {
   newses: NewsItem[];
 }
 
-const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
+const baseUrl = process.env.VERCEL_URL || "http://localhost:3000";
 
 const NewsCardSlider = () => {
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
 
   useEffect(() => {
 
-    const fetchData = () => {
-      const xhr = new XMLHttpRequest();
-      xhr.open('GET', `${baseUrl}/api/news`);
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-          if (xhr.status === 200) {
-            const data = JSON.parse(xhr.responseText) as NewsItemProp;
-            setNewsItems(data.newses || []);
-          } else {
-            console.error('Failed to fetch news data');
-          }
-        }
-      };
-      xhr.send();
-    };
+    // const fetchData = () => {
+    //   const xhr = new XMLHttpRequest();
+    //   xhr.open('GET', `${baseUrl}/api/news`);
+    //   xhr.onreadystatechange = () => {
+    //     if (xhr.readyState === XMLHttpRequest.DONE) {
+    //       if (xhr.status === 200) {
+    //         const data = JSON.parse(xhr.responseText) as NewsItemProp;
+    //         setNewsItems(data.newses || []);
+    //       } else {
+    //         console.error('Failed to fetch news data');
+    //       }
+    //     }
+    //   };
+    //   xhr.send();
+    // };
     
-    fetchData();    
+    // fetchData();    
 
     // const fetchData = async () => {
     //   try {
@@ -94,17 +94,17 @@ const NewsCardSlider = () => {
 
     // fetchData();
 
-    // const fetchData = async () => {
-    //   try {
-    //     const response = await fetch(`${baseUrl}/api/news`);
-    //     const data = await response.json();
-    //     setNewsItems(data.newses || []);
-    //   } catch (error) {
-    //     console.error('Error fetching news data:', error);
-    //   }
-    // };
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${baseUrl}/api/news`);
+        const data = await response.json();
+        setNewsItems(data.newses || []);
+      } catch (error) {
+        console.error('Error fetching news data:', error);
+      }
+    };
 
-    // fetchData();
+    fetchData();
   }, []);
   
   const options = {

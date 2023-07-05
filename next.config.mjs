@@ -24,14 +24,6 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'https://mooc-project.vercel.app/:path*',
-      },
-    ]
-  },
 };
 export default config;
 
