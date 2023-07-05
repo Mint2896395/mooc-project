@@ -51,13 +51,6 @@ interface NewsItem {
   content: string;
 }
 
-import express from 'express';
-import cors from 'cors';
-
-const app = express();
-
-app.use(cors());
-
 const NewsCardSlider = () => {
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
 
