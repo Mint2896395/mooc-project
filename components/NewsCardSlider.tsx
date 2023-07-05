@@ -56,7 +56,7 @@ const NewsCardSlider = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`/api/news`);
+        const response = await fetch('/api/news');
         const data = await response.json();
         setNewsItems(data.newses || []);
       } catch (error) {
