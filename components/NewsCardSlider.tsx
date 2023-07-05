@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-
 import * as $ from "jquery";
 
 declare global {
@@ -60,7 +59,7 @@ interface NewsItemProp {
 const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
 
 const NewsCardSlider = () => {
-  const [newsItems, setNewsItems] = useState(null);
+  const [newsItems, setNewsItems] = useState<NewsItem[] | null >(null);
 
   useEffect(() => {
 
