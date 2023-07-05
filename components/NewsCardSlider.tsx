@@ -1,7 +1,12 @@
+import useSWR from 'swr'
 import React from "react";
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 import NewsItem from 'types/News';
+
+// Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
+const fetcher = async (url: string) => {
+  const res = await fetch(url);
+  return res.json();
+};
 
 import * as $ from "jquery";
 
@@ -46,52 +51,16 @@ interface NewsItemProp {
 // const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
 
 const NewsCardSlider = () => {
-  const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
 
-  useEffect(() => {
+  // Set up SWR to run the fetcher function when calling "/api/staticdata"
+  // There are 3 possible states: (1) loading when data is null (2) ready when the data is returned (3) error when there was an error fetching the data
+  const { data, error } = useSWR<NewsItemProp>('/api/news', fetcher);
 
-    // const fetchData = () => {
-    //   const xhr = new XMLHttpRequest();
-    //   xhr.open('GET', `${baseUrl}/api/news`);
-    //   xhr.onreadystatechange = () => {
-    //     if (xhr.readyState === XMLHttpRequest.DONE) {
-    //       if (xhr.status === 200) {
-    //         const data = JSON.parse(xhr.responseText) as NewsItemProp;
-    //         setNewsItems(data.newses || []);
-    //       } else {
-    //         console.error('Failed to fetch news data');
-    //       }
-    //     }
-    //   };
-    //   xhr.send();
-    // };
-    
-    // fetchData();    
+  // Handle the error state
+  if (error) return <div>Failed to load</div>;
+  // Handle the loading state
+  if (!data) return <div>Loading...</div>;
 
-    // const fetchData = async () => {
-    //   try {
-    //     const response = await axios.get<NewsItemProp>(`/api/news`);
-    //     const data = response.data.newses;
-    //     setNewsItems(data || []);
-    //   } catch (error) {
-    //     console.error('Error fetching news data:', error);
-    //   }
-    // };
-
-    // fetchData();
-
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`/api/news`);
-        const data = await response.json();
-        setNewsItems(data.newses || []);
-      } catch (error) {
-        console.error('Error fetching news data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
   
   const options = {
     margin: 5,
@@ -130,8 +99,8 @@ const NewsCardSlider = () => {
       >
         <ul id="owl-carousel-ul" className="owl-carousel owl-loaded owl-drag">
           <OwlCarousel loop {...options}>
-            {newsItems && newsItems.length > 0
-              ? newsItems.slice(0, 5).map((news) => {
+            {data.newses && data.newses.length > 0
+              ? data.newses.slice(0, 5).map((news) => {
                   return (
                     <>
                       <Link href={`/news/${news.source.id}`} key={news.source.id}>

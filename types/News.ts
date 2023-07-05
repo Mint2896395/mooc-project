@@ -1,4 +1,5 @@
 interface News {
+    [x: string]: number;
     source: {
         id: null | number;
         name: string;
