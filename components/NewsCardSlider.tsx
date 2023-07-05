@@ -56,7 +56,7 @@ interface NewsItemProp {
   newses: NewsItem[];
 }
 
-// const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
+const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
 
 const NewsCardSlider = () => {
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
@@ -65,7 +65,7 @@ const NewsCardSlider = () => {
 
     const fetchData = () => {
       const xhr = new XMLHttpRequest();
-      xhr.open('GET', '/api/news');
+      xhr.open('GET', `${baseUrl}/api/news`);
       xhr.onreadystatechange = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
