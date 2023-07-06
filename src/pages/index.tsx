@@ -4,6 +4,7 @@ import Link from "next/link";
 import CardSlider from "components/CardSlider";
 import NewSlider from "components/NewSlider";
 import CardSliderAll from "components/CardSliderAll";
+import NewsCardSliderIndex from "components/NewsCardSliderIndex";
 
 
 const Home: NextPage = () => {
@@ -165,55 +166,16 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <center className="box-border h-64 bg-gradient-to-r from-[#ecd5b4] to-[#b39569] md:mr-[55%]"></center>
-      <div className="items-top relative top-[-125px] mx-5 box-border grid grid-cols-1 gap-5 md:mx-20 md:grid-cols-2 lg:grid-cols-3 ">
-        <div className="text-white md:w-1/3 ">
-          <p className="text-start text-5xl">ข่าวสาร</p>
-          <p className="text-4xl">และบทความ</p>
+      <center className="box-border md:h-64 h-56 bg-gradient-to-r from-[#ecd5b4] to-[#b39569] md:mr-[55%]"></center>
+      <div className="items-top relative md:top-[-195px] top-[-155px] mx-3 box-border md:mx-20 flex flex-wrap ">
+        <div className="text-white md:w-1/3 w-full">
+          <p className="md:block hidden text-start text-5xl">ข่าวสาร</p>
+          <p className="md:block hidden text-4xl">และบทความ</p>
+          <p className="md:hidden block text-3xl text-center">ข่าวสาร และบทความ</p>
         </div>
-        <Link href="/detail">
-          <div className="max-w-lg transform cursor-pointer overflow-hidden rounded transition duration-500 hover:scale-105 hover:bg-white ">
-            <img
-              className="mx-auto h-64 w-[50vw] object-contain"
-              src="https://mooc.chula.ac.th/img/upload/341670743_2875385015928843_9040996893728401192_n.jpg"
-              alt="Sunset in the mountains"
-            />
-            <div className="px-6 py-4">
-              <p className="float-left text-sm text-blue-700">18 เมษายน 2566</p>
-              <br />
-              <div className="mb-2 text-base font-bold">
-                ศูนย์นวัตกรรมการเรียนรู้ จุฬาฯ ขอเชิญเข้าร่วม
-              </div>
-              <p className="text-xm">
-                ศูนย์นวัตกรรมการเรียนรู้ จุฬาลงกรณ์มหาวิทยาลัย
-                ขอเชิญผู้ที่สนใจเข้าร่วมกิจกรรมเพื่อพัฒนาทักษะการจำ
-              </p>
-            </div>
-          </div>
-        </Link>
-        <Link href="/detail">
-          <div className="max-w-lg transform cursor-pointer overflow-hidden rounded transition duration-500 hover:scale-105 hover:bg-white ">
-            <img
-              className="mx-auto h-64 w-[50vw] object-contain"
-              src="https://mooc.chula.ac.th/img/upload/Untitled-1.png"
-              alt="Sunset in the mountains"
-            />
-            <div className="px-6 py-4">
-              <p className="float-left text-sm text-blue-700">
-                11 พฤษภาคม 2566
-              </p>
-              <br />
-              <div className="mb-2 text-base font-bold">
-                ขอเชิญคณาจารย์ นิสิต นักศึกษา และผู้ที่สนใจทุกท่าน
-              </div>
-              <p className="text-xm">
-                ขอเชิญคณาจารย์ นิสิต นักศึกษา
-                และผู้ที่สนใจทุกท่านเข้าร่วมกิจกรรมในหัวข้อ Generative AI และ
-                ChatGPT
-              </p>
-            </div>
-          </div>
-        </Link>
+        <div className="text-white md:w-2/3 w-full ">
+          <NewsCardSliderIndex />
+        </div>
       </div>
     </>
   );

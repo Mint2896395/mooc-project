@@ -178,7 +178,7 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
         </div>
         <div className="md:px-10 md:pt-10 px-5 pt-5 md:flex">
           <span className="box-border w-1/2 space-y-3.5 p-5">
-            <div className="box-border flex w-full max-w-full flex-shrink-0 flex-col  pb-5">
+            <div className="box-border flex w-full max-w-full flex-shrink-0 flex-col pb-5">
               <div className="flex w-fit items-center space-x-3 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 px-1 py-1 drop-shadow-md">
                 <div className="box-border flex h-10 w-10 items-center justify-center rounded-[50%] bg-white">
                   <FontAwesomeIcon
