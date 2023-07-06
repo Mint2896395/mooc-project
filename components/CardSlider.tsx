@@ -84,7 +84,7 @@ const CardSlider = () => {
   };
 
   return (
-    <div className="md:order-1 order-2 relative top-[-120px] max-w-[1600px] md:w-[88%] w-full mx-auto ">
+    <div className="md:order-1 order-2 relative max-w-[1600px] md:w-[88%] w-full mx-auto ">
       <div
         className="m-4 box-border flex h-full transition duration-700 ease-out md:m-10"
         id="owl-carousel-products"

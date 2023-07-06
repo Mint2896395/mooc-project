@@ -37,11 +37,11 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 
 // Owlcarosuesl arrow Next
 const nextIcon =
-  '<button aria-label="slide forward" class="absolute top-1/2 md:-left-[44%] flex items-center justify-center right-0 z-30 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400  cursor-pointer md:w-14 md:h-14 w-6 h-6 rounded-full bg-[var(--global-color-primary)] hover:bg-orange-400 text-white opacity-90" id="next"><svg class="dark:text-gray-900" md:width="14" md:height="19" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></button>';
+  '<button aria-label="slide forward" class="absolute top-1/2 md:-left-[44%] flex items-center justify-center right-0 z-30 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400  cursor-pointer md:w-14 md:h-14 w-6 h-6 rounded-full bg-[var(--global-color-primary)] hover:bg-orange-400 text-white opacity-90" id="next"><svg class="dark:text-gray-900" width="14" height="19" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></button>';
 
 // Owlcarosuesl arrow Pre 
 const prevIcon =
-  '<button aria-label="slide backward" class="absolute top-1/2 md:-left-[50%] flex items-center justify-center z-30 left-0 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer md:w-14 md:h-14 w-6 h-6 rounded-full bg-[var(--global-color-primary)] hover:bg-orange-400 text-white opacity-90" id="prev"><svg class="dark:text-gray-900" md:width="14" md:height="19" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></button>';
+  '<button aria-label="slide backward" class="absolute top-1/2 md:-left-[50%] flex items-center justify-center z-30 left-0 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer md:w-14 md:h-14 w-6 h-6 rounded-full bg-[var(--global-color-primary)] hover:bg-orange-400 text-white opacity-90" id="prev"><svg class="dark:text-gray-900" width="14" height="19" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></button>';
 
 interface NewsItemProp {
   newses: NewsItem[];

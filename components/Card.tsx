@@ -18,7 +18,7 @@ const CardCourse: React.FC<CourseProps> = ({ course }) => {
             alt={course.name}
           />
           <div className="md:py-4">
-          <div className="mt-1 mb-5 h-10 min-h-0 md:text-xl text-base font-semibold md:font-bold md:mb-0 group-hover:text-gray-500 leading-5">
+          <div className="mt-1 mb-2 h-10 min-h-0 md:text-xl text-base font-semibold md:font-bold md:mb-0 group-hover:text-gray-500 leading-5">
               {course.name}
           </div>
           <p className="md:mb-5 mb-2 md:text-base text-sm text-gray-700">
