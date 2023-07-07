@@ -247,12 +247,27 @@ export const getStaticProps: GetStaticProps<CategoryPageProps> = async ({
   params,
 }) => {
   const category = params?.category as string;
+  const limit = 4;
+  const skip = 0;
+  const url = `${baseUrl}/api/course?category=${encodeURIComponent(
+    category
+  )}&limit=${limit}&skip=${skip}&select=name,src,code,category`;
+
+  // Fetch the data for courses and total count
+  const response = await fetch(url);
+  const { courses, total } = await response.json();
 
   return {
     props: {
       category,
+      courses,
+      total,
+      skip,
+      limit,
     },
   };
 };
+
+
 
 export default CategoryPage;
