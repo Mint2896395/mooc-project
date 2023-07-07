@@ -14,13 +14,13 @@ export const navItems = [
       {
         id: 1,
         title: "กฎหมาย",
-        path: "courses/กฎหมาย",
+        path: "/courses/กฎหมาย",
         cName: "submenu-item",
       },
       {
         id: 2,
         title: "กฎหมายระหว่างประเทศ",
-        path: "courses/กฎหมายระหว่างประเทศ",
+        path: "/courses/กฎหมายระหว่างประเทศ",
         cName: "submenu-item",
       },
       {
