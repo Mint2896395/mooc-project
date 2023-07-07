@@ -6,7 +6,6 @@ import NewSlider from "components/NewSlider";
 import CardSliderAll from "components/CardSliderAll";
 import NewsCardSliderIndex from "components/NewsCardSliderIndex";
 
-
 const Home: NextPage = () => {
   return (
     <>
@@ -20,20 +19,20 @@ const Home: NextPage = () => {
         />
       </Head>
       <NewSlider />
-      <div className="relative md:pt-[75px] pt-[45px] before:bg-gradient-to-r before:from-[#ecd5b4] before:to-[#b39569] before:absolute before:h-[45%] before:z-[-2] before:top-0 before:left-0 before:w-full">
-        <div className="flex flex-col mx-auto px-1">
+      <div className="relative pt-[45px] before:absolute before:left-0 before:top-0 before:z-[-2] before:h-[45%] before:w-full before:bg-gradient-to-r before:from-[#ecd5b4] before:to-[#b39569] md:pt-[75px]">
+        <div className="mx-auto flex flex-col px-1">
           <center className="box-border">
             <div className="relative box-border ">
-              <p className="my-0 box-border whitespace-nowrap md:text-4xl text-2xl fonnt-semibold tracking-[3.2px] text-white mb-[15px]">
+              <p className="fonnt-semibold my-0 mb-[15px] box-border whitespace-nowrap text-2xl tracking-[3.2px] text-white md:text-4xl">
                 คอร์สใหม่
               </p>
             </div>
           </center>
           <CardSlider />
-          <div className="md:order-2 relative box-border flex w-full max-w-full flex-col items-center">
+          <div className="relative box-border flex w-full max-w-full flex-col items-center md:order-2">
             <div className="box-border ">
               <Link
-                className="box-border min-w-[140px] rounded-3xl border border-[var(--global-color-primary)] md:px-6 px-5 py-1 text-center font-[inherit] md:text-base text-sm font-medium normal-case leading-[inherit] tracking-normal text-[var(--global-color-primary)] cursor-pointer mb-5"
+                className="mb-5 box-border min-w-[140px] cursor-pointer rounded-3xl border border-[var(--global-color-primary)] px-5 py-1 text-center font-[inherit] text-sm font-medium normal-case leading-[inherit] tracking-normal text-[var(--global-color-primary)] md:px-6 md:text-base"
                 href="/courses"
               >
                 ดูทั้งหมด
@@ -42,28 +41,28 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="md:py-20 py-[50px]">
-        <div className="md:flow-root flex flex-col text-center">
-          <h2 className="md:float-left md:mb-11 mt-0 box-border table md:pl-10 md:text-3xl text-xl font-medium leading-[normal] tracking-wide  text-[rgba(17,17,17,1)] md:underline decoration-sky-500 underline-offset-8 xl:text-3xl">
+      <div className="py-[50px] md:py-20">
+        <div className="flex flex-col text-center md:flow-root">
+          <h2 className="mt-0 box-border table text-xl font-medium leading-[normal] tracking-wide text-[rgba(17,17,17,1)] decoration-sky-500 underline-offset-8 md:float-left  md:mb-11 md:pl-10 md:text-3xl md:underline xl:text-3xl">
             คอร์สที่กำลังเปิด
           </h2>
-          <div className="md:float-right box-border md:pr-10 pt-3 md:py-0 py-5">
-              <Link
-                className="box-border min-w-[140px] rounded-3xl border border-[var(--global-color-primary)] md:px-6 px-5 py-1 text-center font-[inherit] md:text-base text-sm font-medium normal-case leading-[inherit] tracking-normal text-[var(--global-color-primary)] cursor-pointer"
-                href="/courses"
-              >
-                ดูทั้งหมด
-              </Link>
+          <div className="box-border py-5 pt-3 md:float-right md:py-0 md:pr-10">
+            <Link
+              className="box-border min-w-[140px] cursor-pointer rounded-3xl border border-[var(--global-color-primary)] px-5 py-1 text-center font-[inherit] text-sm font-medium normal-case leading-[inherit] tracking-normal text-[var(--global-color-primary)] md:px-6 md:text-base"
+              href="/courses"
+            >
+              ดูทั้งหมด
+            </Link>
           </div>
         </div>
         <CardSliderAll />
       </div>
-      <div className="md:mb-36 box-border bg-[url('https://mooc.chula.ac.th/images/index/categoryBG.jpg')] pt-[45px] pb-[65px] ">
+      <div className="box-border bg-[url('https://mooc.chula.ac.th/images/index/categoryBG.jpg')] pb-[65px] pt-[45px] md:mb-36 ">
         <div className="box-border flex items-center justify-center pl-[var(--bs-gutter-x,_0.75rem)] pr-[var(--bs-gutter-x,_0.75rem)]">
           <div className="box-border w-[88%]">
             <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
               <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)]">
-                <h1 className="mb-11 mt-0 box-border text-center font-[Noto_Sans_Thai] text-4xl leading-[normal] tracking-wide text-[rgba(17,17,17,1)] xl:text-4xl">
+                <h1 className="mb-11 mt-0 box-border text-center text-4xl font-[Noto_Sans_Thai] leading-[normal] tracking-wide text-[rgba(17,17,17,1)] xl:text-4xl">
                   หมวดวิชา
                 </h1>
               </div>
@@ -167,14 +166,16 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="relative pt-[45px] pb-[60px] before:bg-gradient-to-r before:from-[#ecd5b4] before:to-[#b39569] before:absolute before:md:h-[40%] before:h-[30%] before:z-[-2] before:top-0 before:left-0 before:w-full before:md:w-[48%]">
-        <div className="items-top relative mx-3 box-border md:mx-20 flex flex-wrap ">
-          <div className="text-white md:w-1/3 w-full">
-            <p className="md:block hidden text-start text-5xl">ข่าวสาร</p>
-            <p className="md:block hidden text-4xl">และบทความ</p>
-            <p className="md:hidden block text-3xl text-center">ข่าวสาร และบทความ</p>
+      <div className="relative pb-[60px] pt-[45px] before:absolute before:left-0 before:top-0 before:z-[-2] before:h-[30%] before:w-full before:bg-gradient-to-r before:from-[#ecd5b4] before:to-[#b39569] before:md:h-[40%] before:md:w-[48%]">
+        <div className="items-top relative mx-3 box-border flex flex-wrap md:mx-20 ">
+          <div className="w-full text-white md:w-1/3">
+            <p className="hidden text-start text-5xl md:block">ข่าวสาร</p>
+            <p className="hidden text-4xl md:block">และบทความ</p>
+            <p className="block text-center text-3xl md:hidden">
+              ข่าวสาร และบทความ
+            </p>
           </div>
-          <div className="text-white md:w-2/3 w-full ">
+          <div className="w-full text-white md:w-2/3 ">
             <NewsCardSliderIndex />
           </div>
         </div>

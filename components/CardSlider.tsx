@@ -1,6 +1,6 @@
-import useSWR from 'swr'
+import useSWR from "swr";
 import React from "react";
-import CourseItem from 'types/Course';
+import CourseItem from "types/Course";
 
 const fetcher = async (url: string) => {
   const res = await fetch(url);
@@ -42,18 +42,18 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 const nextIcon =
   '<button aria-label="slide forward" class="absolute flex items-center justify-center z-30 right-0 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400  cursor-pointer md:w-8 md:h-8 w-6 h-6 rounded-full bg-[var(--global-color-primary)] hover:bg-orange-400 text-white" id="next"><svg class="dark:text-gray-900" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></button>';
 
-// Owlcarosuesl arrow Pre 
+// Owlcarosuesl arrow Pre
 const prevIcon =
   '<button aria-label="slide backward" class="absolute flex items-center justify-center z-30 left-0 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer md:w-8 md:h-8 w-6 h-6 rounded-full bg-[var(--global-color-primary)] hover:bg-orange-400 text-white" id="prev"><svg class="dark:text-gray-900" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></button>';
 
 const CardSlider = () => {
-  const { data, error } = useSWR<CourseItemProp>('/api/course', fetcher);
+  const { data, error } = useSWR<CourseItemProp>("/api/course", fetcher);
 
   // Handle the error state
   if (error) return <div>Failed to load</div>;
   // Handle the loading state
   if (!data) return <div>Loading...</div>;
-  
+
   const options = {
     margin: 5,
     responsiveClass: true,
@@ -84,7 +84,7 @@ const CardSlider = () => {
   };
 
   return (
-    <div className="md:order-1 order-2 relative max-w-[1600px] md:w-[88%] w-full mx-auto ">
+    <div className="relative order-2 mx-auto w-full max-w-[1600px] md:order-1 md:w-[88%] ">
       <div
         className="m-4 box-border flex h-full transition duration-700 ease-out md:m-10"
         id="owl-carousel-products"
@@ -92,13 +92,15 @@ const CardSlider = () => {
         <ul id="owl-carousel-ul" className="owl-carousel owl-loaded owl-drag">
           <OwlCarousel loop {...options}>
             {data.courses && data.courses.length > 0
-              ? data.courses.filter((course) => course.status == 'feature').map((course) => {
-                  return (
-                    <>
-                      <CardCourse key={course.id} course={course} />
-                    </>
-                  );
-                })
+              ? data.courses
+                  .filter((course) => course.status == "feature")
+                  .map((course) => {
+                    return (
+                      <>
+                        <CardCourse key={course.id} course={course} />
+                      </>
+                    );
+                  })
               : ""}
           </OwlCarousel>
         </ul>

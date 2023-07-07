@@ -30,8 +30,8 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="relative box-border " key={course.id}>
-        <div className="box-border w-full bg-gradient-to-r from-[#b39569] to-[#ecd5b4] md:py-[75px] py-[35px] md:p-5 p-3">
-          <div className="box-border md:w-[88%] w-full mx-auto">
+        <div className="box-border w-full bg-gradient-to-r from-[#b39569] to-[#ecd5b4] p-3 py-[35px] md:p-5 md:py-[75px]">
+          <div className="mx-auto box-border w-full md:w-[88%]">
             <div className="box-border flex flex-wrap justify-center ">
               <div className="box-border w-full max-w-full flex-shrink-0 pr-5 md:w-5/6 lg:w-1/2 ">
                 <div className="box-border ">
@@ -45,19 +45,19 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
                   <div className="box-border flex flex-wrap ">
                     <div className="box-border w-full max-w-full flex-shrink-0 ">
                       <ul className="float-left mb-6 mt-0 box-border w-full pl-0 ">
-                        <li className="mb-1 float-left box-border w-full md:text-base text-sm font-normal md:leading-7 tracking-normal text-white">
+                        <li className="float-left mb-1 box-border w-full text-sm font-normal tracking-normal text-white md:text-base md:leading-7">
                           <strong className="float-left box-border pr-3 font-semibold text-white">
                             โดย :{" "}
                           </strong>
                           ทีมคณาจารย์จาก CHULA ARi
                         </li>
-                        <li className="mb-1 float-left box-border w-full md:text-base text-sm font-normal md:leading-7 tracking-normal text-white">
+                        <li className="float-left mb-1 box-border w-full text-sm font-normal tracking-normal text-white md:text-base md:leading-7">
                           <strong className="float-left box-border pr-3 font-semibold text-white">
                             รหัส :{" "}
                           </strong>
                           {course.code}
                         </li>
-                        <li className="float-left box-border w-full md:text-base text-sm font-normal md:leading-7 tracking-normal text-white flex items-center">
+                        <li className="float-left box-border flex w-full items-center text-sm font-normal tracking-normal text-white md:text-base md:leading-7">
                           <strong className="float-left box-border pr-3.5 font-semibold text-white">
                             หมู่ :{" "}
                           </strong>
@@ -73,17 +73,17 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
                   </div>
                   <div className="box-border flex flex-wrap ">
                     <div className="box-border w-full max-w-full flex-shrink-0 ">
-                      <h6 className="md:mb-5 mb-2 mt-0 box-border md:text-lg text-base font-semibold leading-[normal] tracking-normal text-white md:text-left text-center">
+                      <h6 className="mb-2 mt-0 box-border text-center text-base font-semibold leading-[normal] tracking-normal text-white md:mb-5 md:text-left md:text-lg">
                         ลงทะเบียนเรียน
                       </h6>
                     </div>
                   </div>
                   <div className="box-border flex flex-wrap ">
-                    <div className="box-border w-full max-w-full flex-shrink-0 flex md:justify-start justify-center ">
+                    <div className="box-border flex w-full max-w-full flex-shrink-0 justify-center md:justify-start ">
                       <ul className="my-0 mb-5 box-border pl-0 ">
                         <li className="float-left mr-3.5 box-border last:mr-0 ">
                           <Link
-                            className="float-left box-border rounded-[25px] bg-yellow-400 text-center md:text-base text-sm font-normal text-white hover:block border-2 border-white px-[13px] pt-[6px] pb-[8px]"
+                            className="float-left box-border rounded-[25px] border-2 border-white bg-yellow-400 px-[13px] pb-[8px] pt-[6px] text-center text-sm font-normal text-white hover:block md:text-base"
                             target="_blank"
                             href="https://www.mycourseville.com/?q=onlinecourse/course/34730"
                           >
@@ -95,13 +95,13 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
                   </div>
                 </div>
               </div>
-              <div className="mt-0 box-border w-full max-w-full flex-shrink-0 md:pl-5 md:w-5/6 lg:w-1/2">
+              <div className="mt-0 box-border w-full max-w-full flex-shrink-0 md:w-5/6 md:pl-5 lg:w-1/2">
                 {/* IMAGE */}
                 {/*<div className="img-width"><img src="images/course/courseIT-01.jpg"></div>*/}
                 {/* VDO */}
                 <div className="relative box-border w-full overflow-hidden">
                   <iframe
-                    className="w-full aspect-video"
+                    className="aspect-video w-full"
                     src="https://www.youtube.com/embed/ukZNOXnKvs8"
                     title="CHULA MOOC | การดูแลตนเองเพื่อการเป็นผู้สูงวัยสุขภาพดีมีความสุข"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -112,8 +112,8 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
           </div>
         </div>
       </div>
-      
-      <div className="md:w-[88%] w-full mx-auto">
+
+      <div className="mx-auto w-full md:w-[88%]">
         <div className="box-border flex w-full max-w-full flex-shrink-0 flex-col items-center py-10">
           <div className="flex w-fit items-center space-x-3 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 px-1 py-1 drop-shadow-md">
             <div className="box-border flex h-10 w-10 items-center justify-center rounded-[50%] bg-white">
@@ -128,8 +128,8 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
             </span>
           </div>
         </div>
-        <div className="relative box-border w-full max-w-full flex-shrink-0 pl-0 flex flex-col md:flex-row">
-          <div className="content-[''] w-[calc(100%_-_14px)] h-[calc(100%_-_14px)] absolute -translate-x-2/4 -translate-y-2/4 border-2 border-solid border-[white] left-2/4 top-2/4"></div>
+        <div className="relative box-border flex w-full max-w-full flex-shrink-0 flex-col pl-0 md:flex-row">
+          <div className="absolute left-2/4 top-2/4 h-[calc(100%_-_14px)] w-[calc(100%_-_14px)] -translate-x-2/4 -translate-y-2/4 border-2 border-solid border-[white] content-['']"></div>
           <div className="z-[-1] box-border md:w-1/2">
             <Image
               className="w-full"
@@ -139,10 +139,10 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
               alt={course.name}
             />
           </div>
-          <div className="relative md:w-1/2 bg-gray-100 z-[-1] w-full">
-            <div className="box-border w-[calc(100%_-_12px)] tracking-[0.01rem] md:absolute md:-translate-y-2/4 px-[50px] py-[25px] md:top-[45%] ">
+          <div className="relative z-[-1] w-full bg-gray-100 md:w-1/2">
+            <div className="box-border w-[calc(100%_-_12px)] px-[50px] py-[25px] tracking-[0.01rem] md:absolute md:top-[45%] md:-translate-y-2/4 ">
               <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
-                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg leading-8 text-[rgba(37,37,37,1)] md:w-1/3 lg:w-1/3 font-bold">
+                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg font-bold leading-8 text-[rgba(37,37,37,1)] md:w-1/3 lg:w-1/3">
                   เนื้อหา
                 </div>
                 <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-0 pr-[calc(var(--bs-gutter-x)_/_2)] text-base leading-8 md:w-2/3 lg:w-2/3">
@@ -150,7 +150,7 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
                 </div>
               </div>
               <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
-                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg leading-8 text-[rgba(37,37,37,1)] md:w-1/3  lg:w-1/3 font-bold">
+                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg font-bold leading-8 text-[rgba(37,37,37,1)]  md:w-1/3 lg:w-1/3">
                   กลุ่มเป้าหมาย
                 </div>
                 <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-0 pr-[calc(var(--bs-gutter-x)_/_2)] text-base leading-8 md:w-2/3 lg:w-2/3">
@@ -158,7 +158,7 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
                 </div>
               </div>
               <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
-                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg leading-8 text-[rgba(37,37,37,1)] md:w-1/3  lg:w-1/3 font-bold">
+                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg font-bold leading-8 text-[rgba(37,37,37,1)]  md:w-1/3 lg:w-1/3">
                   เกณฑ์การเรียนจบ
                 </div>
                 <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-0 pr-[calc(var(--bs-gutter-x)_/_2)] text-base leading-8 md:w-2/3 lg:w-2/3">
@@ -166,7 +166,7 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
                 </div>
               </div>
               <div className="ml-[calc(1.5rem_/_-2)] mr-[calc(1.5rem_/_-2)] mt-[calc(-0px_*_-1)] box-border flex flex-wrap">
-                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0  pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg leading-8 text-[rgba(37,37,37,1)] md:w-1/3  lg:w-1/3 font-bold">
+                <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0  pl-[calc(var(--bs-gutter-x)_/_2)] pr-[calc(var(--bs-gutter-x)_/_2)] text-lg font-bold leading-8 text-[rgba(37,37,37,1)]  md:w-1/3 lg:w-1/3">
                   แพลตฟอร์ม
                 </div>
                 <div className="mt-[var(--bs-gutter-y)] box-border w-full max-w-full flex-shrink-0 pl-0 pr-[calc(var(--bs-gutter-x)_/_2)] text-base leading-8 md:w-2/3 lg:w-2/3">
@@ -176,7 +176,7 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
             </div>
           </div>
         </div>
-        <div className="md:px-10 md:pt-10 px-5 pt-5 md:flex">
+        <div className="px-5 pt-5 md:flex md:px-10 md:pt-10">
           <span className="box-border w-1/2 space-y-3.5 p-5">
             <div className="box-border flex w-full max-w-full flex-shrink-0 flex-col pb-5">
               <div className="flex w-fit items-center space-x-3 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 px-1 py-1 drop-shadow-md">
@@ -204,9 +204,10 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
               ภายใต้โครงการบูรณาการสหศาสตร์เพื่อรองรับสังคมสูงวัย (จุฬาอารี)
               เพื่อให้ผู้เรียนมีความรู้และทักษะที่จำเป็นก่อนเข้าสู่วัยผู้สูงอายุ
               สำหรับเนื้อหาวิชาจะประกอบด้วย ความรอบรู้
-              และการตระหนักรู้ตนเองด้านสุขภาพ กิจกรรมทางกาย โภชนาการเพื่อสุขภาพดี
-              การได้ยิน และการมองเห็น การดูแลตนเองเพื่อชะลอสมองเสื่อม
-              การดูแลสุขภาพช่องปาก และการดูแลสุขภาพจิต เป็นต้น
+              และการตระหนักรู้ตนเองด้านสุขภาพ กิจกรรมทางกาย
+              โภชนาการเพื่อสุขภาพดี การได้ยิน และการมองเห็น
+              การดูแลตนเองเพื่อชะลอสมองเสื่อม การดูแลสุขภาพช่องปาก
+              และการดูแลสุขภาพจิต เป็นต้น
             </p>
           </span>
 
@@ -237,7 +238,7 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
             <p>บทที่ 6 การดูแลสุขภาพจิตเพื่อสุขภาพดีมีความสุขและสุขภาวะ</p>
           </span>
         </div>
-        <div className="md:px-10 md:pt-10 px-5 pt-5 md:flex">
+        <div className="px-5 pt-5 md:flex md:px-10 md:pt-10">
           <span className="> * + * box-border w-1/2 space-y-3.5 p-5">
             <div className="box-border flex w-full max-w-full flex-shrink-0 flex-col  pb-5">
               <div className="flex w-fit items-center space-x-3 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 px-1 py-1 drop-shadow-md">
@@ -285,7 +286,7 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
             </p>
           </span>
         </div>
-        <div className="md:px-10 md:pt-10 px-5 pt-5 md:flex">
+        <div className="px-5 pt-5 md:flex md:px-10 md:pt-10">
           <span className="> * + * box-border w-1/2 space-y-3.5 p-5">
             <div className="box-border flex w-full max-w-full flex-shrink-0 flex-col  pb-5">
               <div className="flex w-fit items-center space-x-3 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 px-1 py-1 drop-shadow-md">
@@ -348,7 +349,7 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
 
       <CardSlider />
 
-      <BackButton href='/courses' className='top-[-90px]' />
+      <BackButton href="/courses" className="top-[-90px]" />
     </>
   );
 };

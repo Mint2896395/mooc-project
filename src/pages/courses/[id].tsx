@@ -9,14 +9,17 @@ interface CourseProps {
 
 const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
 
-export default function Course({course} : CourseProps) {
+export default function Course({ course }: CourseProps) {
   const router = useRouter();
   const { id } = router.query;
 
-  const selectedCourse = course.find((courseItem) => courseItem.id === Number(id));
-  
-  return selectedCourse ? <Detail key={selectedCourse.id} course={selectedCourse} /> : null;
+  const selectedCourse = course.find(
+    (courseItem) => courseItem.id === Number(id)
+  );
 
+  return selectedCourse ? (
+    <Detail key={selectedCourse.id} course={selectedCourse} />
+  ) : null;
 }
 
 export const getStaticProps: GetStaticProps<CourseProps> = async () => {
@@ -24,14 +27,14 @@ export const getStaticProps: GetStaticProps<CourseProps> = async () => {
   const data = await response.json();
 
   return {
-    props: { 
+    props: {
       course: data.courses || [],
     },
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-   const response = await fetch(`${baseUrl}/api/course`);
+  const response = await fetch(`${baseUrl}/api/course`);
   const data = await response.json();
   const paths = data.courses.map((courseItem: Course) => ({
     params: { id: String(courseItem.id) },
@@ -41,4 +44,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths,
     fallback: false,
   };
-}
+};

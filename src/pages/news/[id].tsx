@@ -4,12 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import your icons
-import {
-  faArrowLeft,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import NewsCardSlider from "components/NewsCardSlider";
 import BackButton from "components/BackButton";
-import News from 'types/News';
+import News from "types/News";
 
 interface NewsProps {
   news: News[];
@@ -21,43 +19,52 @@ export default function News({ news }: NewsProps) {
   const router = useRouter();
   const { id } = router.query;
 
-  const selectedNews = news.find((newsItem) => newsItem.source.id === Number(id));
+  const selectedNews = news.find(
+    (newsItem) => newsItem.source.id === Number(id)
+  );
 
   return (
     <>
       <center className="box-border  ">
-        <div className="relative box-border md:h-[250px] h-[130px] ">
-          <div className="relative top-1/2 left-1/2 text-center transform -translate-x-1/2 -translate-y-1/2 ">
-              <p className="my-0 box-border whitespace-nowrap md:text-4xl text-2xl text-[#b39573] tracking-[3.2px]">
-                  ข่าวสาร และบทความ
-              </p>
+        <div className="relative box-border h-[130px] md:h-[250px] ">
+          <div className="relative left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center ">
+            <p className="my-0 box-border whitespace-nowrap text-2xl tracking-[3.2px] text-[#b39573] md:text-4xl">
+              ข่าวสาร และบทความ
+            </p>
           </div>
         </div>
-        
-        <hr className="md:mt-6 box-content h-0 overflow-visible border-solid" />
+
+        <hr className="box-content h-0 overflow-visible border-solid md:mt-6" />
       </center>
       <article>
         {selectedNews ? (
-          <div className="box-border md:pb-36 pb-[65px] md:py-20 py-[50px]">
+          <div className="box-border py-[50px] pb-[65px] md:py-20 md:pb-36">
             <div className="box-border ">
-              <div className="box-border md:w-[88%] w-full px-[15px] mx-auto">
+              <div className="mx-auto box-border w-full px-[15px] md:w-[88%]">
                 <div className="box-border ">
                   <div className="box-border flex flex-wrap justify-center ">
-                    <div className="box-border w-full max-w-full flex-shrink-0 md:pr-5 pr-0 md:w-11/12 lg:w-3/4 ">
+                    <div className="box-border w-full max-w-full flex-shrink-0 pr-0 md:w-11/12 md:pr-5 lg:w-3/4 ">
                       <div className="box-border flex flex-wrap ">
                         <div className="box-border w-full max-w-full flex-shrink-0 ">
-                          <div className="float-left mb-2 box-border text-sm font-medium tracking-normal text-[var(--global-color-primary)]">20 มิถุนายน 2566</div>
+                          <div className="float-left mb-2 box-border text-sm font-medium tracking-normal text-[var(--global-color-primary)]">
+                            20 มิถุนายน 2566
+                          </div>
                         </div>
                       </div>
                       <div className="box-border flex flex-wrap ">
                         <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 font-[Noto_Sans_Thai]">
-                          <h4 className="mt-0 mb-6 box-border text-2xl font-medium tracking-wide xl:text-2xl leading-[normal] text-[rgba(17,17,17,1)]">{selectedNews.title}</h4>
+                          <h4 className="mb-6 mt-0 box-border text-2xl font-medium leading-[normal] tracking-wide text-[rgba(17,17,17,1)] xl:text-2xl">
+                            {selectedNews.title}
+                          </h4>
                         </div>
                       </div>
                       <div className="box-border flex flex-wrap ">
                         <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 ">
                           <div className="mb-10 box-border overflow-hidden rounded-xl ">
-                            <img className="box-border h-auto w-full align-middle " src={selectedNews.urlToImage} />
+                            <img
+                              className="box-border h-auto w-full align-middle "
+                              src={selectedNews.urlToImage}
+                            />
                           </div>
                         </div>
                       </div>
@@ -70,60 +77,71 @@ export default function News({ news }: NewsProps) {
                       </div>
                       <div className="box-border flex flex-wrap ">
                         <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 ">
-                          <ul className="float-left mt-0 mb-14 box-border w-full pl-0 ">
-                          </ul>
+                          <ul className="float-left mb-14 mt-0 box-border w-full pl-0 "></ul>
                         </div>
                       </div>
                     </div>
                     <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 md:w-full lg:w-1/4 ">
-                      <div className="md:mb-14 mb-[30px] box-border bg-[#fef8f4] py-[25px] px-5">
+                      <div className="mb-[30px] box-border bg-[#fef8f4] px-5 py-[25px] md:mb-14">
                         <div className="box-border flex flex-wrap ">
-                          <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 font-[Noto_Sans_Thai] md:px-0 px-2">
-                            <h5 className="relative mt-0 mb:mb-10 mb-[28px] mx-auto box-border md:pb-2 pb-0 text-center md:text-2xl text-lg font-medium tracking-wide leading-[normal] text-[rgba(17,17,17,1)] md:border-b-[3px] border-b-[2px] border-[var(--global-color-primary)] md:block table">ข่าวสารและบทความล่าสุด</h5>
+                          <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 px-2 font-[Noto_Sans_Thai] md:px-0">
+                            <h5 className="mb:mb-10 relative mx-auto mb-[28px] mt-0 box-border table border-b-[2px] border-[var(--global-color-primary)] pb-0 text-center text-lg font-medium leading-[normal] tracking-wide text-[rgba(17,17,17,1)] md:block md:border-b-[3px] md:pb-2 md:text-2xl">
+                              ข่าวสารและบทความล่าสุด
+                            </h5>
                           </div>
                         </div>
                         {/* <!-- LASTEST NEWS :: PC & IPAD PRO --> */}
                         <div className="box-border hidden md:hidden lg:block ">
-                          <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 md:w-1/3 lg:w-full mb-[30px] ">
+                          <div className="-mt-0 mb-[30px] box-border w-full max-w-full flex-shrink-0 md:w-1/3 lg:w-full ">
                             {news?.slice(0, 5).map((news) => {
-                                return (
-                                  <>                                    
-                                    <Link href={`/news/${news.source.id}`} key={news.source.id}>
-                                      <div className="group w-full transform cursor-pointer overflow-hidden md:h-full md:max-w-lg mb-[35px]">
-                                        <div className="box-border flex flex-wrap ">
-                                          <div className="box-border w-full max-w-full flex-shrink-0 ">
-                                            <div className="mb-3.5 box-border overflow-hidden ">
-                                              <div className="relative box-border overflow-hidden pt-[65%] rounded-xl transition-all duration-500 group-hover:bg-[rgba(255,148,27,0.3)]  ">
-                                                <img className="mx-auto absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 w-[100%] align-middle  group-hover:opacity-60 group-hover:mix-blend-luminosity overflow-clip margin-content-box" src={news.urlToImage} />
-                                                {/* <Image
+                              return (
+                                <>
+                                  <Link
+                                    href={`/news/${news.source.id}`}
+                                    key={news.source.id}
+                                  >
+                                    <div className="group mb-[35px] w-full transform cursor-pointer overflow-hidden md:h-full md:max-w-lg">
+                                      <div className="box-border flex flex-wrap ">
+                                        <div className="box-border w-full max-w-full flex-shrink-0 ">
+                                          <div className="mb-3.5 box-border overflow-hidden ">
+                                            <div className="relative box-border overflow-hidden rounded-xl pt-[65%] transition-all duration-500 group-hover:bg-[rgba(255,148,27,0.3)]  ">
+                                              <img
+                                                className="margin-content-box absolute left-2/4 top-2/4 mx-auto w-[100%] -translate-x-2/4 -translate-y-2/4  overflow-clip align-middle group-hover:opacity-60 group-hover:mix-blend-luminosity"
+                                                src={news.urlToImage}
+                                              />
+                                              {/* <Image
                                                   className="w-full rounded-xl"
                                                   src={news.urlToImage}
                                                   width={640}
                                                   height={360}
                                                   alt={news.source.name}
                                                 /> */}
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="box-border flex flex-wrap ">
-                                          <div className="box-border w-full max-w-full flex-shrink-0 ">
-                                            <div className="float-left mb-1.5 box-border text-xs font-medium tracking-normal text-[var(--global-color-primary)]">20 มิถุนายน 2566</div>
-                                          </div>
-                                        </div>
-                                        <div className="box-border flex flex-wrap ">
-                                          <div className="box-border w-full max-w-full flex-shrink-0 ">
-                                            <div className="mb-1.5 box-border ">
-                                              <p className="my-0 box-border overflow-hidden text-base font-semibold tracking-normal text-[rgba(37,37,37,1)] group-hover:text-[var(--global-color-primary)]"> {news.title}</p>
                                             </div>
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
-                                  </>
-                                );
-                              })
-                            }
+                                      <div className="box-border flex flex-wrap ">
+                                        <div className="box-border w-full max-w-full flex-shrink-0 ">
+                                          <div className="float-left mb-1.5 box-border text-xs font-medium tracking-normal text-[var(--global-color-primary)]">
+                                            20 มิถุนายน 2566
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div className="box-border flex flex-wrap ">
+                                        <div className="box-border w-full max-w-full flex-shrink-0 ">
+                                          <div className="mb-1.5 box-border ">
+                                            <p className="my-0 box-border overflow-hidden text-base font-semibold tracking-normal text-[rgba(37,37,37,1)] group-hover:text-[var(--global-color-primary)]">
+                                              {" "}
+                                              {news.title}
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </Link>
+                                </>
+                              );
+                            })}
                           </div>
                         </div>
                         {/* <!-- LASTEST NEWS :: IPAD & MOBILE --> */}
@@ -133,7 +151,7 @@ export default function News({ news }: NewsProps) {
                   </div>
                 </div>
               </div>
-              <BackButton href='/news' />
+              <BackButton href="/news" />
             </div>
           </div>
         ) : (
@@ -150,7 +168,9 @@ export const getStaticProps: GetStaticProps<NewsProps> = async () => {
 
   // Sort the news items by the newest creation date
   const sortedNews = data.newses.sort((a: News, b: News) => {
-    return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+    return (
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+    );
   });
 
   return {
@@ -172,4 +192,3 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   };
 };
-

@@ -1,6 +1,6 @@
-import useSWR from 'swr'
+import useSWR from "swr";
 import React from "react";
-import CourseItem from 'types/Course';
+import CourseItem from "types/Course";
 
 const fetcher = async (url: string) => {
   const res = await fetch(url);
@@ -39,7 +39,7 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 // import OwlCarousel from 'react-owl-carousel';
 
 const CardSliderAll = () => {
-  const { data, error } = useSWR<CourseItemProp>('/api/course', fetcher);
+  const { data, error } = useSWR<CourseItemProp>("/api/course", fetcher);
 
   // Handle the error state
   if (error) return <div>Failed to load</div>;
@@ -78,7 +78,7 @@ const CardSliderAll = () => {
   };
 
   return (
-    <div className="md:order-1 order-2 relative w-full mx-0 ">
+    <div className="relative order-2 mx-0 w-full md:order-1 ">
       <div
         className="box-border flex h-full transition duration-700 ease-out"
         id="owl-carousel-products"
