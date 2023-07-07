@@ -28,7 +28,7 @@ const CategoryPage = ({ category }: CategoryPageProps) => {
   //Define limit and skip which is used by DummyJSON API for pagination
   const limit = parseInt(perPage);
   const skip = (parseInt(page) - 1) * limit;
-  const url = `${baseUrl}/api/course?category=${encodeURIComponent(
+  const url = `/api/course?category=${encodeURIComponent(
     category
   )}&limit=${limit}&skip=${skip}&select=name,src,code,category`;
 
