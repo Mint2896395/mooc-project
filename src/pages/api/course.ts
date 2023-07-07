@@ -38,7 +38,7 @@ export default function getAllCourse(req: NextApiRequest, res: NextApiResponse<R
       src: "/images/_LW013401_กฎหมายระหว่างประเทศแผนกคดีบุคคล.jpeg",
       code: "LW013401",
       url: "detail",
-      category: "กฎหมาย",
+      category: "กฎหมายระหว่างประเทศ",
       seat: "99 ที่ว่าง",
       status: "feature",
     },
@@ -68,7 +68,7 @@ export default function getAllCourse(req: NextApiRequest, res: NextApiResponse<R
       src: "/images/_LW013401_กฎหมายระหว่างประเทศแผนกคดีบุคคล.jpeg",
       code: "LW013401",
       url: "detail",
-      category: "กฎหมาย",
+      category: "กฎหมายระหว่างประเทศ",
       seat: "99 ที่ว่าง",
       status: "",
     },
@@ -98,7 +98,7 @@ export default function getAllCourse(req: NextApiRequest, res: NextApiResponse<R
       src: "/images/_LW013401_กฎหมายระหว่างประเทศแผนกคดีบุคคล.jpeg",
       code: "LW013401",
       url: "detail",
-      category: "กฎหมาย",
+      category: "กฎหมายระหว่างประเทศ",
       seat: "99 ที่ว่าง",
       status: "feature",
     },
@@ -128,7 +128,7 @@ export default function getAllCourse(req: NextApiRequest, res: NextApiResponse<R
       src: "/images/_LW013401_กฎหมายระหว่างประเทศแผนกคดีบุคคล.jpeg",
       code: "LW013401",
       url: "detail",
-      category: "กฎหมาย",
+      category: "กฎหมายระหว่างประเทศ",
       seat: "99 ที่ว่าง",
       status: "",
     },
@@ -168,7 +168,7 @@ export default function getAllCourse(req: NextApiRequest, res: NextApiResponse<R
       src: "/images/_LW013401_กฎหมายระหว่างประเทศแผนกคดีบุคคล.jpeg",
       code: "LW013401",
       url: "detail",
-      category: "กฎหมาย",
+      category: "กฎหมายระหว่างประเทศ",
       seat: "99 ที่ว่าง",
       status: "",
     },
@@ -198,7 +198,7 @@ export default function getAllCourse(req: NextApiRequest, res: NextApiResponse<R
       src: "/images/_LW013401_กฎหมายระหว่างประเทศแผนกคดีบุคคล.jpeg",
       code: "LW013401",
       url: "detail",
-      category: "กฎหมาย",
+      category: "กฎหมายระหว่างประเทศ",
       seat: "99 ที่ว่าง",
       status: "feature",
     },
@@ -228,7 +228,7 @@ export default function getAllCourse(req: NextApiRequest, res: NextApiResponse<R
       src: "/images/_LW013401_กฎหมายระหว่างประเทศแผนกคดีบุคคล.jpeg",
       code: "LW013401",
       url: "detail",
-      category: "กฎหมาย",
+      category: "กฎหมายระหว่างประเทศ",
       seat: "99 ที่ว่าง",
       status: "",
     },
@@ -268,17 +268,21 @@ export default function getAllCourse(req: NextApiRequest, res: NextApiResponse<R
       src: "/images/_LW013401_กฎหมายระหว่างประเทศแผนกคดีบุคคล.jpeg",
       code: "LW013401",
       url: "detail",
-      category: "กฎหมาย",
+      category: "กฎหมายระหว่างประเทศ",
       seat: "99 ที่ว่าง",
       status: "",
     },
   ];
 
-  const { id, skip, limit } = req.query;
+  const { id, skip, limit, category } = req.query;
   let filteredCourses: Course[];
 
   if (id) {
     filteredCourses = courses.filter(course => course.id === Number(id));
+  } else if (category) {
+    filteredCourses = courses.filter(
+      course => course.category === String(category)
+    );
   } else {
     filteredCourses = courses;
   }

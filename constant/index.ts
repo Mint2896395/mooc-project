@@ -1,123 +1,123 @@
 export const navItems = [
   {
     id: 1,
-    title: 'หน้าแรก',
-    path: '/',
-    cName: 'nav-item'
+    title: "หน้าแรก",
+    path: "/",
+    cName: "nav-item",
   },
   {
     id: 2,
-    title: 'หมวดวิชา',
-    path: '/courses',
-    cName: 'nav-item',
+    title: "หมวดวิชา",
+    path: "/courses",
+    cName: "nav-item",
     children: [
       {
         id: 1,
-        title: 'ภาษา',
-        path: '/ภาษา',
-        cName: 'submenu-item'
+        title: "กฎหมาย",
+        path: "courses/กฎหมาย",
+        cName: "submenu-item",
       },
       {
         id: 2,
-        title: 'เทคโนโลยี',
-        path: '/เทคโนโลยี',
-        cName: 'submenu-item'
+        title: "กฎหมายระหว่างประเทศ",
+        path: "courses/กฎหมายระหว่างประเทศ",
+        cName: "submenu-item",
       },
       {
         id: 3,
-        title: 'การจัดการ',
-        path: '/การจัดการ',
-        cName: 'submenu-item'
+        title: "การจัดการ",
+        path: "/การจัดการ",
+        cName: "submenu-item",
       },
       {
         id: 4,
-        title: 'ศิลปะและการพัฒนาตนเอง',
-        path: '/ศิลปะและการพัฒนาตนเอง',
-        cName: 'submenu-item'
+        title: "ศิลปะและการพัฒนาตนเอง",
+        path: "/ศิลปะและการพัฒนาตนเอง",
+        cName: "submenu-item",
       },
       {
         id: 5,
-        title: 'สุขภาพ',
-        path: '/สุขภาพ',
-        cName: 'submenu-item'
+        title: "สุขภาพ",
+        path: "/สุขภาพ",
+        cName: "submenu-item",
       },
       {
         id: 6,
-        title: 'คอร์สทั้งหมด',
-        path: '/courses',
-        cName: 'submenu-item'
+        title: "คอร์สทั้งหมด",
+        path: "/courses",
+        cName: "submenu-item",
       },
-    ]
+    ],
   },
   {
     id: 3,
-    title: 'ประเภทผู้เรียน',
-    path: '/ประเภทผู้เรียน',
-    cName: 'nav-item',
+    title: "ประเภทผู้เรียน",
+    path: "/ประเภทผู้เรียน",
+    cName: "nav-item",
     children: [
       {
         id: 1,
-        title: 'นิสิตและบุคลากร มข.',
-        path: '/นิสิตและบุคลากร_มข',
-        cName: 'submenu-item'
+        title: "นิสิตและบุคลากร มข.",
+        path: "/นิสิตและบุคลากร_มข",
+        cName: "submenu-item",
       },
       {
         id: 2,
-        title: 'บุคคลทั่วไป',
-        path: '/บุคคลทั่วไป',
-        cName: 'submenu-item'
+        title: "บุคคลทั่วไป",
+        path: "/บุคคลทั่วไป",
+        cName: "submenu-item",
       },
       {
         id: 3,
-        title: 'Partner',
-        path: '/Partner',
-        cName: 'submenu-item'
+        title: "Partner",
+        path: "/Partner",
+        cName: "submenu-item",
       },
-    ]
+    ],
   },
   {
     id: 4,
-    title: 'คลังความรู้',
-    path: '/คลังความรู้',
-    cName: 'nav-item',
+    title: "คลังความรู้",
+    path: "/คลังความรู้",
+    cName: "nav-item",
   },
   {
     id: 5,
-    title: 'ข่าวประชาสัมพันธ์',
-    path: '/news',
-    cName: 'nav-item'
+    title: "ข่าวประชาสัมพันธ์",
+    path: "/news",
+    cName: "nav-item",
   },
   {
     id: 6,
-    title: 'คำถามที่พบบ่อย',
-    path: '/คำถามที่พบบ่อย',
-    cName: 'nav-item'
+    title: "คำถามที่พบบ่อย",
+    path: "/คำถามที่พบบ่อย",
+    cName: "nav-item",
   },
   {
     id: 7,
-    title: 'เกี่ยวกับเรา',
-    path: '/about_us',
-    cName: 'nav-item',
+    title: "เกี่ยวกับเรา",
+    path: "/about_us",
+    cName: "nav-item",
     children: [
       {
         id: 1,
-        title: 'เกี่ยวกับเรา',
-        path: '/about_us',
-        cName: 'submenu-item'
+        title: "เกี่ยวกับเรา",
+        path: "/about_us",
+        cName: "submenu-item",
       },
       {
         id: 2,
-        title: 'ติดต่อเรา',
-        path: '/contact_us',
-        cName: 'submenu-item'
+        title: "ติดต่อเรา",
+        path: "/contact_us",
+        cName: "submenu-item",
       },
       {
         id: 3,
-        title: 'คลิปอื่น',
-        path: '/คลิปอื่น',
-        cName: 'submenu-item'
+        title: "คลิปอื่น",
+        path: "/คลิปอื่น",
+        cName: "submenu-item",
       },
-    ]
+    ],
   },
 ];
 

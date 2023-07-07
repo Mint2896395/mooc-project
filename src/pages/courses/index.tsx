@@ -2,7 +2,7 @@ import Head from "next/head";
 import CardCourse from "components/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import Pagination from "../../../components/Pagination";
+import Pagination from "components/Pagination";
 import { useRouter } from "next/router";
 import { useFetch } from "usehooks-ts";
 import Course from "types/Course";
@@ -188,7 +188,7 @@ const CoursesPage = () => {
             </div>
             <div className="box-border flex w-full max-w-full flex-shrink-0 flex-col items-center">
               <h2 className="relative float-none mb-8 mt-0 box-border table text-center text-2xl font-medium leading-[normal] tracking-wide text-[rgba(17,17,17,1)] underline decoration-sky-500 underline-offset-8 md:mb-11 xl:text-3xl ">
-                กฎหมาย
+                คอร์สทั้งหมด
               </h2>
             </div>
             {!data && <div>Loading...</div>}

@@ -8,7 +8,7 @@ interface CourseProps {
 
 const CardCourse: React.FC<CourseProps> = ({ course }) => {
   return (
-    <Link href={`/courses/${course.id}`} key={course.id}>
+    <Link href={`/course-detail/${course.id}`} key={course.id}>
       <div className="group w-full scale-95 transform cursor-pointer overflow-hidden border-0 border-b-2 border-solid border-[var(--global-color-primary)] transition duration-500 hover:scale-100 md:h-full md:max-w-lg">
         <Image
           className="w-full rounded-xl"

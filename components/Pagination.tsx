@@ -28,7 +28,7 @@ const Pagination = ({ page, itemCount, perPage }: Props) => {
   // calculate the previous page
   const prevPage = Math.max(page - 1, firstPage);
   // create a new array based on the total pages
-  const arr = new Array(totalPages);
+  const arr = new Array(totalPages + 1);
 
   return (
     <div className="flex gap-2 items-center">
