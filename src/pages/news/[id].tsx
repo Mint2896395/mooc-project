@@ -154,6 +154,8 @@ export default function News({ news }: NewsProps) {
               <BackButton
                 href="/news"
                 label="ย้อนกลับ"
+                className=""
+                icon={true}
               />
             </div>
           </div>

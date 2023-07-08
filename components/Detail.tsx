@@ -345,7 +345,12 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
           </div>
         </center>
         <CardSlider className="pb-[35px] md:pb-[85px]" column="4" />
-        <BackButton href="/courses" label="ย้อนกลับ" />
+        <BackButton
+          href="/courses"
+          label="ย้อนกลับ"
+          className=""
+          icon={true}
+        />
       </div>
     </>
   );
