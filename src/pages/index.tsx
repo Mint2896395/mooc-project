@@ -5,6 +5,7 @@ import CardSlider from "components/CardSlider";
 import NewSlider from "components/NewSlider";
 import CardSliderAll from "components/CardSliderAll";
 import NewsCardSliderIndex from "components/NewsCardSliderIndex";
+import BackButton from "components/BackButton";
 
 const Home: NextPage = () => {
   return (
@@ -28,32 +29,26 @@ const Home: NextPage = () => {
               </p>
             </div>
           </center>
-          <CardSlider />
-          <div className="relative box-border flex w-full max-w-full flex-col items-center md:order-2">
-            <div className="box-border ">
-              <Link
-                className="mb-5 box-border min-w-[140px] cursor-pointer rounded-3xl border border-[var(--global-color-primary)] px-5 py-1 text-center font-[inherit] text-sm font-medium normal-case leading-[inherit] tracking-normal text-[var(--global-color-primary)] md:px-6 md:text-base"
-                href="/courses"
-              >
-                ดูทั้งหมด
-              </Link>
-            </div>
-          </div>
+          <CardSlider className="md:pb-[40px]" column="3" />
+          <BackButton
+            href="/courses"
+            label="ดูทั้งหมด"
+            className="md:order-2"
+            icon={false}
+          />
         </div>
       </div>
       <div className="py-[50px] md:py-20">
-        <div className="flex flex-col text-center md:flow-root">
-          <h2 className="mt-0 box-border table text-xl font-medium leading-[normal] tracking-wide text-[rgba(17,17,17,1)] decoration-sky-500 underline-offset-8 md:float-left  md:mb-11 md:pl-10 md:text-3xl md:underline xl:text-3xl">
+        <div className="flex flex-col text-center md:flow-root mb-5">
+          <h2 className="mt-0 box-border table text-xl font-medium leading-[normal] tracking-wide text-[rgba(17,17,17,1)] decoration-sky-500 underline-offset-8 md:float-left md:mb-11 md:pl-10 md:text-3xl md:underline xl:text-3xl mb-3">
             คอร์สที่กำลังเปิด
           </h2>
-          <div className="box-border py-5 pt-3 md:float-right md:py-0 md:pr-10">
-            <Link
-              className="box-border min-w-[140px] cursor-pointer rounded-3xl border border-[var(--global-color-primary)] px-5 py-1 text-center font-[inherit] text-sm font-medium normal-case leading-[inherit] tracking-normal text-[var(--global-color-primary)] md:px-6 md:text-base"
-              href="/courses"
-            >
-              ดูทั้งหมด
-            </Link>
-          </div>
+          <BackButton
+            href="/courses"
+            label="ดูทั้งหมด"
+            className="md:float-right md:py-0 md:pr-10"
+            icon={false}
+          />
         </div>
         <CardSliderAll />
       </div>

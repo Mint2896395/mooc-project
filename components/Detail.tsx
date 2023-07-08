@@ -336,20 +336,17 @@ const Detail: React.FC<CourseProps> = ({ course }) => {
           <p className="text-sm">มหาวิทยาลัยขอนแก่น</p>
         </div>
       </div>
-      <center className="box-border bg-gradient-to-r from-[#ecd5b4] to-[#b39569]">
-        <div className="relative box-border h-48 md:h-64 ">
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform ">
-            <p className="my-0 box-border whitespace-nowrap text-4xl tracking-[3.2px] text-white">
+      <div className="relative py-[45px] before:absolute before:left-0 before:top-0 before:z-[-2] before:h-[45%] before:w-full before:bg-gradient-to-r before:from-[#ecd5b4] before:to-[#b39569] md:pb-[120px] md:pt-[75px]">
+        <center className="box-border">
+          <div className="relative box-border ">
+            <p className="fonnt-semibold my-0 mb-[15px] box-border whitespace-nowrap text-2xl tracking-[3.2px] text-white md:mb-[35px] md:text-4xl">
               คอร์สแนะนำ
             </p>
           </div>
-        </div>
-        <hr className="my-6 box-content h-0 overflow-visible border-solid" />
-      </center>
-
-      <CardSlider />
-
-      <BackButton href="/courses" className="top-[-90px]" />
+        </center>
+        <CardSlider className="pb-[35px] md:pb-[85px]" column="4" />
+        <BackButton href="/courses" label="ย้อนกลับ" />
+      </div>
     </>
   );
 };
