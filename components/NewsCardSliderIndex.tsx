@@ -26,6 +26,7 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 import Link from "next/link";
+import ThaiDateTime from "./ThaiDateTime";
 
 // This is for Next.js. On Rect JS remove this line
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
@@ -99,16 +100,6 @@ const NewsCardSliderIndex = () => {
           <OwlCarousel loop {...options}>
             {data.newses && data.newses.length > 0
               ? data.newses.slice(0, 5).map((news) => {
-                  const publishedAt = news.publishedAt;
-                  const date = new Date(publishedAt);
-
-                  const options: Intl.DateTimeFormatOptions = {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  };
-
-                  const result = date.toLocaleDateString("th-TH", options);
                   
                   return (
                     <>
@@ -145,7 +136,9 @@ const NewsCardSliderIndex = () => {
                                       <div className="box-border flex flex-wrap ">
                                         <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 ">
                                           <div className="float-left mb-1 box-border text-sm font-medium tracking-normal text-[var(--global-color-primary)] md:text-base">
-                                            {result}
+                                            <ThaiDateTime
+                                              publishedAt={news.publishedAt}
+                                            />
                                           </div>
                                         </div>
                                       </div>

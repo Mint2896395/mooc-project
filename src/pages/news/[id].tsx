@@ -8,6 +8,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import NewsCardSlider from "components/NewsCardSlider";
 import BackButton from "components/BackButton";
 import News from "types/News";
+import ThaiDateTime from "components/ThaiDateTime";
 
 interface NewsProps {
   news: News[];
@@ -22,25 +23,6 @@ export default function News({ news}: NewsProps) {
   const selectedNews = news.find(
     (newsItem) => newsItem.source.id === Number(id)
   );
-
-  let result: any;
-
-  if (selectedNews) {
-    const publishedAt = selectedNews.publishedAt;
-    const date = new Date(publishedAt);
-
-    const options: Intl.DateTimeFormatOptions = {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    };
-
-    result = date.toLocaleDateString("th-TH", options);
-
-    console.log(result); // Output: Formatted published date
-  } else {
-    console.log("News item not found");
-  }
 
   return (
     <>
@@ -66,7 +48,9 @@ export default function News({ news}: NewsProps) {
                       <div className="box-border flex flex-wrap ">
                         <div className="box-border w-full max-w-full flex-shrink-0 ">
                           <div className="float-left mb-2 box-border text-sm font-medium tracking-normal text-[var(--global-color-primary)]">
-                            {result}
+                            <ThaiDateTime
+                              publishedAt={selectedNews.publishedAt}
+                            />
                           </div>
                         </div>
                       </div>
@@ -142,7 +126,11 @@ export default function News({ news}: NewsProps) {
                                       <div className="box-border flex flex-wrap ">
                                         <div className="box-border w-full max-w-full flex-shrink-0 ">
                                           <div className="float-left mb-1.5 box-border text-xs font-medium tracking-normal text-[var(--global-color-primary)]">
-                                            {result}
+                                            <ThaiDateTime
+                                              publishedAt={
+                                                selectedNews.publishedAt
+                                              }
+                                            />
                                           </div>
                                         </div>
                                       </div>

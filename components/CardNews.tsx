@@ -1,22 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import News from 'types/News';
+import ThaiDateTime from "./ThaiDateTime";
 
 interface NewsProps {
   news: News;
 }
 
 const CardNews: React.FC<NewsProps> = ({ news }) => {
-  const publishedAt = news.publishedAt;
-  const date = new Date(publishedAt);
-
-  const options: Intl.DateTimeFormatOptions = {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  };
-
-  const result = date.toLocaleDateString("th-TH", options);
 
   return (
     <Link href={`/news/${news.source.id}`} key={news.source.id}>
@@ -43,7 +34,7 @@ const CardNews: React.FC<NewsProps> = ({ news }) => {
         <div className="box-border flex flex-wrap ">
           <div className="box-border w-full max-w-full flex-shrink-0 ">
             <div className="float-left mb-1.5 box-border text-xs font-medium tracking-normal text-[var(--global-color-primary)] md:text-sm">
-              {result}
+              <ThaiDateTime publishedAt={news.publishedAt} />
             </div>
           </div>
         </div>
