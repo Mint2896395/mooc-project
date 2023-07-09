@@ -29,7 +29,7 @@ const BackButton: FC<BackButtonProps> = ({ href, className, label, icon }) => {
     >
       <div className="box-border ">
         <Link
-          className="group box-border cursor-pointer rounded-3xl border border-[var(--global-color-primary)] px-3 pb-[6px] pt-[5px] text-center font-[inherit] text-sm normal-case leading-[inherit] tracking-normal text-[var(--global-color-primary)] hover:bg-[var(--global-color-primary)] md:px-6 md:py-2 md:font-medium"
+          className="group box-border cursor-pointer rounded-3xl border border-[var(--global-color-primary)] px-3 pb-[6px] pt-[5px] text-center font-[inherit] text-sm normal-case leading-[inherit] tracking-normal text-[var(--global-color-primary)] hover:bg-[var(--global-color-primary)] md:px-6 md:py-2 md:font-medium justify-center items-center flex"
           href={href}
         >
           {icon && (

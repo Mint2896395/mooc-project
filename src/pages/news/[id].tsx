@@ -11,17 +11,35 @@ import News from "types/News";
 
 interface NewsProps {
   news: News[];
+  result: any;
 }
 
 const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
 
-export default function News({ news }: NewsProps) {
+export default function News({ news, result }: NewsProps) {
   const router = useRouter();
   const { id } = router.query;
 
   const selectedNews = news.find(
     (newsItem) => newsItem.source.id === Number(id)
   );
+
+  if (selectedNews) {
+    const publishedAt = selectedNews.publishedAt;
+    const date = new Date(publishedAt);
+
+    const options: Intl.DateTimeFormatOptions = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
+
+    result = date.toLocaleDateString("th-TH", options);
+
+    console.log(result); // Output: Formatted published date
+  } else {
+    console.log("News item not found");
+  }
 
   return (
     <>
@@ -47,7 +65,7 @@ export default function News({ news }: NewsProps) {
                       <div className="box-border flex flex-wrap ">
                         <div className="box-border w-full max-w-full flex-shrink-0 ">
                           <div className="float-left mb-2 box-border text-sm font-medium tracking-normal text-[var(--global-color-primary)]">
-                            20 มิถุนายน 2566
+                            {result}
                           </div>
                         </div>
                       </div>
@@ -123,7 +141,7 @@ export default function News({ news }: NewsProps) {
                                       <div className="box-border flex flex-wrap ">
                                         <div className="box-border w-full max-w-full flex-shrink-0 ">
                                           <div className="float-left mb-1.5 box-border text-xs font-medium tracking-normal text-[var(--global-color-primary)]">
-                                            20 มิถุนายน 2566
+                                            {result}
                                           </div>
                                         </div>
                                       </div>

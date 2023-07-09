@@ -38,8 +38,8 @@ const Home: NextPage = () => {
           />
         </div>
       </div>
-      <div className="py-[50px] md:py-20">
-        <div className="flex flex-col text-center md:flow-root mb-5">
+      <div className="py-[50px] md:py-20 flex flex-col items-center">
+        <div className="flex flex-col text-center md:flow-root mb-5 md:w-[88%] md:px-[15px]">
           <h2 className="mt-0 box-border table text-xl font-medium leading-[normal] tracking-wide text-[rgba(17,17,17,1)] decoration-sky-500 underline-offset-8 md:float-left md:mb-11 md:pl-10 md:text-3xl md:underline xl:text-3xl mb-3">
             คอร์สที่กำลังเปิด
           </h2>

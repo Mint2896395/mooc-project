@@ -98,6 +98,17 @@ const NewsCardSlider = () => {
           <OwlCarousel loop {...options}>
             {data.newses && data.newses.length > 0
               ? data.newses.slice(0, 5).map((news) => {
+                  const publishedAt = news.publishedAt;
+                  const date = new Date(publishedAt);
+
+                  const options: Intl.DateTimeFormatOptions = {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  };
+
+                  const result = date.toLocaleDateString("th-TH", options);
+                  
                   return (
                     <>
                       <Link
@@ -133,7 +144,7 @@ const NewsCardSlider = () => {
                                       <div className="box-border flex flex-wrap ">
                                         <div className="-mt-0 box-border w-full max-w-full flex-shrink-0 ">
                                           <div className="float-left mb-1 box-border text-xs font-medium tracking-normal text-[var(--global-color-primary)]">
-                                            20 มิถุนายน 2566
+                                            {result}
                                           </div>
                                         </div>
                                       </div>

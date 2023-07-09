@@ -26,19 +26,18 @@ const FooterColumn = ({ title, links }: ColumnProps) => {
       <br />
       <br />
       {links.map((link: any) => (
-        <li className="box-border">
+        <li className="box-border" key={link.id}>
           <Link
             className="box-border bg-transparent "
             target="_blank"
             href={link.path}
-            key={link.id}
           >
             {link.title}
           </Link>
         </li>
       ))}
     </ul>
-  )
+  );
 };
 
 const FooterMobile = ({ id, title, links }: ColumnProps) => (

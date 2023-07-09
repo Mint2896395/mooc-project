@@ -13,7 +13,7 @@ export default function getAllCourse(
   req: NextApiRequest,
   res: NextApiResponse<Response>
 ) {
-  // All Courses
+  // All News
   const newses: News[] = [
     {
       source: {
