@@ -11,18 +11,19 @@ import News from "types/News";
 
 interface NewsProps {
   news: News[];
-  result: any;
 }
 
 const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
 
-export default function News({ news, result }: NewsProps) {
+export default function News({ news}: NewsProps) {
   const router = useRouter();
   const { id } = router.query;
 
   const selectedNews = news.find(
     (newsItem) => newsItem.source.id === Number(id)
   );
+
+  let result: any;
 
   if (selectedNews) {
     const publishedAt = selectedNews.publishedAt;
