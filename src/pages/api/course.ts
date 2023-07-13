@@ -1,15 +1,18 @@
-import Course from "types/Course";
+import Course from "~/types/Course";
 
 interface Response {
   total: number;
   skip: number;
   limit: number;
   courses: Course[];
-};
+}
 
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from "next";
 
-export default function getAllCourse(req: NextApiRequest, res: NextApiResponse<Response>) {
+export default function getAllCourse(
+  req: NextApiRequest,
+  res: NextApiResponse<Response>
+) {
   // All Courses
   const courses: Course[] = [
     {
@@ -278,17 +281,19 @@ export default function getAllCourse(req: NextApiRequest, res: NextApiResponse<R
   let filteredCourses: Course[];
 
   if (id) {
-    filteredCourses = courses.filter(course => course.id === Number(id));
+    filteredCourses = courses.filter((course) => course.id === Number(id));
   } else if (category) {
     filteredCourses = courses.filter(
-      course => course.category === String(category)
+      (course) => course.category === String(category)
     );
   } else {
     filteredCourses = courses;
   }
 
   // Apply the limit if provided
-  const limitedCourses = limit ? filteredCourses.slice(Number(skip), Number(skip) + Number(limit)) : filteredCourses;
+  const limitedCourses = limit
+    ? filteredCourses.slice(Number(skip), Number(skip) + Number(limit))
+    : filteredCourses;
 
   const response: Response = {
     courses: limitedCourses,

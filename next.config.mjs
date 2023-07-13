@@ -7,9 +7,12 @@ await import("./src/env.mjs");
 /** @type {import("next").NextConfig} */
 
 const config = {
-  pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
+  pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],
 
   reactStrictMode: true,
+  experimental: {
+    appDir: true,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
