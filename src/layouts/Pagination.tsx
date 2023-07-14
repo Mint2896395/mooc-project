@@ -2,7 +2,8 @@
 import usePagination from "@lucasmogari/react-pagination";
 import cn from "classnames";
 import Link from "next/link";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import React, { memo, PropsWithChildren, ReactNode } from "react";
 
 type Props = {
@@ -74,8 +75,10 @@ type PaginationLinkProps = {
 } & PropsWithChildren;
 
 function PaginationLink({ page, children, ...props }: PaginationLinkProps) {
-  const router = useRouter();
-  const query = router.query;
+  // const router = useRouter();
+  // const query = router.query;
+   const { pathname }: any = usePathname();
+   const query = pathname?.query;
 
   // we use existing data from router query, we just modify the page.
   const q = { ...query, page };

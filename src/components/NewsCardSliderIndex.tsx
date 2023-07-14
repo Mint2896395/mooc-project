@@ -93,8 +93,8 @@ const NewsCardSliderIndex = () => {
                   return (
                     <>
                       <Link
-                        href={`/news/${news.source.id}`}
-                        key={news.source.id}
+                        href={`/news/${news.id}`}
+                        key={news.id}
                       >
                         <div className="group box-border block w-full scale-95 transform cursor-pointer transition duration-500 hover:scale-100">
                           <div className="relative box-border ">
@@ -109,7 +109,7 @@ const NewsCardSliderIndex = () => {
                                             <div className="relative box-border overflow-hidden rounded-xl pt-[78%]">
                                               <img
                                                 className="absolute left-2/4 top-2/4 mx-auto w-[100%] -translate-x-2/4 -translate-y-2/4 align-middle "
-                                                src={news.urlToImage}
+                                                src={news.url_to_image}
                                               />
                                               {/* <Image
                                                   className="w-full rounded-xl"

@@ -9,7 +9,7 @@ interface NewsProps {
 
 const CardNews: React.FC<NewsProps> = ({ news }) => {
   return (
-    <Link href={`/news/${news.source.id}`} key={news.source.id}>
+    <Link href={`/news/${news.id}`} key={news.id}>
       <div className="group w-full transform cursor-pointer overflow-hidden md:h-full md:max-w-lg">
         <div className="box-border flex flex-wrap ">
           <div className="box-border w-full max-w-full flex-shrink-0 ">
@@ -17,7 +17,7 @@ const CardNews: React.FC<NewsProps> = ({ news }) => {
               <div className="relative box-border overflow-hidden rounded-xl pt-[78%] transition-all duration-500 group-hover:bg-[rgba(255,148,27,0.3)]  ">
                 <img
                   className="margin-content-box absolute left-2/4 top-2/4 mx-auto w-[100%] -translate-x-2/4 -translate-y-2/4  overflow-clip align-middle group-hover:opacity-60 group-hover:mix-blend-luminosity"
-                  src={news.urlToImage}
+                  src={news.url_to_image}
                 />
                 {/* <Image
                   className="w-full rounded-xl"

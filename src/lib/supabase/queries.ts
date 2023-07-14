@@ -1,6 +1,6 @@
 import { Database } from "../supabase.types";
 import { supabaseServer } from ".";
-import { courses, profiles } from "@/lib/db/schema";
+import { courses, profiles, newses } from "@/lib/db/schema";
 import { db } from "@/lib/db";
 import { and, desc, eq, exists, sql } from "drizzle-orm";
 
@@ -73,6 +73,22 @@ export const getCourse = async (id: number) => {
 
 export const getCourses = async () => {
   const res = await db.select().from(courses).orderBy(desc(courses.createdAt));
+
+  return res;
+};
+
+export const getNews = async (id: number) => {
+  const res = await db
+    .select()
+    .from(newses)
+    .where(eq(newses.id, id))
+    .limit(1);
+
+  return res;
+};
+
+export const getNewses = async () => {
+  const res = await db.select().from(newses).orderBy(desc(newses.publishedAt));
 
   return res;
 };

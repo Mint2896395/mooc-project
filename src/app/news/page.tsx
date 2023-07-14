@@ -1,6 +1,7 @@
+"use client";
 import Head from "next/head";
 import Pagination from "~/layouts/Pagination";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { useFetch } from "usehooks-ts";
 import CardNews from "~/components/CardNews";
 import News from "~/types/News";
@@ -12,17 +13,17 @@ interface Response {
   newses: News[];
 }
 
-const CoursesPage = () => {
-  //parse the page and perPage  from router.query
-  const router = useRouter();
-  const query = router.query;
-  const page = (query.page as string) ?? "1";
-  const perPage = (query.perPage as string) ?? "6";
+const NewsPage = () => {
+  // Get the pathname using the usePathname hook
+  const { pathname }: any = usePathname();
+
+  const page = (pathname?.query.page as string) ?? "1";
+  const perPage = (pathname?.query.perPage as string) ?? "6";
 
   //Define limit and skip which is used by DummyJSON API for pagination
   const limit = perPage;
   const skip = (parseInt(page) - 1) * parseInt(limit);
-  const url = `/api/news?limit=${limit}&skip=${skip}&select=source.name,author,description,content`;
+  const url = `/api/news?limit=${limit}&skip=${skip}&select=name,author,description,content`;
 
   //use the useFetch hook to get the products
   const { data } = useFetch<Response>(url);
@@ -53,7 +54,7 @@ const CoursesPage = () => {
               {data?.newses?.map((news) => {
                 return (
                   <>
-                    <CardNews key={news.source.id} news={news} />
+                    <CardNews key={news.id} news={news} />
                   </>
                 );
               })}
@@ -75,4 +76,4 @@ const CoursesPage = () => {
   );
 };
 
-export default CoursesPage;
+export default NewsPage;

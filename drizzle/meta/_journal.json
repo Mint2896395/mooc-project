@@ -8,6 +8,20 @@
       "when": 1689163860054,
       "tag": "0000_sloppy_wrecker",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1689257286656,
+      "tag": "0001_awesome_fantastic_four",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1689257888090,
+      "tag": "0002_great_scourge",
+      "breakpoints": true
     }
   ]
 }

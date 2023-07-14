@@ -1,3 +1,4 @@
+import React from "react";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -9,20 +10,28 @@ import NewsCardSlider from "~/components/NewsCardSlider";
 import BackButton from "~/components/ui/BackButton";
 import News from "~/types/News";
 import ThaiDateTime from "~/utils/formatThaiDate";
+import { getNews, getNewses } from "@/lib/supabase/queries";
 
 interface NewsProps {
-  news: News[];
+  params: {
+    id: number;
+  };
 }
 
-const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
+// const baseUrl = process.env.API_BASE_URL || "http://localhost:3000";
 
-export default function News({ news }: NewsProps) {
-  const router = useRouter();
-  const { id } = router.query;
+export default async function News({ params }: NewsProps) {
+  // const router = useRouter();
+  // const { id } = router.query;
 
-  const selectedNews = news.find(
-    (newsItem) => newsItem.source.id === Number(id)
-  );
+  // const selectedNews = news.find(
+  //   (newsItem) => newsItem.source.id === Number(id)
+  // );
+
+  const newses: News[] = (await getNewses()) as News[];
+
+  const selectedNewses = await getNews(params.id);
+  const selectedNews: any = selectedNewses[0];
 
   return (
     <>
@@ -66,7 +75,7 @@ export default function News({ news }: NewsProps) {
                           <div className="mb-10 box-border overflow-hidden rounded-xl ">
                             <img
                               className="box-border h-auto w-full align-middle "
-                              src={selectedNews.urlToImage}
+                              src={selectedNews.url_to_image}
                             />
                           </div>
                         </div>
@@ -96,12 +105,12 @@ export default function News({ news }: NewsProps) {
                         {/* <!-- LASTEST NEWS :: PC & IPAD PRO --> */}
                         <div className="box-border hidden md:hidden lg:block ">
                           <div className="-mt-0 mb-[30px] box-border w-full max-w-full flex-shrink-0 md:w-1/3 lg:w-full ">
-                            {news?.slice(0, 5).map((news) => {
+                            {newses?.slice(0, 5).map((news) => {
                               return (
                                 <>
                                   <Link
-                                    href={`/news/${news.source.id}`}
-                                    key={news.source.id}
+                                    href={`/news/${news.id}`}
+                                    key={news.id}
                                   >
                                     <div className="group mb-[35px] w-full transform cursor-pointer overflow-hidden md:h-full md:max-w-lg">
                                       <div className="box-border flex flex-wrap ">
@@ -110,7 +119,7 @@ export default function News({ news }: NewsProps) {
                                             <div className="relative box-border overflow-hidden rounded-xl pt-[65%] transition-all duration-500 group-hover:bg-[rgba(255,148,27,0.3)]  ">
                                               <img
                                                 className="margin-content-box absolute left-2/4 top-2/4 mx-auto w-[100%] -translate-x-2/4 -translate-y-2/4  overflow-clip align-middle group-hover:opacity-60 group-hover:mix-blend-luminosity"
-                                                src={news.urlToImage}
+                                                src={news.url_to_image}
                                               />
                                               {/* <Image
                                                   className="w-full rounded-xl"
@@ -174,33 +183,33 @@ export default function News({ news }: NewsProps) {
   );
 }
 
-export const getStaticProps: GetStaticProps<NewsProps> = async () => {
-  const response = await fetch(`${baseUrl}/api/news`);
-  const data = await response.json();
+// export const getStaticProps: GetStaticProps<NewsProps> = async () => {
+//   const response = await fetch(`${baseUrl}/api/news`);
+//   const data = await response.json();
 
-  // Sort the news items by the newest creation date
-  const sortedNews = data.newses.sort((a: News, b: News) => {
-    return (
-      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-    );
-  });
+//   // Sort the news items by the newest creation date
+//   const sortedNews = data.newses.sort((a: News, b: News) => {
+//     return (
+//       new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+//     );
+//   });
 
-  return {
-    props: {
-      news: data.newses || [],
-    },
-  };
-};
+//   return {
+//     props: {
+//       news: data.newses || [],
+//     },
+//   };
+// };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await fetch(`${baseUrl}/api/news`);
-  const data = await response.json();
-  const paths = data.newses.map((newsItem: News) => ({
-    params: { id: String(newsItem.source.id) },
-  }));
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const response = await fetch(`${baseUrl}/api/news`);
+//   const data = await response.json();
+//   const paths = data.newses.map((newsItem: News) => ({
+//     params: { id: String(newsItem.source.id) },
+//   }));
 
-  return {
-    paths,
-    fallback: false,
-  };
-};
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };

@@ -12,10 +12,10 @@ const CardCourse: React.FC<CourseProps> = ({ course }) => {
       <div className="group w-full scale-95 transform cursor-pointer overflow-hidden border-0 border-b-2 border-solid border-[var(--global-color-primary)] transition duration-500 hover:scale-100 md:h-full md:max-w-lg">
         <Image
           className="w-full rounded-xl"
-          src={course.src}
+          src={course.src || "/fallback-image.jpg"}
           width={640}
           height={360}
-          alt={course.name}
+          alt={course.name ?? "Fallback Name"}
         />
         <div className="md:py-4">
           <div className="mb-2 mt-1 h-10 min-h-0 text-base font-semibold leading-5 group-hover:text-gray-500 md:mb-0 md:text-xl md:font-bold">

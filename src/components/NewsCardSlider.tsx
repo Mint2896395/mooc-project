@@ -1,6 +1,7 @@
+"use client";
 import useSWR from "swr";
 import React from "react";
-import NewsItem from "~/types/News";
+import NewsItem from "@/types/News";
 
 // Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 const fetcher = async (url: string) => {
@@ -27,6 +28,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 
 import Link from "next/link";
 import ThaiDateTime from "../utils/formatThaiDate";
+// import news from "~/pages/api/news";
 
 // This is for Next.js. On Rect JS remove this line
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
@@ -101,10 +103,7 @@ const NewsCardSlider = () => {
               ? data.newses.slice(0, 5).map((news) => {
                   return (
                     <>
-                      <Link
-                        href={`/news/${news.source.id}`}
-                        key={news.source.id}
-                      >
+                      <Link href={`/news/${news.id}`} key={news.id}>
                         <div className="box-border block md:block lg:hidden ">
                           <div className="relative box-border ">
                             <div className="relative z-[1] box-border block w-full">
@@ -118,7 +117,7 @@ const NewsCardSlider = () => {
                                             <div className="relative box-border overflow-hidden rounded-xl pt-[78%]">
                                               <img
                                                 className="absolute left-2/4 top-2/4 mx-auto w-[100%] -translate-x-2/4 -translate-y-2/4 align-middle "
-                                                src={news.urlToImage}
+                                                src={news.url_to_image}
                                               />
                                               {/* <Image
                                                   className="w-full rounded-xl"

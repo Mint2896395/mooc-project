@@ -35,3 +35,18 @@ export const courses = pgTable("courses", {
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 
+export const newses = pgTable("newses", {
+  id: serial("id").primaryKey(),
+  source_id: serial("source_id"),
+  source_name: varchar("source_name", { length: 255 }),
+  author: varchar("author", { length: 255 }),
+  title: varchar("title", { length: 255 }),
+  description: text("description"),
+  url: varchar("url", { length: 255 }),
+  url_to_image: varchar("url_to_image", { length: 255 }),
+  publishedAt: timestamp("published_at"),
+  content: text("content"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+

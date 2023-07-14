@@ -1,12 +1,11 @@
 "use client";
-import CardCourse from "~/components/Card";
+import CardCourse from "@/components/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import Pagination from "~/layouts/Pagination";
+import Pagination from "@/layouts/Pagination";
 import { usePathname } from "next/navigation";
 import { useFetch } from "usehooks-ts";
-import Course from "~/types/Course";
-import { Metadata } from "next";
+import Course from "@/types/Course";
 
 // export const metadata: Metadata = {
 //   title: "All Course",

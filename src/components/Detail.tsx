@@ -127,10 +127,10 @@ const Detail = ({ course }: CourseProps) => {
           <div className="z-[-1] box-border md:w-1/2">
             <Image
               className="w-full"
-              src={course.src}
+              src={course.src || "/fallback-image.jpg"}
               width={640}
               height={360}
-              alt={course.name}
+              alt={course.name ?? "Fallback Name"}
             />
           </div>
           <div className="relative z-[-1] w-full bg-gray-100 md:w-1/2">
