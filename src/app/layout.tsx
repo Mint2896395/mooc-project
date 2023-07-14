@@ -11,13 +11,6 @@ const roboto = Noto_Sans_Thai({
 import Footer from "~/layouts/Footer";
 import Navbar from "~/layouts/Navbar";
 import GotoTop from "~/components/ui/GotoTop";
-import {
-  QueryClient,
-  QueryClientProvider,
-  useQuery,
-} from "@tanstack/react-query";
-
-const queryClient = new QueryClient();
 
 export default function RootLayout({
   children,
@@ -28,9 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <Navbar />
-        <QueryClientProvider client={queryClient}>
-          <main>{children}</main>
-        </QueryClientProvider>
+        <main>{children}</main>
         <Footer />
         <GotoTop />
         <Script
