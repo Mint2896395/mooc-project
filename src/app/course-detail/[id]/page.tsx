@@ -65,11 +65,10 @@
 import React from "react";
 import Detail from "@/components/Detail";
 import { getCourse, getCourses } from "@/lib/supabase/queries";
-import Course from "@/types/Course";
 
 interface CourseDetailPageProps {
   params: {
-    id: number;
+    id: string;
   };
 }
 
@@ -87,7 +86,7 @@ export async function generateStaticParams() {
 // Multiple versions of this page will be statically generated
 // using the `params` returned by `generateStaticParams`
 const CourseDetailPage: React.FC<CourseDetailPageProps> = async ({ params }) => {
-  const courses = await getCourse(params.id);
+  const courses = await getCourse(Number(params.id));
   const course: any = courses[0];
 
   return course ? <Detail course={course} /> : <p>Loading course...</p>;
