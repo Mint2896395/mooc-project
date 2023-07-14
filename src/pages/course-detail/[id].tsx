@@ -4,11 +4,25 @@ import { getCourse, getCourses } from "@/lib/supabase/queries";
 import { GetStaticProps, GetStaticPaths } from "next";
 import Course from "~/types/Course";
 
-interface PageProps {
-  course: Course;
+interface CoursePageProps {
+  id: number;
+  code: string | null;
+  name: string | null;
+  src: string | null;
+  vdo_url: string | null;
+  category: string | null;
+  seat: string | null;
+  status: string | null;
+  userId: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
-const CourseDetailPage: React.FC<PageProps> = ({ course }) => {
+interface PageProps {
+  course: CoursePageProps;
+}
+
+const CourseDetailPage: React.FC<PageProps> = ({ course }:any) => {
   if (!course) {
     return <p>Loading course...</p>;
   }
@@ -45,15 +59,17 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   if (!course) {
     return {
       notFound: true,
-      props: undefined,
+      props: {
+        course: null,
+      },
     };
   }
 
   // Convert the createdAt and updatedAt properties to serializable format
-  const serializedCourse = {
+  const serializedCourse: CoursePageProps = {
     ...course,
-    createdAt: course.createdAt.toISOString(),
-    updatedAt: course.updatedAt.toISOString(),
+    createdAt: course.createdAt.toString(),
+    updatedAt: course.updatedAt.toString(),
   };
 
   // Return the serialized course data as props
@@ -63,6 +79,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
     },
   };
 };
+
 
 
 
