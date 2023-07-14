@@ -93,4 +93,3 @@ const CourseDetailPage: React.FC<CourseDetailPageProps> = async ({ params }) => 
 };
 
 export default CourseDetailPage;
-

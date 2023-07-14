@@ -77,6 +77,12 @@ export const getCourses = async () => {
   return res;
 };
 
+export const getCoursex = async () => {
+  const res = await db.select().from(courses);
+
+  return res;
+};
+
 export const getNews = async (id: number) => {
   const res = await db
     .select()
